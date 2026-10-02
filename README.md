@@ -6,59 +6,30 @@ Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 
 **Estudiantes:** Marco López Quesada · Joseph Salazar Araya
 **Profesor:** Deiver Cubero Molina
 
+**Aplicación Práctica — Semanas 1-3**
+
 ---
 
-## Sección 01 — Propuesta inicial del proyecto
+## 1. Acta de Inicio (Project Charter)
 
-*Semana 1 — Lección 1: Del problema al proyecto*
+### Justificación del proyecto
 
-### 1. Problema
+En Costa Rica, el sistema nacional de trazabilidad Trazar-Agro está enfocado casi
+exclusivamente en el cumplimiento sanitario y comercial del ganado bovino y porcino, sin
+ofrecer a los productores —en particular a los pequeños y medianos, muchos de ellos
+adultos mayores con poca familiaridad tecnológica— una herramienta de uso interno para
+administrar el historial detallado de cada animal (salud, peso, reproducción,
+fotografías, propietario). El registro manual del número de arete es, además, propenso a
+errores de digitación, y la conectividad en las fincas rurales suele ser limitada.
 
-En Costa Rica ya existe un sistema nacional de trazabilidad (Trazar-Agro), pero está
-enfocado casi exclusivamente en el cumplimiento sanitario y comercial del ganado bovino
-(y recientemente porcino), con datos básicos orientados a movilización y control de
-enfermedades. Los productores —especialmente pequeños y medianos, muchos de ellos adultos
-mayores con poca familiaridad tecnológica, y quienes manejan varias especies en la misma
-finca— no cuentan con una herramienta unificada, detallada y fácil de usar para llevar el
-control interno de cada animal (historial de salud, peso, reproducción, fotos,
-propietario). Además, el registro manual de datos como el número del arete oficial es
-propenso a errores de digitación, y muchas fincas rurales tienen conectividad limitada.
+El proyecto se justifica porque complementa, sin duplicar, el sistema oficial: ofrece a
+los productores una plataforma propia para el control individual de su ganado, con una
+interfaz simplificada y un módulo de inteligencia artificial que agiliza el registro
+mediante fotografía (lectura del arete, sugerencia de raza y color/patrón), reduciendo el
+tiempo y los errores de digitación, especialmente para usuarios con menor destreza
+tecnológica.
 
-### 2. Interesados identificados
-
-- Productores pequeños y medianos — usuarios principales del sistema.
-- Productores adultos mayores — segmento crítico para el diseño de la interfaz, por su
-  menor familiaridad tecnológica.
-- Propietarios con varias especies en una misma finca — necesitan gestionar distintos
-  tipos de animales desde una sola cuenta.
-- SENASA / Trazar-Agro — sistema y entidad reguladora nacional con la que el proyecto se
-  complementa, sin competir ni duplicar.
-- Equipo desarrollador (Marco y Joseph) — responsables de diseñar, construir y validar la
-  plataforma.
-- Profesor del curso — evalúa el proyecto y actúa como patrocinador académico.
-
-### 3. Necesidad
-
-Los productores necesitan una herramienta unificada, detallada y de uso sencillo para
-llevar el control interno de cada animal (salud, peso, reproducción, fotos, propietario),
-que funcione con conectividad limitada y que minimice los errores de digitación, en
-especial para usuarios sin experiencia tecnológica previa.
-
-### 4. Propuesta de valor
-
-- Control individual y detallado orientado a la gestión propia del productor, no solo al
-  cumplimiento regulatorio.
-- Trazabilidad clara de propiedad mediante la vinculación de cada animal a una cédula
-  (física o jurídica).
-- Reducción del tiempo y los errores de digitación gracias al módulo de IA (arete, raza,
-  color/patrón), especialmente valioso para usuarios con menor destreza tecnológica.
-- Se posiciona como complemento del sistema nacional, no como una copia: para animales sin
-  registrar, acelera su primera ficha; para animales ya registrados, evita redigitar lo
-  que el arete ya certifica y suma valor donde Trazar-Agro no llega.
-- Interfaz simple y accesible, adecuada al perfil real del usuario final (productores
-  adultos mayores).
-
-### 5. Objetivo general
+### Objetivo general
 
 Desarrollar una plataforma digital que permita el registro y control individual detallado
 del ganado en Costa Rica, organizado por categorías de especie y asociado a un propietario
@@ -79,49 +50,65 @@ que agilice el registro mediante fotografía.
    productores reales o simulados, priorizando la accesibilidad para usuarios adultos
    mayores con poca experiencia en plataformas digitales.
 
-### 6. Producto / resultado esperado
+### Límites generales del proyecto
 
-Una plataforma digital de registro individual de ganado, organizada por categorías de
-especie (bovinos, porcinos, equinos, etc.), donde cada animal cuenta con una ficha
-detallada (nacimiento, raza, color/patrón, sexo, salud, peso, reproducción, foto opcional)
-y un código único generado automáticamente. Cada animal queda asociado a un propietario
-identificado por cédula, permitiendo administrar varios animales desde una sola cuenta.
+**Dentro del alcance**
 
-### 7. Restricciones
+- Registro y gestión de fichas individuales de ganado multi-especie (bovino, porcino,
+  equino, etc.).
+- Asociación de animales a un propietario mediante cédula física o jurídica.
+- Generación automática de código único por animal.
+- Módulo de IA/OCR para lectura de arete y sugerencia de raza/color-patrón a partir de
+  fotografía.
+- Interfaz simplificada orientada a productores con baja alfabetización digital.
 
-- Conectividad limitada en muchas fincas rurales.
-- Perfil de usuario con baja alfabetización digital (adultos mayores): la interfaz debe
-  minimizar digitación y pasos.
-- El sistema no duplica ni sustituye a Trazar-Agro/SENASA, únicamente lo complementa.
-- Equipo de desarrollo de 2 personas y tiempo acotado al calendario del cuatrimestre.
+**Fuera del alcance**
 
-### 8. Riesgos iniciales
-
-- Precisión limitada del OCR ante aretes sucios, dañados o fotos de baja calidad.
-- Baja adopción si la interfaz resulta compleja para el perfil real de usuario (adultos
-  mayores).
-- Dependencia de conectividad para sincronizar datos entre fincas remotas y el sistema.
-- Posibles cambios futuros en Trazar-Agro/SENASA que afecten la integración o el uso del
-  número de arete como referencia.
+- Sustitución o duplicación del registro oficial de Trazar-Agro/SENASA.
+- Procesos de pago, facturación o comercialización de ganado.
+- Módulo veterinario avanzado (diagnósticos, historiales clínicos detallados) en esta
+  fase.
+- Soporte completamente offline; se asume conectividad intermitente, no ausencia total de
+  red.
+- Equipo de desarrollo de 2 integrantes, trabajo acotado a las 14 semanas del curso.
 
 ---
 
-## Sección 02 — Contexto organizacional del proyecto
+## 2. Definición del Scrum Team
 
-*Semana 2 — Contexto del proyecto e interesados*
+| Rol | Integrante | Responsabilidades principales |
+|---|---|---|
+| Product Owner | Marco López Quesada | Define y prioriza el Product Backlog; representa la visión del producto y las necesidades de los productores; decide qué se construye en cada Sprint. |
+| Scrum Master | Joseph Salazar Araya | Facilita el proceso Scrum; da seguimiento al Sprint Backlog; elimina obstáculos del equipo; organiza Sprint Planning, Daily Scrum, Sprint Review y Retrospective. |
+| Developers | Marco López Quesada y Joseph Salazar Araya | Diseñan, construyen, prueban e integran la solución técnica: modelo de datos, interfaz y módulo de IA/OCR. |
 
-El proyecto no nace dentro de una empresa u organización existente, sino de un equipo de
-2 estudiantes. El análisis de contexto se aplica al equipo del proyecto y al entorno real
-donde operará la plataforma: fincas costarricenses y el ecosistema regulatorio
-agropecuario.
+Duración del equipo: 14 semanas, correspondientes a la duración completa del curso.
 
-### Factores ambientales de la empresa (EEF)
+---
+
+## 3. Análisis de Entorno (Lean Canvas / EEFs)
+
+### Lean Canvas
+
+| Bloque | Contenido |
+|---|---|
+| Problema | Falta de una herramienta interna, simple y detallada para el control individual del ganado; Trazar-Agro cubre solo trazabilidad sanitaria/comercial; alta tasa de error en digitación manual del arete. |
+| Segmentos de clientes | Productores pequeños y medianos; productores adultos mayores; propietarios con varias especies en una misma finca. |
+| Propuesta de valor única | Control individual y detallado del ganado, con registro asistido por IA que reduce tiempo y errores de digitación, complementando el sistema nacional sin duplicarlo. |
+| Solución | Plataforma multi-especie con ficha por animal, código único, asociación a propietario por cédula y módulo de IA/OCR para lectura de arete y sugerencia de raza/color-patrón. |
+| Canales | Aplicación web/móvil; difusión a través de cooperativas y asociaciones de productores agropecuarios. |
+| Flujos de ingreso | Proyecto académico, sin modelo de ingresos definido en esta etapa. |
+| Estructura de costos | Tiempo de desarrollo del equipo (2 estudiantes); hosting; costo de servicios de OCR/IA en la nube. |
+| Métricas clave | Número de animales registrados; tasa de precisión del OCR; tasa de adopción en pruebas con usuarios reales o simulados. |
+| Ventaja injusta | Diseño construido específicamente para el contexto costarricense (conectividad limitada, usuarios adultos mayores) e integración conceptual con Trazar-Agro/SENASA. |
+
+### Factores Ambientales de la Empresa (EEF)
 
 **Internos**
 
 - Equipo de 2 desarrolladores (Marco y Joseph), sin estructura jerárquica formal; las
   decisiones se toman en conjunto.
-- Tiempo disponible limitado al calendario académico del II Cuatrimestre 2026.
+- Tiempo disponible limitado al calendario académico de 14 semanas.
 - Presupuesto estudiantil, dependiente de servicios gratuitos o de bajo costo (APIs de
   OCR, hosting).
 
@@ -135,36 +122,6 @@ agropecuario.
 - Disponibilidad y costo de servicios de IA/OCR en la nube (dependencia de terceros).
 - Normativa de protección de datos personales (cédula del propietario) aplicable en Costa
   Rica.
-
-### Activos de los procesos de la organización
-
-- Plantillas y herramientas del curso (Project Canvas, este documento, registro de
-  interesados, mapa poder-interés).
-- Documentación pública de Trazar-Agro/SENASA como referencia para diseñar la
-  integración.
-- Librerías y servicios de OCR de código abierto o gratuito.
-
-### Estructura organizacional del equipo
-
-Con solo 2 integrantes, la estructura se asemeja a un equipo orientado a proyecto: alta
-autonomía, decisiones conjuntas y sin jerarquías funcionales internas. No hay una
-gerencia funcional externa que asigne recursos: los propios estudiantes gestionan tiempo,
-alcance y tecnología.
-
-### Gobernanza del proyecto
-
-- El profesor actúa como patrocinador y comité de aprobación académico: cualquier cambio
-  importante de alcance se justifica ante él.
-- Dentro del equipo, las decisiones técnicas y de alcance se toman por consenso entre
-  Marco y Joseph.
-- Los hitos de entrega semanales del curso funcionan como puntos de control del avance
-  del proyecto.
-
----
-
-## Sección 03 — Interesados: registro y mapa poder-interés
-
-*Semana 2 — Contexto del proyecto e interesados*
 
 ### Registro de interesados
 
@@ -195,21 +152,6 @@ quadrantChart
     Profesor del curso: [0.65, 0.7]
     Proveedor OCR/IA: [0.25, 0.3]
 ```
-
-### Restricciones actualizadas
-
-- No duplicar ni competir con Trazar-Agro/SENASA: usarlo como referencia (arete) y
-  complementarlo con datos de manejo diario.
-- Diseño accesible para usuarios de baja alfabetización digital.
-- Conectividad intermitente en zonas rurales.
-- Equipo de 2 personas, tiempo limitado al cuatrimestre académico.
-
-### Enfoque de gestión: predictivo, adaptativo o híbrido
-
-Se aplica un enfoque híbrido: la fecha de entrega del curso y el alcance mínimo viable se
-planifican de forma predictiva, mientras que el módulo de IA/OCR y el diseño de la
-interfaz para productores adultos mayores se desarrollan mediante ciclos cortos de
-prueba, retroalimentación real de usuarios y ajuste.
 
 ---
 
