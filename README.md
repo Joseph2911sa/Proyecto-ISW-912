@@ -142,6 +142,10 @@ decisiones se toman en conjunto.
 - Interfaz simplificada orientada a productores con baja alfabetización digital.
 - Sustitución o duplicación del registro oficial de Trazar-Agro/SENASA.
 
+---
+
+## Sección 03 — Interesados / stakeholders
+
 ### Registro de interesados
 
 | Interesado | Rol / relación | Necesidad | Poder (1-5) | Interés (1-5) | Actitud | Estrategia |
