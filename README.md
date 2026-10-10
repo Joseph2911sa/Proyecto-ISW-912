@@ -8,7 +8,7 @@ Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 
 **Estudiantes:** Marco López Quesada · Joseph Salazar Araya
 **Profesor:** Deiver Cubero Molina
 
-**Aplicación Práctica — Semanas 1-3**
+### Definición del Scrum Team
 
 | Rol | Integrante | Responsabilidades principales |
 |---|---|---|
