@@ -1,5 +1,7 @@
 # Plataforma de Registro Individual de Ganado
 
+## Sección 00 — Portada e identificación del equipo
+
 **Proyecto final — ISW-912 · Administración de Proyectos Informáticos**
 Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 2026
 
@@ -7,6 +9,14 @@ Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 
 **Profesor:** Deiver Cubero Molina
 
 **Aplicación Práctica — Semanas 1-3**
+
+| Rol | Integrante | Responsabilidades principales |
+|---|---|---|
+| Product Owner | Marco López Quesada | Define y prioriza el Product Backlog; representa la visión del producto y las necesidades de los productores; decide qué se construye en cada Sprint. |
+| Scrum Master | Joseph Salazar Araya | Facilita el proceso Scrum; da seguimiento al Sprint Backlog; elimina obstáculos del equipo; organiza Sprint Planning, Daily Scrum, Sprint Review y Retrospective. |
+| Developers | Marco López Quesada y Joseph Salazar Araya | Diseñan, construyen, prueban e integran la solución técnica: modelo de datos, interfaz y módulo de IA/OCR. |
+
+Duración del equipo: 14 semanas, correspondientes a la duración completa del curso.
 
 ---
 
@@ -71,18 +81,6 @@ que agilice el registro mediante fotografía.
 - Soporte completamente offline; se asume conectividad intermitente, no ausencia total de
   red.
 - Equipo de desarrollo de 2 integrantes, trabajo acotado a las 14 semanas del curso.
-
----
-
-## 2. Definición del Scrum Team
-
-| Rol | Integrante | Responsabilidades principales |
-|---|---|---|
-| Product Owner | Marco López Quesada | Define y prioriza el Product Backlog; representa la visión del producto y las necesidades de los productores; decide qué se construye en cada Sprint. |
-| Scrum Master | Joseph Salazar Araya | Facilita el proceso Scrum; da seguimiento al Sprint Backlog; elimina obstáculos del equipo; organiza Sprint Planning, Daily Scrum, Sprint Review y Retrospective. |
-| Developers | Marco López Quesada y Joseph Salazar Araya | Diseñan, construyen, prueban e integran la solución técnica: modelo de datos, interfaz y módulo de IA/OCR. |
-
-Duración del equipo: 14 semanas, correspondientes a la duración completa del curso.
 
 ---
 
