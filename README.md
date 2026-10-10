@@ -91,7 +91,7 @@ registro mediante fotografía.
 
 ---
 
-## 3. Análisis de Entorno (Lean Canvas / EEFs)
+## Sección 02 — Contexto organizacional y restricciones
 
 ### Lean Canvas
 
@@ -127,6 +127,20 @@ registro mediante fotografía.
 - Disponibilidad y costo de servicios de IA/OCR en la nube (dependencia de terceros).
 - Normativa de protección de datos personales (cédula del propietario) aplicable en Costa
   Rica.
+
+### Tipo de estructura organizacional
+
+Orientada a proyectos: equipo de 2 integrantes, sin estructura jerárquica formal; las
+decisiones se toman en conjunto.
+
+### Restricciones
+
+- Equipo de desarrollo de 2 integrantes, trabajo acotado a las 14 semanas del curso.
+- Presupuesto estudiantil, dependiente de servicios gratuitos o de bajo costo (APIs de
+  OCR, hosting).
+- Conectividad rural limitada en muchas fincas costarricenses.
+- Interfaz simplificada orientada a productores con baja alfabetización digital.
+- Sustitución o duplicación del registro oficial de Trazar-Agro/SENASA.
 
 ### Registro de interesados
 
