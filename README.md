@@ -366,6 +366,16 @@ Developers) se definen en la Sección 00.
 
 ---
 
+## Sección 11 — Decisiones, cambios y evidencias — integración final
+
+### Decisiones y cambios
+
+### Evidencias
+
+### Preparación de la demostración
+
+---
+
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
