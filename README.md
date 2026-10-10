@@ -328,6 +328,16 @@ completo y la demostración del incremento se realizan en la Semana 11.
 
 ---
 
+## Sección 08 — Riesgos y adquisiciones
+
+### Registro de riesgos
+
+### Respuestas a los riesgos
+
+### Plan de adquisiciones
+
+---
+
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
