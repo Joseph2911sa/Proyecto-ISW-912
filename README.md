@@ -376,6 +376,18 @@ Developers) se definen en la Sección 00.
 
 ---
 
+## Sección 12 — Producto / Incremento final y cierre del proyecto
+
+### Producto / Incremento final
+
+### Informe final
+
+### Demostración del incremento
+
+### Cierre del proyecto
+
+---
+
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
