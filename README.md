@@ -20,7 +20,7 @@ Duración del equipo: 14 semanas, correspondientes a la duración completa del c
 
 ---
 
-## 1. Acta de Inicio (Project Charter)
+## Sección 01 — Problema, oportunidad y Product Goal
 
 ### Justificación del proyecto
 
@@ -81,6 +81,13 @@ que agilice el registro mediante fotografía.
 - Soporte completamente offline; se asume conectividad intermitente, no ausencia total de
   red.
 - Equipo de desarrollo de 2 integrantes, trabajo acotado a las 14 semanas del curso.
+
+### Product Goal
+
+Una plataforma digital de registro y control individual detallado del ganado en Costa
+Rica, organizada por categorías de especie, con cada animal asociado a un propietario
+mediante cédula, código único generado automáticamente y un módulo de IA que agilice el
+registro mediante fotografía.
 
 ---
 
