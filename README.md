@@ -22,7 +22,9 @@ Duración del equipo: 14 semanas, correspondientes a la duración completa del c
 
 ## Sección 01 — Problema, oportunidad y Product Goal
 
-### Justificación del proyecto
+### Acta de Inicio (Project Charter)
+
+#### Justificación del proyecto
 
 En Costa Rica, el sistema nacional de trazabilidad Trazar-Agro está enfocado casi
 exclusivamente en el cumplimiento sanitario y comercial del ganado bovino y porcino, sin
@@ -39,14 +41,14 @@ mediante fotografía (lectura del arete, sugerencia de raza y color/patrón), re
 tiempo y los errores de digitación, especialmente para usuarios con menor destreza
 tecnológica.
 
-### Objetivo general
+#### Objetivo general
 
 Desarrollar una plataforma digital que permita el registro y control individual detallado
 del ganado en Costa Rica, organizado por categorías de especie y asociado a un propietario
 mediante cédula, con generación automática de código único por animal y un módulo de IA
 que agilice el registro mediante fotografía.
 
-### Objetivos específicos
+#### Objetivos específicos
 
 1. Diseñar el modelo de datos multi-especie (bovinos, porcinos, equinos, etc.), incluyendo
    la entidad Propietario (cédula física o jurídica) vinculada a uno o varios animales,
@@ -60,7 +62,7 @@ que agilice el registro mediante fotografía.
    productores reales o simulados, priorizando la accesibilidad para usuarios adultos
    mayores con poca experiencia en plataformas digitales.
 
-### Límites generales del proyecto
+#### Límites generales del proyecto
 
 **Dentro del alcance**
 
