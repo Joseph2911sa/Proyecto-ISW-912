@@ -353,6 +353,41 @@ para usuarios adultos mayores con poca experiencia en plataformas digitales.
 
 ---
 
+## Sección 10 — Comunicación y responsabilidades del equipo
+
+### Matriz de responsabilidades
+
+Los roles y las responsabilidades del Scrum Team (Product Owner, Scrum Master y
+Developers) se definen en la Sección 00.
+
+### Plan de comunicación
+
+### Working Agreements
+
+---
+
+## Sección 11 — Decisiones, cambios y evidencias — integración final
+
+### Decisiones y cambios
+
+### Evidencias
+
+### Preparación de la demostración
+
+---
+
+## Sección 12 — Producto / Incremento final y cierre del proyecto
+
+### Producto / Incremento final
+
+### Informe final
+
+### Demostración del incremento
+
+### Cierre del proyecto
+
+---
+
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
