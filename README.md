@@ -338,6 +338,21 @@ completo y la demostración del incremento se realizan en la Semana 11.
 
 ---
 
+## Sección 09 — Calidad y Definition of Done
+
+### Criterios de calidad
+
+Toda sugerencia generada por el módulo de IA puede corregirse manualmente.
+
+### Definition of Done
+
+### Estrategia de validación
+
+La interfaz se valida con productores reales o simulados, priorizando la accesibilidad
+para usuarios adultos mayores con poca experiencia en plataformas digitales.
+
+---
+
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
