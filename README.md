@@ -210,6 +210,51 @@ quadrantChart
 
 ---
 
+## Sección 04 — Ciclo de vida del proyecto y primer Sprint
+
+### Ciclo de vida del proyecto
+
+El proyecto nace del problema descrito en la Sección 01: el sistema nacional Trazar-Agro
+cubre el cumplimiento sanitario y comercial, pero los productores no cuentan con una
+herramienta propia, detallada y fácil de usar para el control individual de cada animal.
+
+La fecha de la entrega oficial es fija (Semana 11) y el alcance se construye de forma
+adaptativa mediante 5 Sprints de 2 semanas, por lo que el ciclo de vida del proyecto es
+híbrido.
+
+El trabajo avanza por tres líneas, tomadas de los objetivos específicos:
+
+1. Modelo de datos y registro individual: modelo multi-especie, propietario por cédula,
+   ficha por animal y código único.
+2. Módulo de asistencia por IA: lectura del arete mediante OCR y sugerencia de raza y
+   color/patrón, con corrección manual.
+3. Interfaz simple y validación: pasos guiados y mínima digitación, validados con
+   productores reales o simulados.
+
+El cierre del proyecto consiste en la entrega oficial del Expediente completo, la
+demostración del incremento y la defensa ante el docente en la Semana 11.
+
+### Primer Sprint
+
+**Duración:** 2 semanas (Sprint 1 de 5).
+
+**Sprint Goal:** Permitir al productor registrar un animal asociado a un propietario
+identificado por cédula, con su código único generado automáticamente, y consultar su
+ficha. Todo lo demás queda para futuros Sprints.
+
+**Historias que se atacan primero**
+
+- HU-01 Registro de propietario por cédula.
+- HU-02 Registro de animal asociado a un propietario.
+- HU-03 Código único por animal.
+- HU-04 Consulta de la ficha del animal.
+
+**Por qué estas historias:** son la base de la que dependen las demás. Sin propietario y
+animal registrados no hay a qué asociar la fotografía, la lectura del arete ni las
+sugerencias del módulo de IA.
+
+---
+
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
