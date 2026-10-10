@@ -139,8 +139,9 @@ decisiones se toman en conjunto.
 - Presupuesto estudiantil, dependiente de servicios gratuitos o de bajo costo (APIs de
   OCR, hosting).
 - Conectividad rural limitada en muchas fincas costarricenses.
-- Interfaz simplificada orientada a productores con baja alfabetización digital.
-- Sustitución o duplicación del registro oficial de Trazar-Agro/SENASA.
+- Perfil demográfico del usuario final (productores adultos mayores, baja alfabetización
+  digital), que condiciona el diseño de la interfaz.
+- El proyecto complementa, sin duplicar, el sistema oficial.
 
 ---
 
