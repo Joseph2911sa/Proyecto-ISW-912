@@ -313,6 +313,21 @@ límites generales del proyecto se detallan en la Sección 01.
 
 ---
 
+## Sección 07 — Planificación temporal, estimaciones y costos
+
+### Plan temporal
+
+### Estimaciones
+
+### Cronograma de entregas
+
+El proyecto se organiza en 5 Sprints de 2 semanas. La entrega oficial del Expediente
+completo y la demostración del incremento se realizan en la Semana 11.
+
+### Costos
+
+---
+
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
