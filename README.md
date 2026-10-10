@@ -297,6 +297,22 @@ seguimiento al Sprint Backlog.
 
 ---
 
+## Sección 06 — Alcance, Product Backlog priorizado y criterios de aceptación
+
+### Declaración de alcance
+
+El alcance incluye el registro y control individual del ganado multi-especie, la asociación
+de cada animal a un propietario mediante cédula, la generación automática del código único
+y el módulo de IA/OCR para la lectura del arete y la sugerencia de raza y color/patrón.
+Excluye la sustitución o duplicación del registro oficial de Trazar-Agro/SENASA. Los
+límites generales del proyecto se detallan en la Sección 01.
+
+### Product Backlog priorizado
+
+### Criterios de aceptación
+
+---
+
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
