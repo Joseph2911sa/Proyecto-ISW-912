@@ -151,14 +151,32 @@ decisiones se toman en conjunto.
 
 ### Registro de interesados
 
-| Interesado | Rol / relación | Necesidad | Poder (1-5) | Interés (1-5) | Actitud | Estrategia |
-|---|---|---|---|---|---|---|
-| Productores pequeños/medianos | Usuarios principales | Control simple y rápido de su ganado | 2 | 5 | Favorable | Informar y validar la interfaz con ellos |
-| Productores adultos mayores | Segmento crítico de usuarios | Interfaz sencilla, mínima digitación | 2 | 5 | Mixta | Involucrar en pruebas de usabilidad tempranas |
-| SENASA / Trazar-Agro | Entidad reguladora / sistema nacional | Que el proyecto no duplique ni interfiera con el registro oficial | 5 | 3 | Neutral | Mantener informado; diseñar como complemento |
-| Equipo desarrollador | Responsables del proyecto | Cumplir los objetivos del curso y del producto | 5 | 5 | Favorable | Gestionar de cerca |
-| Profesor del curso | Evaluador / patrocinador académico | Evidencia de aplicación correcta de los conceptos del curso | 4 | 4 | Favorable | Mantener informado con avances semanales |
-| Proveedor de servicio OCR/IA | Tercero tecnológico | Uso correcto de su API/servicio | 2 | 2 | Neutral | Monitorear disponibilidad y costos |
+| Interesado | Rol / relación | Necesidad | Poder (1-5) | Interés (1-5) | Actitud | Estrategia | Responsable |
+|---|---|---|---|---|---|---|---|
+| Productores pequeños/medianos | Usuarios principales | Control simple y rápido de su ganado | 2 | 5 | Favorable | Informar y validar la interfaz con ellos | Marco López Quesada |
+| Productores adultos mayores | Segmento crítico de usuarios | Interfaz sencilla, mínima digitación | 2 | 5 | Mixta | Involucrar en pruebas de usabilidad tempranas | Marco López Quesada |
+| SENASA / Trazar-Agro | Entidad reguladora / sistema nacional | Que el proyecto no duplique ni interfiera con el registro oficial | 5 | 3 | Neutral | Mantener informado; diseñar como complemento | Joseph Salazar Araya |
+| Equipo desarrollador | Responsables del proyecto | Cumplir los objetivos del curso y del producto | 5 | 5 | Favorable | Gestionar de cerca | Marco López Quesada y Joseph Salazar Araya |
+| Profesor del curso | Evaluador / patrocinador académico | Evidencia de aplicación correcta de los conceptos del curso | 4 | 4 | Favorable | Mantener informado con avances semanales | Joseph Salazar Araya |
+| Proveedor de servicio OCR/IA | Tercero tecnológico | Uso correcto de su API/servicio | 2 | 2 | Neutral | Monitorear disponibilidad y costos | Joseph Salazar Araya |
+| Cooperativas y asociaciones de productores | Canal de difusión entre productores | Que la herramienta sea útil para sus asociados y fácil de recomendar | 3 | 4 | Favorable | Mantener informado y consultar sobre la difusión | Marco López Quesada |
+| Médicos veterinarios y asistentes técnicos | Usuarios secundarios; apoyo a los productores | Consultar con claridad los datos individuales de cada animal | 2 | 3 | Neutral | Monitorear y considerar su opinión sobre los datos de la ficha | Marco López Quesada |
+| Entidad de protección de datos personales | Entidad reguladora | Que el manejo de la cédula del propietario cumpla la normativa | 4 | 2 | Neutral | Mantener satisfecho; aplicar la normativa en el diseño de los datos | Joseph Salazar Araya |
+
+### Justificación de las valoraciones discutibles
+
+- **SENASA / Trazar-Agro (poder 5, interés 3):** su normativa y su sistema oficial pueden
+  condicionar el diseño del producto, por eso el poder es alto; el interés es moderado
+  porque la plataforma es una herramienta de uso interno del productor que complementa el
+  sistema oficial y no sustituye ningún trámite.
+- **Productores adultos mayores (poder 2, actitud mixta):** su poder de decisión sobre el
+  proyecto es bajo, pero de su adopción depende el cumplimiento del tercer objetivo
+  específico; la actitud es mixta por su poca familiaridad con plataformas digitales.
+- **Cooperativas y asociaciones de productores (poder 3, interés 4):** no deciden el alcance
+  del producto, pero pueden facilitar o dificultar su difusión entre los asociados.
+- **Entidad de protección de datos personales (poder 4, interés 2):** puede exigir el
+  cumplimiento de la normativa sobre la cédula del propietario, pero no sigue de cerca el
+  avance del proyecto.
 
 ### Mapa Poder-Interés
 
@@ -177,7 +195,18 @@ quadrantChart
     Equipo desarrollador: [0.9, 0.9]
     Profesor del curso: [0.65, 0.7]
     Proveedor OCR/IA: [0.25, 0.3]
+    Cooperativas y asociaciones: [0.65, 0.48]
+    Medicos veterinarios: [0.45, 0.30]
+    Entidad de proteccion de datos: [0.25, 0.70]
 ```
+
+### Interesados críticos
+
+| Interesado crítico | Por qué es crítico | Forma de involucramiento |
+|---|---|---|
+| Productores adultos mayores | De su adopción depende el cumplimiento del tercer objetivo específico y es el segmento con menor familiaridad tecnológica. | Pruebas de usabilidad tempranas del registro guiado con productores reales o simulados; sus observaciones se incorporan al Product Backlog y se revisan al cierre de cada Sprint. |
+| SENASA / Trazar-Agro | Su normativa y su sistema oficial determinan que el producto sea un complemento y no un duplicado del registro oficial. | Consulta de su información pública al definir cada Sprint, para confirmar que el alcance complementa el registro oficial sin duplicarlo. |
+| Profesor del curso | Evalúa cada entrega del Expediente, del repositorio y de la demostración. | Avance semanal del Expediente y del repositorio, y atención de su retroalimentación en el Sprint siguiente. |
 
 ---
 
