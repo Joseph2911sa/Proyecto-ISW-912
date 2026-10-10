@@ -391,7 +391,7 @@ Developers) se definen en la Sección 00.
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
-  material de Lección 1, Lección 2 y Semana 2.
+  material de Lección 1, Lección 2, Semana 2, Semana 3 y Semana 4.
 - Project Management Institute. *A Guide to the Project Management Body of Knowledge
   (PMBOK® Guide), Eighth Edition.*
 - Schwaber, K. & Sutherland, J. *The Scrum Guide.* November 2020.
