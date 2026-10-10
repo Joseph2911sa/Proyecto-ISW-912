@@ -210,6 +210,93 @@ quadrantChart
 
 ---
 
+## Sección 04 — Ciclo de vida del proyecto y primer Sprint
+
+### Ciclo de vida del proyecto
+
+El proyecto nace del problema descrito en la Sección 01: el sistema nacional Trazar-Agro
+cubre el cumplimiento sanitario y comercial, pero los productores no cuentan con una
+herramienta propia, detallada y fácil de usar para el control individual de cada animal.
+
+La fecha de la entrega oficial es fija (Semana 11) y el alcance se construye de forma
+adaptativa mediante 5 Sprints de 2 semanas, por lo que el ciclo de vida del proyecto es
+híbrido.
+
+El trabajo avanza por tres líneas, tomadas de los objetivos específicos:
+
+1. Modelo de datos y registro individual: modelo multi-especie, propietario por cédula,
+   ficha por animal y código único.
+2. Módulo de asistencia por IA: lectura del arete mediante OCR y sugerencia de raza y
+   color/patrón, con corrección manual.
+3. Interfaz simple y validación: pasos guiados y mínima digitación, validados con
+   productores reales o simulados.
+
+El cierre del proyecto consiste en la entrega oficial del Expediente completo, la
+demostración del incremento y la defensa ante el docente en la Semana 11.
+
+### Primer Sprint
+
+**Duración:** 2 semanas (Sprint 1 de 5).
+
+**Sprint Goal:** Permitir al productor registrar un animal asociado a un propietario
+identificado por cédula, con su código único generado automáticamente, y consultar su
+ficha. Todo lo demás queda para futuros Sprints.
+
+**Historias que se atacan primero**
+
+- HU-01 Registro de propietario por cédula.
+- HU-02 Registro de animal asociado a un propietario.
+- HU-03 Código único por animal.
+- HU-04 Consulta de la ficha del animal.
+
+**Por qué estas historias:** son la base de la que dependen las demás. Sin propietario y
+animal registrados no hay a qué asociar la fotografía, la lectura del arete ni las
+sugerencias del módulo de IA.
+
+---
+
+## Sección 05 — Backlog inicial y Sprint Backlog
+
+### Backlog inicial
+
+El backlog está ordenado por valor para el productor y por dependencia entre historias.
+
+| ID | Historia de usuario | Prioridad |
+|---|---|---|
+| HU-01 | Como productor, quiero registrar a un propietario por su cédula física o jurídica para asociarle sus animales. | Alta |
+| HU-02 | Como productor, quiero registrar un animal en su categoría de especie, asociado a un propietario, para llevar su control individual. | Alta |
+| HU-03 | Como productor, quiero que cada animal reciba un código único generado automáticamente para identificarlo sin duplicados. | Alta |
+| HU-04 | Como productor, quiero consultar la ficha de un animal registrado para ver sus datos. | Alta |
+| HU-05 | Como productor, quiero administrar varios animales de un mismo propietario desde una sola cuenta. | Media |
+| HU-06 | Como productor, quiero completar la ficha detallada del animal con su salud, peso y reproducción. | Media |
+| HU-07 | Como productor, quiero adjuntar una fotografía opcional del animal. | Media |
+| HU-08 | Como productor, quiero que la plataforma lea el número de arete a partir de la fotografía (OCR) para reducir errores de digitación. | Media |
+| HU-09 | Como productor, quiero recibir sugerencias de raza y de color/patrón de pelaje a partir de la fotografía para completar la ficha con menos esfuerzo. | Media |
+| HU-10 | Como productor, quiero corregir manualmente los datos sugeridos por el módulo de IA. | Media |
+| HU-11 | Como productor, quiero registrar un animal mediante pasos guiados y con mínima digitación. | Media |
+| HU-12 | Como productor, quiero que, si el animal ya está registrado oficialmente, el número de arete se use como referencia para complementar su ficha sin duplicar el registro oficial. | Media |
+
+### Sprint Backlog del primer Sprint
+
+**Sprint Goal:** Permitir al productor registrar un animal asociado a un propietario
+identificado por cédula, con su código único generado automáticamente, y consultar su
+ficha.
+
+| Historia | Plan de entrega |
+|---|---|
+| HU-01 | Definir los datos del propietario (cédula física o jurídica) y su registro. |
+| HU-02 | Definir la ficha del animal por categoría de especie y su registro asociado a un propietario. |
+| HU-03 | Definir la regla de generación automática del código único. |
+| HU-04 | Mostrar la ficha del animal registrado con sus datos. |
+
+### Mecanismo de seguimiento
+
+El Sprint Backlog se sigue en un tablero con las columnas Por hacer, En curso y Hecho, que
+se actualiza en un Daily Scrum breve. El Scrum Master organiza el Daily Scrum y da
+seguimiento al Sprint Backlog.
+
+---
+
 ## Bibliografía y fuentes base
 
 - Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
