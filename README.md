@@ -309,7 +309,169 @@ límites generales del proyecto se detallan en la Sección 01.
 
 ### Product Backlog priorizado
 
+El orden refleja el valor para el productor y la dependencia entre historias. La
+estimación se expresa en puntos de historia (secuencia de Fibonacci).
+
+| Orden | ID | Historia | Prioridad | Estimación (puntos) |
+|---|---|---|---|---|
+| 1 | HU-01 | Registro de propietario por cédula | Alta | 3 |
+| 2 | HU-02 | Registro de animal asociado a un propietario | Alta | 5 |
+| 3 | HU-03 | Código único por animal | Alta | 3 |
+| 4 | HU-04 | Consulta de la ficha del animal | Alta | 3 |
+| 5 | HU-05 | Varios animales por propietario | Media | 3 |
+| 6 | HU-06 | Ficha detallada del animal | Media | 8 |
+| 7 | HU-07 | Fotografía opcional del animal | Media | 3 |
+| 8 | HU-08 | Lectura del número de arete (OCR) | Media | 8 |
+| 9 | HU-09 | Sugerencia de raza y color/patrón | Media | 8 |
+| 10 | HU-10 | Corrección manual de lo sugerido por la IA | Media | 3 |
+| 11 | HU-11 | Registro guiado con mínima digitación | Media | 5 |
+| 12 | HU-12 | Arete como referencia del registro oficial | Media | 5 |
+
 ### Criterios de aceptación
+
+#### HU-01 — Registro de propietario por cédula
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Registrar a un propietario por su cédula física o jurídica |
+| Para | Asociarle sus animales |
+| Criterios de aceptación | 1. *Dado que* el productor ingresa una cédula física o jurídica que no está registrada, *cuando* guarda el propietario, *entonces* el sistema crea el registro del propietario.<br>2. *Dado que* ya existe un propietario con esa cédula, *cuando* el productor intenta registrarlo de nuevo, *entonces* el sistema no crea un duplicado e informa que ya está registrado.<br>3. *Dado que* el productor no ingresa la cédula, *cuando* intenta guardar, *entonces* el sistema no registra al propietario y solicita completar el dato. |
+| Prioridad | Alta |
+| Estimación | 3 puntos |
+| Notas | Sin dependencias previas. |
+
+#### HU-02 — Registro de animal asociado a un propietario
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Registrar un animal en su categoría de especie, asociado a un propietario |
+| Para | Llevar su control individual |
+| Criterios de aceptación | 1. *Dado que* existe un propietario registrado, *cuando* el productor registra un animal indicando su categoría de especie y el propietario, *entonces* el animal queda registrado y asociado a ese propietario.<br>2. *Dado que* falta la especie o el propietario, *cuando* el productor intenta guardar, *entonces* el sistema no registra el animal y señala el dato faltante. |
+| Prioridad | Alta |
+| Estimación | 5 puntos |
+| Notas | Depende de HU-01. |
+
+#### HU-03 — Código único por animal
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Que cada animal reciba un código único generado automáticamente |
+| Para | Identificarlo sin duplicados |
+| Criterios de aceptación | 1. *Dado que* se registra un animal, *cuando* se guarda, *entonces* el sistema le asigna un código único generado automáticamente.<br>2. *Dado que* ya existen animales con código asignado, *cuando* se registra otro animal, *entonces* su código es distinto de todos los existentes. |
+| Prioridad | Alta |
+| Estimación | 3 puntos |
+| Notas | Depende de HU-02. |
+
+#### HU-04 — Consulta de la ficha del animal
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Consultar la ficha de un animal registrado |
+| Para | Ver sus datos |
+| Criterios de aceptación | 1. *Dado que* el animal está registrado, *cuando* el productor consulta su ficha, *entonces* el sistema muestra su código único, su especie y su propietario. |
+| Prioridad | Alta |
+| Estimación | 3 puntos |
+| Notas | Depende de HU-02 y HU-03. |
+
+#### HU-05 — Varios animales por propietario
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Administrar varios animales de un mismo propietario desde una sola cuenta |
+| Para | Llevar el control de todo su ganado en un solo lugar |
+| Criterios de aceptación | 1. *Dado que* un propietario tiene animales registrados, *cuando* el productor consulta a ese propietario, *entonces* el sistema muestra la lista de todos sus animales.<br>2. *Dado que* el productor registra otro animal para el mismo propietario, *cuando* lo guarda, *entonces* el animal aparece en la lista junto con los anteriores. |
+| Prioridad | Media |
+| Estimación | 3 puntos |
+| Notas | Depende de HU-01 y HU-02. |
+
+#### HU-06 — Ficha detallada del animal
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Completar la ficha detallada del animal con su salud, peso y reproducción |
+| Para | Llevar el historial de cada animal |
+| Criterios de aceptación | 1. *Dado que* el animal está registrado, *cuando* el productor completa datos de salud, peso o reproducción y guarda, *entonces* la ficha conserva esos datos.<br>2. *Dado que* la ficha tiene datos de salud, peso o reproducción, *cuando* el productor la consulta, *entonces* el sistema los muestra junto con los datos básicos del animal. |
+| Prioridad | Media |
+| Estimación | 8 puntos |
+| Notas | Depende de HU-02. |
+
+#### HU-07 — Fotografía opcional del animal
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Adjuntar una fotografía opcional del animal |
+| Para | Identificarlo visualmente en su ficha |
+| Criterios de aceptación | 1. *Dado que* el productor registra un animal, *cuando* no adjunta fotografía, *entonces* el registro se completa sin ella.<br>2. *Dado que* el productor adjunta una fotografía, *cuando* guarda el registro, *entonces* la fotografía queda asociada a la ficha y se muestra al consultarla. |
+| Prioridad | Media |
+| Estimación | 3 puntos |
+| Notas | Depende de HU-02. |
+
+#### HU-08 — Lectura del número de arete (OCR)
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Que la plataforma lea el número de arete a partir de la fotografía (OCR) |
+| Para | Reducir errores de digitación |
+| Criterios de aceptación | 1. *Dado que* la fotografía muestra un arete legible, *cuando* el productor solicita la lectura, *entonces* el sistema sugiere el número de arete detectado.<br>2. *Dado que* el sistema no logra leer el arete, *cuando* termina el proceso, *entonces* informa que no se detectó el número y permite ingresarlo manualmente. |
+| Prioridad | Media |
+| Estimación | 8 puntos |
+| Notas | Depende de HU-07. |
+
+#### HU-09 — Sugerencia de raza y color/patrón
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Recibir sugerencias de raza y de color/patrón de pelaje a partir de la fotografía |
+| Para | Completar la ficha con menos esfuerzo |
+| Criterios de aceptación | 1. *Dado que* el animal tiene fotografía, *cuando* el productor solicita la sugerencia, *entonces* el sistema propone una raza y un color/patrón de pelaje como apoyo al llenado de la ficha.<br>2. *Dado que* el sistema no logra proponer una raza o un color/patrón, *cuando* termina el proceso, *entonces* el productor puede completar esos datos manualmente. |
+| Prioridad | Media |
+| Estimación | 8 puntos |
+| Notas | Depende de HU-07. |
+
+#### HU-10 — Corrección manual de lo sugerido por la IA
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Corregir manualmente los datos sugeridos por el módulo de IA |
+| Para | Asegurar que los datos de la ficha sean correctos |
+| Criterios de aceptación | 1. *Dado que* el módulo de IA sugirió el número de arete, la raza o el color/patrón, *cuando* el productor modifica cualquiera de esos valores, *entonces* la ficha guarda el valor corregido y no la sugerencia.<br>2. *Dado que* el módulo de IA sugirió valores, *cuando* el productor los confirma, *entonces* la ficha guarda los valores confirmados. |
+| Prioridad | Media |
+| Estimación | 3 puntos |
+| Notas | Depende de HU-08 y HU-09. |
+
+#### HU-11 — Registro guiado con mínima digitación
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Registrar un animal mediante pasos guiados y con mínima digitación |
+| Para | Hacerlo sin dificultad aunque tenga poca experiencia con plataformas digitales |
+| Criterios de aceptación | 1. *Dado que* el productor inicia el registro de un animal, *cuando* avanza en el proceso, *entonces* el sistema lo conduce por pasos guiados.<br>2. *Dado que* un dato tiene opciones definidas, como la categoría de especie, *cuando* el productor lo completa, *entonces* lo selecciona de una lista en lugar de digitarlo. |
+| Prioridad | Media |
+| Estimación | 5 puntos |
+| Notas | Depende de HU-02. |
+
+#### HU-12 — Arete como referencia del registro oficial
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Que, si el animal ya está registrado oficialmente, el número de arete se use como referencia |
+| Para | Complementar su ficha sin duplicar el registro oficial |
+| Criterios de aceptación | 1. *Dado que* el animal ya está registrado oficialmente, *cuando* el productor registra el animal con su número de arete, *entonces* el número de arete se guarda como referencia en la ficha.<br>2. *Dado que* el animal no está registrado oficialmente, *cuando* el productor lo registra con su número de arete, *entonces* el número sirve de base para iniciar la ficha.<br>3. *Dado que* el animal se registra en la plataforma, *cuando* se guarda la ficha, *entonces* el registro oficial de Trazar-Agro/SENASA no se duplica ni se modifica. |
+| Prioridad | Media |
+| Estimación | 5 puntos |
+| Notas | Depende de HU-02 y HU-08. |
 
 ---
 
