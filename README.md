@@ -326,14 +326,14 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 |---|---|---|---|---|
 | 1 | HU-01 | Registro de propietario por cédula | Alta | 3 |
 | 2 | HU-02 | Registro de animal asociado a un propietario | Alta | 5 |
-| 3 | HU-03 | Código único por animal | Alta | 3 |
-| 4 | HU-04 | Consulta de la ficha del animal | Alta | 3 |
-| 5 | HU-05 | Varios animales por propietario | Media | 3 |
+| 3 | HU-03 | Código único por animal | Alta | 2 |
+| 4 | HU-04 | Consulta de la ficha del animal | Alta | 2 |
+| 5 | HU-05 | Varios animales por propietario | Media | 2 |
 | 6 | HU-06 | Ficha detallada del animal | Media | 8 |
 | 7 | HU-07 | Fotografía opcional del animal | Media | 3 |
 | 8 | HU-08 | Lectura del número de arete (OCR) | Media | 8 |
-| 9 | HU-09 | Sugerencia de raza y color/patrón | Media | 8 |
-| 10 | HU-10 | Corrección manual de lo sugerido por la IA | Media | 3 |
+| 9 | HU-09 | Sugerencia de raza y color/patrón | Media | 13 |
+| 10 | HU-10 | Corrección manual de lo sugerido por la IA | Media | 2 |
 | 11 | HU-11 | Registro guiado con mínima digitación | Media | 5 |
 | 12 | HU-12 | Arete como referencia del registro oficial | Media | 5 |
 
@@ -372,7 +372,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Para | Identificarlo sin duplicados |
 | Criterios de aceptación | 1. *Dado que* se registra un animal, *cuando* se guarda, *entonces* el sistema le asigna un código único generado automáticamente.<br>2. *Dado que* ya existen animales con código asignado, *cuando* se registra otro animal, *entonces* su código es distinto de todos los existentes. |
 | Prioridad | Alta |
-| Estimación | 3 puntos |
+| Estimación | 2 puntos |
 | Notas | Depende de HU-02. |
 
 #### HU-04 — Consulta de la ficha del animal
@@ -384,7 +384,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Para | Ver sus datos |
 | Criterios de aceptación | 1. *Dado que* el animal está registrado, *cuando* el productor consulta su ficha, *entonces* el sistema muestra su código único, su especie y su propietario. |
 | Prioridad | Alta |
-| Estimación | 3 puntos |
+| Estimación | 2 puntos |
 | Notas | Depende de HU-02 y HU-03. |
 
 #### HU-05 — Varios animales por propietario
@@ -396,7 +396,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Para | Llevar el control de todo su ganado en un solo lugar |
 | Criterios de aceptación | 1. *Dado que* un propietario tiene animales registrados, *cuando* el productor consulta a ese propietario, *entonces* el sistema muestra la lista de todos sus animales.<br>2. *Dado que* el productor registra otro animal para el mismo propietario, *cuando* lo guarda, *entonces* el animal aparece en la lista junto con los anteriores. |
 | Prioridad | Media |
-| Estimación | 3 puntos |
+| Estimación | 2 puntos |
 | Notas | Depende de HU-01 y HU-02. |
 
 #### HU-06 — Ficha detallada del animal
@@ -444,7 +444,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Para | Completar la ficha con menos esfuerzo |
 | Criterios de aceptación | 1. *Dado que* el animal tiene fotografía, *cuando* el productor solicita la sugerencia, *entonces* el sistema propone una raza y un color/patrón de pelaje como apoyo al llenado de la ficha.<br>2. *Dado que* el sistema no logra proponer una raza o un color/patrón, *cuando* termina el proceso, *entonces* el productor puede completar esos datos manualmente. |
 | Prioridad | Media |
-| Estimación | 8 puntos |
+| Estimación | 13 puntos |
 | Notas | Depende de HU-07. |
 
 #### HU-10 — Corrección manual de lo sugerido por la IA
@@ -456,7 +456,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Para | Asegurar que los datos de la ficha sean correctos |
 | Criterios de aceptación | 1. *Dado que* el módulo de IA sugirió el número de arete, la raza o el color/patrón, *cuando* el productor modifica cualquiera de esos valores, *entonces* la ficha guarda el valor corregido y no la sugerencia.<br>2. *Dado que* el módulo de IA sugirió valores, *cuando* el productor los confirma, *entonces* la ficha guarda los valores confirmados. |
 | Prioridad | Media |
-| Estimación | 3 puntos |
+| Estimación | 2 puntos |
 | Notas | Depende de HU-08 y HU-09. |
 
 #### HU-11 — Registro guiado con mínima digitación
@@ -490,6 +490,67 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 ### Plan temporal
 
 ### Estimaciones
+
+#### Técnica y escala
+
+Las historias de usuario se estiman con planning poker, en puntos de historia con la
+secuencia de Fibonacci. Un punto mide el tamaño relativo de la historia (esfuerzo,
+complejidad e incertidumbre), no horas. La historia de referencia es HU-01 (3 puntos) y
+cada historia se compara con ella.
+
+| Puntos | Tamaño | Uso |
+|---|---|---|
+| 1 | Trivial | Cambio mínimo, sin riesgo |
+| 2 | Pequeña | Tarea simple y conocida |
+| 3 | Mediana | Historia de referencia del equipo |
+| 5 | Grande | Más partes que conectar o probar |
+| 8 | Muy grande | Mucha complejidad o incertidumbre |
+| 13 | Dividir | Esconde varias historias |
+
+#### Matriz de estimación
+
+| ID | Historia | Puntos | Prioridad | Dependencias | Justificación |
+|---|---|---|---|---|---|
+| HU-01 | Registro de propietario por cédula | 3 | Alta | Ninguna | Historia de referencia. Acepta dos tipos de cédula y no permite duplicar propietarios; incluye montar la base de datos y la estructura del proyecto, lo que pesa para un equipo junior. |
+| HU-02 | Registro de animal asociado a un propietario | 5 | Alta | HU-01 | Más grande que HU-01 sin llegar al doble: depende del propietario, maneja las categorías de especie, valida que no falten la especie ni el propietario y asocia varios animales a una cédula. No lleva IA, fotografías ni tecnología desconocida. |
+| HU-03 | Código único por animal | 2 | Alta | HU-02 | Una sola regla: generar el código al guardar el animal y garantizar que no se repita. Menor que HU-01 porque no monta estructura nueva. |
+| HU-04 | Consulta de la ficha del animal | 2 | Alta | HU-02, HU-03 | Muestra datos ya registrados (código, especie y propietario); no valida ni guarda información. |
+| HU-05 | Varios animales por propietario | 2 | Media | HU-01, HU-02 | La asociación entre animal y propietario ya existe desde HU-02; se agrega la lista de animales del propietario. |
+| HU-06 | Ficha detallada del animal | 8 | Media | HU-02 | Tres grupos de datos distintos (salud, peso y reproducción) que se guardan y se muestran, con mucha incertidumbre sobre los datos concretos de cada grupo. |
+| HU-07 | Fotografía opcional del animal | 3 | Media | HU-02 | Similar a HU-01: además de guardar, maneja la carga y el almacenamiento de imágenes, algo nuevo para el equipo. |
+| HU-08 | Lectura del número de arete (OCR) | 8 | Media | HU-07 | Integra un servicio de OCR desconocido para el equipo, depende de la calidad de la fotografía y debe manejar el caso en que el arete no se lee. |
+| HU-09 | Sugerencia de raza y color/patrón | 13 | Media | HU-07 | Dos sugerencias distintas a partir de la fotografía, para varias especies, con un servicio de IA desconocido para el equipo. Esconde dos historias. |
+| HU-10 | Corrección manual de lo sugerido por la IA | 2 | Media | HU-08, HU-09 | Los campos sugeridos se muestran editables antes de guardar; reutiliza el registro existente. |
+| HU-11 | Registro guiado con mínima digitación | 5 | Media | HU-02 | Reorganiza todo el registro en pasos y listas de selección, y requiere ajustes después de validar con productores. |
+| HU-12 | Arete como referencia del registro oficial | 5 | Media | HU-02, HU-08 | Guarda el arete como referencia y distingue si el animal está registrado oficialmente, sin duplicar ni modificar el registro oficial; hay incertidumbre en la relación con Trazar-Agro. |
+
+**Total del Product Backlog:** 58 puntos.
+
+#### Desglose por línea de trabajo
+
+| Línea de trabajo | Historias | Puntos |
+|---|---|---|
+| Modelo de datos y registro individual | HU-01, HU-02, HU-03, HU-04, HU-05, HU-06, HU-07, HU-12 | 30 |
+| Módulo de asistencia por IA | HU-08, HU-09, HU-10 | 23 |
+| Interfaz simple y validación | HU-11 | 5 |
+| Total | | 58 |
+
+#### Historias para dividir
+
+| Historia | Puntos | División |
+|---|---|---|
+| HU-09 | 13 | Sugerencia de raza a partir de la fotografía; sugerencia de color/patrón de pelaje a partir de la fotografía. |
+
+#### Supuestos y riesgos de la estimación
+
+- El OCR y la IA se consumen como servicios externos; si se requiere entrenar un modelo
+  propio, HU-08 y HU-09 se reestiman.
+- HU-05 no incluye inicio de sesión ni gestión de usuarios.
+- HU-12 no incluye conexión directa con los sistemas de Trazar-Agro/SENASA.
+- Los datos concretos de salud, peso y reproducción de HU-06 se definen antes del Sprint
+  en que se desarrolle; si son más de los previstos, se reestima.
+- El equipo es junior: las primeras historias cargan con la curva de aprendizaje de las
+  herramientas.
 
 ### Cronograma de entregas
 
