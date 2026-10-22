@@ -276,7 +276,9 @@ El backlog está ordenado por valor para el productor y por dependencia entre hi
 | HU-11 | Como productor, quiero registrar un animal mediante pasos guiados y con mínima digitación. | Media |
 | HU-12 | Como productor, quiero que, si el animal ya está registrado oficialmente, el número de arete se use como referencia para complementar su ficha sin duplicar el registro oficial. | Media |
 
-### Sprint Backlog del primer Sprint
+### Sprint Backlog
+
+#### Sprint 1
 
 **Sprint Goal:** Permitir al productor registrar un animal asociado a un propietario
 identificado por cédula, con su código único generado automáticamente, y consultar su
@@ -288,6 +290,14 @@ ficha.
 | HU-02 | Definir la ficha del animal por categoría de especie y su registro asociado a un propietario. |
 | HU-03 | Definir la regla de generación automática del código único. |
 | HU-04 | Mostrar la ficha del animal registrado con sus datos. |
+
+#### Sprint 2
+
+#### Sprint 3
+
+#### Sprint 4
+
+#### Sprint 5
 
 ### Mecanismo de seguimiento
 
@@ -485,6 +495,16 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 
 El proyecto se organiza en 5 Sprints de 2 semanas. La entrega oficial del Expediente
 completo y la demostración del incremento se realizan en la Semana 11.
+
+#### Sprint 1
+
+#### Sprint 2
+
+#### Sprint 3
+
+#### Sprint 4
+
+#### Sprint 5
 
 ### Costos
 
