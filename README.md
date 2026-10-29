@@ -14,7 +14,9 @@ Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 
 |---|---|---|
 | Product Owner | Marco López Quesada | Define y prioriza el Product Backlog; representa la visión del producto y las necesidades de los productores; decide qué se construye en cada Sprint. |
 | Scrum Master | Joseph Salazar Araya | Facilita el proceso Scrum; da seguimiento al Sprint Backlog; elimina obstáculos del equipo; organiza Sprint Planning, Daily Scrum, Sprint Review y Retrospective. |
-| Developers | Marco López Quesada y Joseph Salazar Araya | Diseñan, construyen, prueban e integran la solución técnica: modelo de datos, interfaz y módulo de IA/OCR. |
+| Developer 1 | Marco López Quesada | Modelo de datos y registro individual: modelo multi-especie, propietario por cédula, ficha por animal y código único. |
+| Developer 2 | Joseph Salazar Araya | Módulo de asistencia por IA: lectura del arete mediante OCR y sugerencia de raza y color/patrón, con corrección manual. |
+| Developer 3 | Marco López Quesada | Interfaz simple y validación: pasos guiados y mínima digitación, validados con productores reales o simulados. |
 
 Duración del equipo: 14 semanas, correspondientes a la duración completa del curso.
 
@@ -82,7 +84,7 @@ que agilice el registro mediante fotografía.
   fase.
 - Soporte completamente offline; se asume conectividad intermitente, no ausencia total de
   red.
-- Equipo de desarrollo de 2 integrantes, trabajo acotado a las 14 semanas del curso.
+- Scrum Team de 5 integrantes, trabajo acotado a las 14 semanas del curso.
 
 ### Product Goal
 
@@ -105,7 +107,7 @@ registro mediante fotografía.
 | Solución | Plataforma multi-especie con ficha por animal, código único, asociación a propietario por cédula y módulo de IA/OCR para lectura de arete y sugerencia de raza/color-patrón. |
 | Canales | Aplicación web/móvil; difusión a través de cooperativas y asociaciones de productores agropecuarios. |
 | Flujos de ingreso | Proyecto académico, sin modelo de ingresos definido en esta etapa. |
-| Estructura de costos | Tiempo de desarrollo del equipo (2 estudiantes); hosting; costo de servicios de OCR/IA en la nube. |
+| Estructura de costos | Tiempo de desarrollo del equipo (5 integrantes del Scrum Team); hosting; costo de servicios de OCR/IA en la nube. |
 | Métricas clave | Número de animales registrados; tasa de precisión del OCR; tasa de adopción en pruebas con usuarios reales o simulados. |
 | Ventaja injusta | Diseño construido específicamente para el contexto costarricense (conectividad limitada, usuarios adultos mayores) e integración conceptual con Trazar-Agro/SENASA. |
 
@@ -113,8 +115,8 @@ registro mediante fotografía.
 
 **Internos**
 
-- Equipo de 2 desarrolladores (Marco y Joseph), sin estructura jerárquica formal; las
-  decisiones se toman en conjunto.
+- Scrum Team de 5 integrantes (Product Owner, Scrum Master y 3 Developers), sin
+  estructura jerárquica formal; las decisiones se toman en conjunto.
 - Tiempo disponible limitado al calendario académico de 14 semanas.
 - Presupuesto estudiantil, dependiente de servicios gratuitos o de bajo costo (APIs de
   OCR, hosting).
@@ -132,12 +134,12 @@ registro mediante fotografía.
 
 ### Tipo de estructura organizacional
 
-Orientada a proyectos: equipo de 2 integrantes, sin estructura jerárquica formal; las
+Orientada a proyectos: Scrum Team de 5 integrantes, sin estructura jerárquica formal; las
 decisiones se toman en conjunto.
 
 ### Restricciones
 
-- Equipo de desarrollo de 2 integrantes, trabajo acotado a las 14 semanas del curso.
+- Scrum Team de 5 integrantes, trabajo acotado a las 14 semanas del curso.
 - Presupuesto estudiantil, dependiente de servicios gratuitos o de bajo costo (APIs de
   OCR, hosting).
 - Conectividad rural limitada en muchas fincas costarricenses.
@@ -239,19 +241,19 @@ demostración del incremento y la defensa ante el docente en la Semana 11.
 **Duración:** 2 semanas (Sprint 1 de 5).
 
 **Sprint Goal:** Permitir al productor registrar un animal asociado a un propietario
-identificado por cédula, con su código único generado automáticamente, y consultar su
-ficha. Todo lo demás queda para futuros Sprints.
+identificado por cédula, con su código único generado automáticamente. Todo lo demás queda
+para futuros Sprints.
 
 **Historias que se atacan primero**
 
 - HU-01 Registro de propietario por cédula.
 - HU-02 Registro de animal asociado a un propietario.
 - HU-03 Código único por animal.
-- HU-04 Consulta de la ficha del animal.
 
 **Por qué estas historias:** son la base de la que dependen las demás. Sin propietario y
-animal registrados no hay a qué asociar la fotografía, la lectura del arete ni las
-sugerencias del módulo de IA.
+animal registrados no hay a qué asociar la consulta de la ficha, la fotografía, la lectura
+del arete ni las sugerencias del módulo de IA. El Sprint se limita a tres historias por el
+tamaño del equipo.
 
 ---
 
@@ -281,15 +283,13 @@ El backlog está ordenado por valor para el productor y por dependencia entre hi
 #### Sprint 1
 
 **Sprint Goal:** Permitir al productor registrar un animal asociado a un propietario
-identificado por cédula, con su código único generado automáticamente, y consultar su
-ficha.
+identificado por cédula, con su código único generado automáticamente.
 
 | Historia | Plan de entrega |
 |---|---|
 | HU-01 | Definir los datos del propietario (cédula física o jurídica) y su registro. |
 | HU-02 | Definir la ficha del animal por categoría de especie y su registro asociado a un propietario. |
 | HU-03 | Definir la regla de generación automática del código único. |
-| HU-04 | Mostrar la ficha del animal registrado con sus datos. |
 
 #### Sprint 2
 
@@ -301,9 +301,31 @@ ficha.
 
 ### Mecanismo de seguimiento
 
-El Sprint Backlog se sigue en un tablero con las columnas Por hacer, En curso y Hecho, que
-se actualiza en un Daily Scrum breve. El Scrum Master organiza el Daily Scrum y da
-seguimiento al Sprint Backlog.
+El Sprint Backlog se sigue en un tablero de Trello que se actualiza en el Daily Scrum. El
+Scrum Master organiza el Daily Scrum y da seguimiento al Sprint Backlog.
+
+#### Tablero de Trabajo
+
+**Enlace al tablero:** https://trello.com/b/cdkO85Jm/tablero-de-trabajo-sprint-1-plataforma-de-registro-individual-de-ganado
+
+El tablero contiene las historias del Sprint Backlog 1 (HU-01 a HU-03). Cada tarjeta lleva
+la historia, su estimación, sus dependencias y sus criterios de aceptación como lista de
+verificación.
+
+| Columna | Significado | Límite WIP | Justificación |
+|---|---|---|---|
+| Por hacer | Historias del Sprint Backlog que todavía no se empiezan. | Sin límite | Es el Sprint Backlog del Sprint en curso. |
+| En progreso | Historias que un desarrollador está construyendo. | 3 | El Scrum Team tiene tres Developers: con más de tres historias abiertas el trabajo se dispersa y ninguna termina. |
+| En revisión | Historias construidas que otro integrante del equipo verifica contra sus criterios de aceptación y la Definition of Done. | 2 | La revisión la hace otro integrante del equipo: con más de dos historias pendientes la revisión se vuelve el cuello de botella. |
+| Hecho | Historias que cumplen la Definition of Done (Sección 09). | Sin límite | Solo lo terminado según la Definition of Done cuenta para la velocidad. |
+| Bloqueado | Historias detenidas por un impedimento. | Sin límite | Hace visible el impedimento para escalarlo según la Sección 10. |
+
+**Responsable por tarjeta:** cada tarjeta tiene asignado como responsable al integrante del
+Scrum Team que la desarrolla.
+
+**Regla para mover una tarjeta a Hecho:** una tarjeta pasa a Hecho cuando todos sus
+criterios de aceptación están marcados, la verificó un integrante distinto de quien la
+construyó y cumple la Definition of Done de la Sección 09.
 
 ---
 
@@ -346,10 +368,10 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Como | Productor |
 | Quiero | Registrar a un propietario por su cédula física o jurídica |
 | Para | Asociarle sus animales |
-| Criterios de aceptación | 1. *Dado que* el productor ingresa una cédula física o jurídica que no está registrada, *cuando* guarda el propietario, *entonces* el sistema crea el registro del propietario.<br>2. *Dado que* ya existe un propietario con esa cédula, *cuando* el productor intenta registrarlo de nuevo, *entonces* el sistema no crea un duplicado e informa que ya está registrado.<br>3. *Dado que* el productor no ingresa la cédula, *cuando* intenta guardar, *entonces* el sistema no registra al propietario y solicita completar el dato. |
+| Criterios de aceptación | 1. *Dado que* el productor digita una cédula física, *cuando* confirma el registro, *entonces* el sistema registra al propietario identificado con esa cédula.<br>2. *Dado que* el productor digita una cédula jurídica, *cuando* confirma el registro, *entonces* el sistema registra al propietario identificado con esa cédula.<br>3. *Dado que* la cédula ya está registrada, *cuando* el productor intenta registrarla de nuevo, *entonces* el sistema no crea un segundo propietario con la misma cédula. |
 | Prioridad | Alta |
 | Estimación | 3 puntos |
-| Notas | Sin dependencias previas. |
+| Notas | Sin dependencias previas. Es la base del registro: sin propietario registrado no se pueden asociar animales (HU-02). La cédula es un dato personal, sujeto a la normativa de protección de datos identificada en las Secciones 02 y 03. |
 
 #### HU-02 — Registro de animal asociado a un propietario
 
@@ -358,10 +380,10 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Como | Productor |
 | Quiero | Registrar un animal en su categoría de especie, asociado a un propietario |
 | Para | Llevar su control individual |
-| Criterios de aceptación | 1. *Dado que* existe un propietario registrado, *cuando* el productor registra un animal indicando su categoría de especie y el propietario, *entonces* el animal queda registrado y asociado a ese propietario.<br>2. *Dado que* falta la especie o el propietario, *cuando* el productor intenta guardar, *entonces* el sistema no registra el animal y señala el dato faltante. |
+| Criterios de aceptación | 1. *Dado que* existe un propietario registrado, *cuando* el productor registra un animal indicando su categoría de especie (bovino, porcino, equino u otra), *entonces* el animal queda registrado en esa categoría y asociado a ese propietario.<br>2. *Dado que* el productor no indicó la categoría de especie o el propietario, *cuando* confirma el registro, *entonces* el sistema no registra el animal.<br>3. *Dado que* el propietario ya tiene animales registrados, *cuando* el productor registra otro animal para él, *entonces* el nuevo animal queda asociado al mismo propietario. |
 | Prioridad | Alta |
 | Estimación | 5 puntos |
-| Notas | Depende de HU-01. |
+| Notas | Depende de HU-01. Al registrarse, el animal recibe su código único generado automáticamente (HU-03, Objetivo específico 1). |
 
 #### HU-03 — Código único por animal
 
@@ -589,6 +611,22 @@ Toda sugerencia generada por el módulo de IA puede corregirse manualmente.
 
 ### Definition of Done
 
+Una historia de usuario está terminada cuando cumple todas estas condiciones:
+
+1. Revisión del código: otro integrante del equipo revisó el código y no quedan
+   observaciones pendientes.
+2. Funcionamiento completo: se cumplen todos los criterios de aceptación de la historia,
+   marcados en su tarjeta del Tablero de Trabajo.
+3. Compatibilidad: la funcionalidad se comprobó en los dispositivos y sistemas operativos
+   en que se usará el producto.
+4. Documentación actualizada: se registró la información necesaria sobre la funcionalidad
+   y los cambios realizados para facilitar su mantenimiento.
+5. Seguridad y rendimiento: se verificó que la funcionalidad protege los datos del
+   usuario, en especial la cédula del propietario, y responde adecuadamente sin afectar el
+   rendimiento del producto.
+6. Integración y pruebas: el código está integrado en la rama principal del repositorio y
+   las pruebas de lo nuevo pasan.
+
 ### Estrategia de validación
 
 La interfaz se valida con productores reales o simulados, priorizando la accesibilidad
@@ -605,6 +643,44 @@ Developers) se definen en la Sección 00.
 
 ### Plan de comunicación
 
+#### Interesados y comunicación
+
+| Interesado | Poder | Interés | Qué información necesita | Frecuencia y evento | Canal | Responsable |
+|---|---|---|---|---|---|---|
+| Productores pequeños/medianos | 2 | 5 | Funciones disponibles en cada incremento y cómo usarlas | Al cierre de cada Sprint, en la Sprint Review | Demostración del incremento | Marco López Quesada |
+| Productores adultos mayores | 2 | 5 | Cambios hechos a partir de sus observaciones de usabilidad | Pruebas tempranas; sus observaciones se revisan al cierre de cada Sprint | Sesión de prueba de usabilidad y Sprint Review | Marco López Quesada |
+| SENASA / Trazar-Agro | 5 | 3 | Que el alcance complementa el registro oficial sin duplicarlo | Al definir cada Sprint, en el Sprint Planning | Consulta de su información pública | Joseph Salazar Araya |
+| Equipo desarrollador | 5 | 5 | Avance, bloqueos y decisiones técnicas | Todos los días en el Daily Scrum; cada Sprint en la Review y la Retrospective | Daily Scrum de 15 minutos, Tablero de Trabajo y comentarios en la tarjeta | Joseph Salazar Araya |
+| Profesor del curso | 4 | 4 | Avance del Expediente y del repositorio | Semanal y en la entrega oficial de la Semana 11 | Repositorio Git, enlace al Tablero de Trabajo y clase | Joseph Salazar Araya |
+| Proveedor de servicio OCR/IA | 2 | 2 | Condiciones de uso, disponibilidad y costo de su servicio | Antes del Sprint en que se integre y de forma ocasional después | Documentación pública del servicio | Joseph Salazar Araya |
+| Cooperativas y asociaciones de productores | 3 | 4 | Avance del producto y su utilidad para los asociados | Al cierre de cada Sprint | Resumen breve del incremento por correo | Marco López Quesada |
+| Médicos veterinarios y asistentes técnicos | 2 | 3 | Datos que tendrá la ficha individual del animal | De forma ocasional, antes de desarrollar la ficha detallada | Consulta breve | Marco López Quesada |
+| Entidad de protección de datos personales | 4 | 2 | Cómo se maneja la cédula del propietario según la normativa | Al diseñar los datos del propietario y ante cambios que los afecten | Consulta de la normativa publicada | Joseph Salazar Araya |
+
+#### Reglas del equipo
+
+- Las decisiones de alcance y de prioridad las toma el Product Owner en el Sprint Planning y
+  se registran en la tarjeta correspondiente del Tablero de Trabajo.
+- Las decisiones técnicas las toman los desarrolladores en el momento en que surgen y se
+  registran como comentario en la tarjeta correspondiente.
+- El chat del equipo se usa solo para coordinación rápida y siempre enlaza a la tarjeta.
+- Los mensajes del equipo se responden en un máximo de 24 horas; un bloqueo se avisa el
+  mismo día en que se detecta.
+- El Product Owner comunica a los interesados afectados todo cambio de alcance en un máximo
+  de 24 horas después de decidirlo y lo resume en la Sprint Review.
+
+#### Escalamiento de impedimentos y conflictos
+
+1. El desarrollador que detecta un impedimento mueve la tarjeta a Bloqueado, comenta la
+   causa y avisa al Scrum Master el mismo día.
+2. El Scrum Master intenta resolverlo antes del siguiente Daily Scrum.
+3. Si resolverlo exige decidir sobre el alcance o la prioridad, el Scrum Master lo lleva al
+   Product Owner.
+4. Si el impedimento sigue sin resolverse después de 2 días hábiles, se informa al profesor
+   del curso.
+5. Un conflicto entre los integrantes del equipo se conversa en la Retrospective o en una
+   reunión aparte; si persiste, se consulta al profesor del curso.
+
 ### Working Agreements
 
 ---
@@ -612,6 +688,10 @@ Developers) se definen en la Sección 00.
 ## Sección 11 — Decisiones, cambios y evidencias — integración final
 
 ### Decisiones y cambios
+
+| Fecha | Cambio | Sección |
+|---|---|---|
+| 2026-10-29 | Se agrega el Tablero de Trabajo (Trello) con las historias del Sprint Backlog 1, el Plan de Comunicaciones y la Definition of Done; el Sprint 1 pasa a tres historias; se ajustan los criterios de HU-01 y HU-02 y la composición del Scrum Team. | 00, 01, 02, 04, 05, 06, 09, 10 |
 
 ### Evidencias
 
