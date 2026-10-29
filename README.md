@@ -16,7 +16,7 @@ Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 
 | Scrum Master | Joseph Salazar Araya | Facilita el proceso Scrum; da seguimiento al Sprint Backlog; elimina obstáculos del equipo; organiza Sprint Planning, Daily Scrum, Sprint Review y Retrospective. |
 | Developer 1 | Marco López Quesada | Modelo de datos y registro individual: modelo multi-especie, propietario por cédula, ficha por animal y código único. |
 | Developer 2 | Joseph Salazar Araya | Módulo de asistencia por IA: lectura del arete mediante OCR y sugerencia de raza y color/patrón, con corrección manual. |
-| Developer 3 | Marco López Quesada | Interfaz simple y validación: pasos guiados y mínima digitación, validados con productores reales o simulados. |
+| Developer 3 | Joseph Salazar Araya | Interfaz simple y validación: pasos guiados y mínima digitación, validados con productores reales o simulados. |
 
 Duración del equipo: 14 semanas, correspondientes a la duración completa del curso.
 
@@ -293,23 +293,64 @@ identificado por cédula, con su código único generado automáticamente.
 
 #### Sprint 2
 
+**Sprint Goal:** Permitir al productor consultar la ficha de un animal registrado, adjuntar
+una fotografía opcional y registrar un animal mediante pasos guiados con mínima digitación.
+
+| Historia | Plan de entrega |
+|---|---|
+| HU-04 | Mostrar en la ficha del animal su código único, su especie y su propietario. |
+| HU-07 | Permitir adjuntar una fotografía opcional al registrar el animal, guardarla y mostrarla en la ficha. |
+| HU-11 | Organizar el registro del animal en pasos guiados y reemplazar la digitación por listas de selección en los datos con opciones definidas. |
+
 #### Sprint 3
+
+**Sprint Goal:** Permitir al productor ver todos los animales de un mismo propietario y
+obtener el número de arete leído automáticamente a partir de la fotografía.
+
+| Historia | Plan de entrega |
+|---|---|
+| HU-05 | Mostrar la lista de animales de cada propietario y agregar a ella los animales nuevos. |
+| HU-08 | Integrar el servicio de OCR para sugerir el número de arete a partir de la fotografía y permitir el ingreso manual cuando no se detecta. |
 
 #### Sprint 4
 
+**Sprint Goal:** Permitir al productor recibir sugerencias de raza y de color/patrón de
+pelaje a partir de la fotografía del animal.
+
+| Historia | Plan de entrega |
+|---|---|
+| HU-09a | Proponer una raza a partir de la fotografía y permitir completarla manualmente cuando el sistema no logra proponerla. |
+| HU-09b | Proponer un color/patrón de pelaje a partir de la fotografía y permitir completarlo manualmente cuando el sistema no logra proponerlo. |
+
 #### Sprint 5
+
+**Sprint Goal:** Permitir al productor completar la ficha detallada del animal, corregir
+manualmente los datos sugeridos por el módulo de IA y usar el número de arete como
+referencia del registro oficial.
+
+| Historia | Plan de entrega |
+|---|---|
+| HU-06 | Definir los datos de salud, peso y reproducción, guardarlos en la ficha y mostrarlos junto con los datos básicos del animal. |
+| HU-10 | Mostrar como editables los datos sugeridos por el módulo de IA y guardar el valor corregido o confirmado. |
+| HU-12 | Guardar el número de arete como referencia de la ficha y distinguir si el animal ya está registrado oficialmente, sin duplicar ni modificar el registro oficial. |
 
 ### Mecanismo de seguimiento
 
-El Sprint Backlog se sigue en un tablero de Trello que se actualiza en el Daily Scrum. El
-Scrum Master organiza el Daily Scrum y da seguimiento al Sprint Backlog.
+Cada Sprint Backlog se sigue en su propio tablero de Trello, que se actualiza en el Daily
+Scrum. El Scrum Master organiza el Daily Scrum y da seguimiento al Sprint Backlog.
 
 #### Tablero de Trabajo
 
-**Enlace al tablero:** https://trello.com/b/cdkO85Jm/tablero-de-trabajo-sprint-1-plataforma-de-registro-individual-de-ganado
+| Sprint | Historias | Enlace al tablero |
+|---|---|---|
+| Sprint 1 | HU-01, HU-02, HU-03 | https://trello.com/b/cdkO85Jm/tablero-de-trabajo-sprint-1-plataforma-de-registro-individual-de-ganado |
+| Sprint 2 | HU-04, HU-07, HU-11 | https://trello.com/b/gqrD8G7M/tablero-de-trabajo-sprint-2-plataforma-de-registro-individual-de-ganado |
+| Sprint 3 | HU-05, HU-08 | https://trello.com/b/psRaUSyZ/tablero-de-trabajo-sprint-3-plataforma-de-registro-individual-de-ganado |
+| Sprint 4 | HU-09a, HU-09b | https://trello.com/b/90L4UC3y/tablero-de-trabajo-sprint-4-plataforma-de-registro-individual-de-ganado |
+| Sprint 5 | HU-06, HU-10, HU-12 | Se crea al iniciar el Sprint 5. |
 
-El tablero contiene las historias del Sprint Backlog 1 (HU-01 a HU-03). Cada tarjeta lleva
-la historia, su estimación, sus dependencias y sus criterios de aceptación como lista de
+Cada tablero contiene las historias de su Sprint Backlog. Cada tarjeta lleva la historia, su
+estimación, sus dependencias, su responsable y sus criterios de aceptación como lista de
 verificación.
 
 | Columna | Significado | Límite WIP | Justificación |
@@ -561,7 +602,7 @@ cada historia se compara con ella.
 
 | Historia | Puntos | División |
 |---|---|---|
-| HU-09 | 13 | Sugerencia de raza a partir de la fotografía; sugerencia de color/patrón de pelaje a partir de la fotografía. |
+| HU-09 | 13 | HU-09a: sugerencia de raza a partir de la fotografía. HU-09b: sugerencia de color/patrón de pelaje a partir de la fotografía. |
 
 #### Supuestos y riesgos de la estimación
 
@@ -577,17 +618,44 @@ cada historia se compara con ella.
 ### Cronograma de entregas
 
 El proyecto se organiza en 5 Sprints de 2 semanas. La entrega oficial del Expediente
-completo y la demostración del incremento se realizan en la Semana 11.
+completo y la demostración del incremento se realizan en la Semana 11 (25 de noviembre de
+2026).
+
+| Sprint | Semanas | Fechas (2026) | Historias | Puntos | Puntos restantes al cierre | Estado |
+|---|---|---|---|---|---|---|
+| Sprint 1 | 1 y 2 | 16 al 29 de setiembre | HU-01, HU-02, HU-03 | 10 | 48 | Completado |
+| Sprint 2 | 3 y 4 | 30 de setiembre al 13 de octubre | HU-04, HU-07, HU-11 | 10 | 38 | Completado |
+| Sprint 3 | 5 y 6 | 14 al 27 de octubre | HU-05, HU-08 | 10 | 28 | Completado |
+| Sprint 4 | 7 y 8 | 28 de octubre al 10 de noviembre | HU-09a, HU-09b | 13 | 15 | En curso |
+| Sprint 5 | 9 y 10 | 11 al 24 de noviembre | HU-06, HU-10, HU-12 | 15 | 0 | Pendiente |
+
+**Velocidad:** los Sprints 1 a 3 completaron 10 puntos cada uno.
 
 #### Sprint 1
 
+**Incremento al cierre:** el productor registra un propietario por su cédula y un animal
+asociado a él, con su código único generado automáticamente.
+
 #### Sprint 2
+
+**Incremento al cierre:** el productor consulta la ficha del animal, adjunta una fotografía
+opcional y registra un animal mediante pasos guiados con listas de selección.
 
 #### Sprint 3
 
+**Incremento al cierre:** el productor ve todos los animales de un propietario y la
+plataforma sugiere el número de arete leído a partir de la fotografía.
+
 #### Sprint 4
 
+**Incremento al cierre:** la plataforma sugiere la raza y el color/patrón de pelaje del
+animal a partir de la fotografía.
+
 #### Sprint 5
+
+**Incremento al cierre:** el producto queda completo, con la ficha detallada, la corrección
+manual de los datos sugeridos por el módulo de IA y el número de arete como referencia del
+registro oficial, listo para la entrega oficial de la Semana 11.
 
 ### Costos
 
@@ -692,6 +760,7 @@ Developers) se definen en la Sección 00.
 | Fecha | Cambio | Sección |
 |---|---|---|
 | 2026-10-29 | Se agrega el Tablero de Trabajo (Trello) con las historias del Sprint Backlog 1, el Plan de Comunicaciones y la Definition of Done; el Sprint 1 pasa a tres historias; se ajustan los criterios de HU-01 y HU-02 y la composición del Scrum Team. | 00, 01, 02, 04, 05, 06, 09, 10 |
+| 2026-10-29 | Se agrega un Tablero de Trabajo por Sprint (Sprints 1 a 4), el Sprint Backlog de los Sprints 2 a 5 y el cronograma de entregas con las fechas de los 5 Sprints; HU-09 se divide en HU-09a y HU-09b; el Developer 3 pasa a ser Joseph Salazar Araya. | 00, 05, 07 |
 
 ### Evidencias
 
