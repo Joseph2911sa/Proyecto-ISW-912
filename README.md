@@ -336,37 +336,47 @@ referencia del registro oficial.
 
 ### Mecanismo de seguimiento
 
-Cada Sprint Backlog se sigue en su propio tablero de Trello, que se actualiza en el Daily
-Scrum. El Scrum Master organiza el Daily Scrum y da seguimiento al Sprint Backlog.
+El Sprint Backlog se sigue en el proyecto de Jira **RIG — Plataforma de Registro Individual
+de Ganado**, con un Sprint de Jira por cada Sprint del proyecto. El tablero se actualiza en el
+Daily Scrum. El Scrum Master organiza el Daily Scrum y da seguimiento al Sprint Backlog.
 
 #### Tablero de Trabajo
 
-| Sprint | Historias | Enlace al tablero |
-|---|---|---|
-| Sprint 1 | HU-01, HU-02, HU-03 | https://trello.com/b/cdkO85Jm/tablero-de-trabajo-sprint-1-plataforma-de-registro-individual-de-ganado |
-| Sprint 2 | HU-04, HU-07, HU-11 | https://trello.com/b/gqrD8G7M/tablero-de-trabajo-sprint-2-plataforma-de-registro-individual-de-ganado |
-| Sprint 3 | HU-05, HU-08 | https://trello.com/b/psRaUSyZ/tablero-de-trabajo-sprint-3-plataforma-de-registro-individual-de-ganado |
-| Sprint 4 | HU-09a, HU-09b | https://trello.com/b/90L4UC3y/tablero-de-trabajo-sprint-4-plataforma-de-registro-individual-de-ganado |
-| Sprint 5 | HU-06, HU-10, HU-12 | Se crea al iniciar el Sprint 5. |
+- Tablero del Sprint en curso: https://marcolopezquesada15.atlassian.net/jira/software/projects/RIG/boards/69
+- Backlog y Sprints: https://marcolopezquesada15.atlassian.net/jira/software/projects/RIG/boards/69/backlog
 
-Cada tablero contiene las historias de su Sprint Backlog. Cada tarjeta lleva la historia, su
-estimación, sus dependencias, su responsable y sus criterios de aceptación como lista de
-verificación.
+| Sprint | Historias | Elementos en Jira | Estado |
+|---|---|---|---|
+| Sprint 1 | HU-01, HU-02, HU-03 | RIG-1, RIG-6, RIG-11 | Planificado |
+| Sprint 2 | HU-04, HU-07, HU-11 | RIG-15, RIG-19, RIG-24 | Planificado |
+| Sprint 3 | HU-05, HU-08 | RIG-29, RIG-33 | Planificado |
+| Sprint 4 | HU-09a, HU-09b | RIG-39, RIG-44 | Planificado |
+| Sprint 5 | HU-06, HU-10, HU-12 | RIG-48, RIG-53, RIG-57 | Planificado |
+
+Cada historia de usuario es una *Historia* de Jira que lleva su enunciado, sus criterios de
+aceptación, su estimación en puntos, su prioridad, su línea de trabajo (etiqueta) y sus
+dependencias, registradas como vínculos *bloquea / está bloqueada por*. Cada historia se
+convierte en **tareas (subtareas de Jira)** asignadas al integrante del Scrum Team que las
+desarrolla; la última tarea de cada historia es *Verificar criterios de aceptación y
+Definition of Done* y se asigna a un integrante distinto de quien la construyó.
 
 | Columna | Significado | Límite WIP | Justificación |
 |---|---|---|---|
-| Por hacer | Historias del Sprint Backlog que todavía no se empiezan. | Sin límite | Es el Sprint Backlog del Sprint en curso. |
-| En progreso | Historias que un desarrollador está construyendo. | 3 | El Scrum Team tiene tres Developers: con más de tres historias abiertas el trabajo se dispersa y ninguna termina. |
-| En revisión | Historias construidas que otro integrante del equipo verifica contra sus criterios de aceptación y la Definition of Done. | 2 | La revisión la hace otro integrante del equipo: con más de dos historias pendientes la revisión se vuelve el cuello de botella. |
-| Hecho | Historias que cumplen la Definition of Done (Sección 09). | Sin límite | Solo lo terminado según la Definition of Done cuenta para la velocidad. |
-| Bloqueado | Historias detenidas por un impedimento. | Sin límite | Hace visible el impedimento para escalarlo según la Sección 10. |
+| Por hacer (To Do) | Historias y tareas del Sprint Backlog que todavía no se empiezan. | Sin límite | Es el Sprint Backlog del Sprint en curso. |
+| En progreso (In Progress) | Historias que un desarrollador está construyendo. | 3 | El Scrum Team tiene tres Developers: con más de tres historias abiertas el trabajo se dispersa y ninguna termina. |
+| En revisión (In Review) | Historias construidas que otro integrante del equipo verifica contra sus criterios de aceptación y la Definition of Done. | 2 | La revisión la hace otro integrante del equipo: con más de dos historias pendientes la revisión se vuelve el cuello de botella. |
+| Hecho (Done) | Historias que cumplen la Definition of Done (Sección 09). | Sin límite | Solo lo terminado según la Definition of Done cuenta para la velocidad. |
 
-**Responsable por tarjeta:** cada tarjeta tiene asignado como responsable al integrante del
+**Impedimentos:** una historia o tarea detenida por un impedimento se marca con la bandera
+de impedimento (*Flagged*) de Jira, lo que la resalta en el tablero para escalarla según la
+Sección 10.
+
+**Responsable por tarea:** cada tarea tiene asignado como responsable al integrante del
 Scrum Team que la desarrolla.
 
-**Regla para mover una tarjeta a Hecho:** una tarjeta pasa a Hecho cuando todos sus
-criterios de aceptación están marcados, la verificó un integrante distinto de quien la
-construyó y cumple la Definition of Done de la Sección 09.
+**Regla para mover una historia a Hecho:** una historia pasa a Hecho cuando todas sus tareas
+están en Hecho, incluida la verificación de sus criterios de aceptación por un integrante
+distinto de quien la construyó, y cumple la Definition of Done de la Sección 09.
 
 ---
 
@@ -623,13 +633,14 @@ completo y la demostración del incremento se realizan en la Semana 11 (25 de no
 
 | Sprint | Semanas | Fechas (2026) | Historias | Puntos | Puntos restantes al cierre | Estado |
 |---|---|---|---|---|---|---|
-| Sprint 1 | 1 y 2 | 16 al 29 de setiembre | HU-01, HU-02, HU-03 | 10 | 48 | Completado |
-| Sprint 2 | 3 y 4 | 30 de setiembre al 13 de octubre | HU-04, HU-07, HU-11 | 10 | 38 | Completado |
-| Sprint 3 | 5 y 6 | 14 al 27 de octubre | HU-05, HU-08 | 10 | 28 | Completado |
-| Sprint 4 | 7 y 8 | 28 de octubre al 10 de noviembre | HU-09a, HU-09b | 13 | 15 | En curso |
-| Sprint 5 | 9 y 10 | 11 al 24 de noviembre | HU-06, HU-10, HU-12 | 15 | 0 | Pendiente |
+| Sprint 1 | 1 y 2 | 16 al 29 de setiembre | HU-01, HU-02, HU-03 | 10 | 48 | Planificado |
+| Sprint 2 | 3 y 4 | 30 de setiembre al 13 de octubre | HU-04, HU-07, HU-11 | 10 | 38 | Planificado |
+| Sprint 3 | 5 y 6 | 14 al 27 de octubre | HU-05, HU-08 | 10 | 28 | Planificado |
+| Sprint 4 | 7 y 8 | 28 de octubre al 10 de noviembre | HU-09a, HU-09b | 13 | 15 | Planificado |
+| Sprint 5 | 9 y 10 | 11 al 24 de noviembre | HU-06, HU-10, HU-12 | 15 | 0 | Planificado |
 
-**Velocidad:** los Sprints 1 a 3 completaron 10 puntos cada uno.
+**Velocidad:** se mide al cierre de cada Sprint con los puntos de las historias que quedan en
+Hecho en Jira.
 
 #### Sprint 1
 
@@ -684,7 +695,7 @@ Una historia de usuario está terminada cuando cumple todas estas condiciones:
 1. Revisión del código: otro integrante del equipo revisó el código y no quedan
    observaciones pendientes.
 2. Funcionamiento completo: se cumplen todos los criterios de aceptación de la historia,
-   marcados en su tarjeta del Tablero de Trabajo.
+   verificados en su tarea de verificación en Jira.
 3. Compatibilidad: la funcionalidad se comprobó en los dispositivos y sistemas operativos
    en que se usará el producto.
 4. Documentación actualizada: se registró la información necesaria sobre la funcionalidad
@@ -718,8 +729,8 @@ Developers) se definen en la Sección 00.
 | Productores pequeños/medianos | 2 | 5 | Funciones disponibles en cada incremento y cómo usarlas | Al cierre de cada Sprint, en la Sprint Review | Demostración del incremento | Marco López Quesada |
 | Productores adultos mayores | 2 | 5 | Cambios hechos a partir de sus observaciones de usabilidad | Pruebas tempranas; sus observaciones se revisan al cierre de cada Sprint | Sesión de prueba de usabilidad y Sprint Review | Marco López Quesada |
 | SENASA / Trazar-Agro | 5 | 3 | Que el alcance complementa el registro oficial sin duplicarlo | Al definir cada Sprint, en el Sprint Planning | Consulta de su información pública | Joseph Salazar Araya |
-| Equipo desarrollador | 5 | 5 | Avance, bloqueos y decisiones técnicas | Todos los días en el Daily Scrum; cada Sprint en la Review y la Retrospective | Daily Scrum de 15 minutos, Tablero de Trabajo y comentarios en la tarjeta | Joseph Salazar Araya |
-| Profesor del curso | 4 | 4 | Avance del Expediente y del repositorio | Semanal y en la entrega oficial de la Semana 11 | Repositorio Git, enlace al Tablero de Trabajo y clase | Joseph Salazar Araya |
+| Equipo desarrollador | 5 | 5 | Avance, bloqueos y decisiones técnicas | Todos los días en el Daily Scrum; cada Sprint en la Review y la Retrospective | Daily Scrum de 15 minutos, tablero de Jira y comentarios en la historia o tarea | Joseph Salazar Araya |
+| Profesor del curso | 4 | 4 | Avance del Expediente y del repositorio | Semanal y en la entrega oficial de la Semana 11 | Repositorio Git, enlace al proyecto de Jira y clase | Joseph Salazar Araya |
 | Proveedor de servicio OCR/IA | 2 | 2 | Condiciones de uso, disponibilidad y costo de su servicio | Antes del Sprint en que se integre y de forma ocasional después | Documentación pública del servicio | Joseph Salazar Araya |
 | Cooperativas y asociaciones de productores | 3 | 4 | Avance del producto y su utilidad para los asociados | Al cierre de cada Sprint | Resumen breve del incremento por correo | Marco López Quesada |
 | Médicos veterinarios y asistentes técnicos | 2 | 3 | Datos que tendrá la ficha individual del animal | De forma ocasional, antes de desarrollar la ficha detallada | Consulta breve | Marco López Quesada |
@@ -728,10 +739,11 @@ Developers) se definen en la Sección 00.
 #### Reglas del equipo
 
 - Las decisiones de alcance y de prioridad las toma el Product Owner en el Sprint Planning y
-  se registran en la tarjeta correspondiente del Tablero de Trabajo.
+  se registran en la historia correspondiente en Jira.
 - Las decisiones técnicas las toman los desarrolladores en el momento en que surgen y se
-  registran como comentario en la tarjeta correspondiente.
-- El chat del equipo se usa solo para coordinación rápida y siempre enlaza a la tarjeta.
+  registran como comentario en la historia o tarea correspondiente en Jira.
+- El chat del equipo se usa solo para coordinación rápida y siempre enlaza a la historia o
+  tarea de Jira.
 - Los mensajes del equipo se responden en un máximo de 24 horas; un bloqueo se avisa el
   mismo día en que se detecta.
 - El Product Owner comunica a los interesados afectados todo cambio de alcance en un máximo
@@ -739,8 +751,8 @@ Developers) se definen en la Sección 00.
 
 #### Escalamiento de impedimentos y conflictos
 
-1. El desarrollador que detecta un impedimento mueve la tarjeta a Bloqueado, comenta la
-   causa y avisa al Scrum Master el mismo día.
+1. El desarrollador que detecta un impedimento marca la historia o tarea con la bandera de
+   impedimento en Jira, comenta la causa y avisa al Scrum Master el mismo día.
 2. El Scrum Master intenta resolverlo antes del siguiente Daily Scrum.
 3. Si resolverlo exige decidir sobre el alcance o la prioridad, el Scrum Master lo lleva al
    Product Owner.
@@ -759,8 +771,9 @@ Developers) se definen en la Sección 00.
 
 | Fecha | Cambio | Sección |
 |---|---|---|
-| 2026-10-29 | Se agrega el Tablero de Trabajo (Trello) con las historias del Sprint Backlog 1, el Plan de Comunicaciones y la Definition of Done; el Sprint 1 pasa a tres historias; se ajustan los criterios de HU-01 y HU-02 y la composición del Scrum Team. | 00, 01, 02, 04, 05, 06, 09, 10 |
+| 2026-10-29 | Se agrega el Tablero de Trabajo con las historias del Sprint Backlog 1, el Plan de Comunicaciones y la Definition of Done; el Sprint 1 pasa a tres historias; se ajustan los criterios de HU-01 y HU-02 y la composición del Scrum Team. | 00, 01, 02, 04, 05, 06, 09, 10 |
 | 2026-10-29 | Se agrega un Tablero de Trabajo por Sprint (Sprints 1 a 4), el Sprint Backlog de los Sprints 2 a 5 y el cronograma de entregas con las fechas de los 5 Sprints; HU-09 se divide en HU-09a y HU-09b; el Developer 3 pasa a ser Joseph Salazar Araya. | 00, 05, 07 |
+| 2026-11-04 | Se crea el Tablero de Trabajo en Jira (proyecto RIG): cada historia de usuario se registra como Historia con sus criterios, puntos y dependencias, y se convierte en tareas asignadas a su responsable, con una tarea final de verificación a cargo de otro integrante; los 5 Sprints se registran en Jira. Los impedimentos se marcan con la bandera de impedimento de Jira. | 05, 09, 10 |
 
 ### Evidencias
 
