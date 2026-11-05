@@ -322,6 +322,17 @@ pelaje a partir de la fotografía del animal.
 | HU-09a | Proponer una raza a partir de la fotografía y permitir completarla manualmente cuando el sistema no logra proponerla. |
 | HU-09b | Proponer un color/patrón de pelaje a partir de la fotografía y permitir completarlo manualmente cuando el sistema no logra proponerlo. |
 
+**Acciones de mitigación (Sección 08):**
+
+| Acción | Riesgo | Responsable | Jira |
+|---|---|---|---|
+| M-01 Probar el OCR con al menos 20 fotografías reales de aretes y medir la tasa de lectura. | R-01 | Joseph Salazar Araya | RIG-62 |
+| M-02 Prueba de concepto de sugerencia de raza y color/patrón con fotos de bovinos, porcinos y equinos. | R-02 | Joseph Salazar Araya | RIG-63 |
+| M-03 Encapsular el OCR y la IA detrás de una interfaz propia y configurar alertas de cuota. | R-03 | Joseph Salazar Araya | RIG-64 |
+| M-04 Confirmar la capacidad del equipo para los Sprints 4 y 5 y ajustar el Sprint Backlog. | R-05 | Joseph Salazar Araya | RIG-65 |
+| M-05 Definir con un médico veterinario los datos de HU-06 antes del Sprint Planning 5. | R-10 | Marco López Quesada | RIG-66 |
+| M-06 Comprimir la fotografía antes de subirla y reintentar la carga cuando falle la conexión. | R-09 | Marco López Quesada | RIG-67 |
+
 #### Sprint 5
 
 **Sprint Goal:** Permitir al productor completar la ficha detallada del animal, corregir
@@ -333,6 +344,15 @@ referencia del registro oficial.
 | HU-06 | Definir los datos de salud, peso y reproducción, guardarlos en la ficha y mostrarlos junto con los datos básicos del animal. |
 | HU-10 | Mostrar como editables los datos sugeridos por el módulo de IA y guardar el valor corregido o confirmado. |
 | HU-12 | Guardar el número de arete como referencia de la ficha y distinguir si el animal ya está registrado oficialmente, sin duplicar ni modificar el registro oficial. |
+
+**Acciones de mitigación (Sección 08):**
+
+| Acción | Riesgo | Responsable | Jira |
+|---|---|---|---|
+| M-07 Repetir la prueba de usabilidad del registro completo con al menos 3 productores reales o simulados. | R-06 | Marco López Quesada | RIG-68 |
+| M-08 Agregar aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias. | R-07 | Joseph Salazar Araya | RIG-69 |
+| M-09 Revisar la información pública de SENASA/Trazar-Agro sobre el formato del arete antes de HU-12. | R-08 | Joseph Salazar Araya | RIG-70 |
+| M-10 Revisar el consumo y los límites gratuitos de hosting y almacenamiento de imágenes. | R-04 | Marco López Quesada | RIG-71 |
 
 ### Mecanismo de seguimiento
 
@@ -358,7 +378,8 @@ aceptación, su estimación en puntos, su prioridad, su línea de trabajo (etiqu
 dependencias, registradas como vínculos *bloquea / está bloqueada por*. Cada historia se
 convierte en **tareas (subtareas de Jira)** asignadas al integrante del Scrum Team que las
 desarrolla; la última tarea de cada historia es *Verificar criterios de aceptación y
-Definition of Done* y se asigna a un integrante distinto de quien la construyó.
+Definition of Done* y se asigna a un integrante distinto de quien la construyó. Las acciones de
+mitigación de la Sección 08 se registran como tareas con la etiqueta `riesgo`.
 
 | Columna | Significado | Límite WIP | Justificación |
 |---|---|---|---|
@@ -676,9 +697,90 @@ registro oficial, listo para la entrega oficial de la Semana 11.
 
 ### Registro de riesgos
 
+El Scrum Team identifica los riesgos del proyecto, incluidas las dependencias de terceros y
+las adquisiciones, y los califica por probabilidad e impacto. El Scrum Master mantiene el
+registro y lo revisa con el equipo en cada Sprint Review; los riesgos de prioridad alta se
+revisan además cada semana en el Daily Scrum.
+
+#### Escalas de calificación
+
+| Valor | Probabilidad | Impacto |
+|---|---|---|
+| 1 | Muy baja (menos de 10 %) | Insignificante: sin efecto visible en el Sprint. |
+| 2 | Baja (10 % a 30 %) | Menor: retraso de menos de un día en una tarea. |
+| 3 | Media (30 % a 50 %) | Moderado: una historia se retrasa dentro del mismo Sprint. |
+| 4 | Alta (50 % a 70 %) | Mayor: una historia pasa al Sprint siguiente o se reduce su alcance. |
+| 5 | Muy alta (más de 70 %) | Crítico: compromete la entrega de la Semana 11 o el Product Goal. |
+
+**Prioridad = Probabilidad × Impacto.**
+
+| Prioridad | Rango | Tratamiento |
+|---|---|---|
+| Alta | 15 a 25 | Respuesta inmediata con acciones en el Sprint Backlog; revisión semanal. |
+| Media | 8 a 12 | Respuesta planificada con acciones en el Sprint Backlog; revisión en cada Sprint Review. |
+| Baja | 1 a 6 | Se acepta y se monitorea; revisión al cierre del proyecto. |
+
+#### Matriz de Riesgos
+
+| ID | Riesgo (causa → efecto) | Categoría | Historias afectadas | Probabilidad | Impacto | Prioridad |
+|---|---|---|---|---|---|---|
+| R-05 | Dos estudiantes cubren los cinco roles del Scrum Team, con carga de otros cursos y poca experiencia con IA; los Sprints 4 (13 puntos) y 5 (15 puntos) superan la velocidad planificada de 10 puntos → no se terminan las historias del Sprint y se compromete la entrega de la Semana 11. | Organizacional | Todas | 4 | 5 | **20 — Alta** |
+| R-01 | Las fotografías tomadas en la finca tienen poca luz, aretes sucios o ángulos difíciles → el servicio de OCR no lee el número de arete y HU-08 no cumple su propósito. | Técnico / tercero | HU-08, HU-12 | 4 | 4 | **16 — Alta** |
+| R-02 | Los servicios de IA disponibles reconocen sobre todo razas bovinas → la sugerencia de raza y de color/patrón falla en porcinos, equinos u otras especies. | Técnico / tercero | HU-09a, HU-09b, HU-10 | 4 | 4 | **16 — Alta** |
+| R-03 | El proveedor de OCR/IA agota la cuota gratuita, cambia sus precios o deja de estar disponible → se detiene el registro asistido por fotografía. | Tercero / adquisición | HU-08, HU-09a, HU-09b | 3 | 4 | 12 — Media |
+| R-06 | Los productores adultos mayores tienen poca experiencia con plataformas digitales → no logran completar el registro sin ayuda y no se cumple el tercer objetivo específico. | Usuario | HU-11 | 3 | 4 | 12 — Media |
+| R-09 | La conectividad en las fincas es intermitente → la carga de la fotografía y la lectura del arete fallan o tardan demasiado. | Externo | HU-07, HU-08, HU-09a, HU-09b | 4 | 3 | 12 — Media |
+| R-07 | La cédula del propietario es un dato personal protegido por la Ley N.º 8968 → un manejo inadecuado expone al proyecto a incumplir la normativa. | Legal | HU-01, HU-05 | 2 | 5 | 10 — Media |
+| R-10 | Los datos de salud, peso y reproducción de HU-06 no están definidos → al definirlos crece el alcance y la historia no cabe en el Sprint 5. | Alcance | HU-06 | 3 | 3 | 9 — Media |
+| R-08 | SENASA/Trazar-Agro cambia el formato del arete o sus reglas → la referencia al registro oficial queda desactualizada. | Externo / regulatorio | HU-12 | 2 | 4 | 8 — Media |
+| R-04 | El hosting, el almacenamiento de imágenes o los servicios de OCR/IA superan su plan gratuito → aparecen costos que el presupuesto estudiantil no cubre. | Adquisición / costos | HU-07, HU-08, HU-09a, HU-09b | 2 | 3 | 6 — Baja |
+
+#### Mapa de calor
+
+| Probabilidad \ Impacto | 1 Insignificante | 2 Menor | 3 Moderado | 4 Mayor | 5 Crítico |
+|---|---|---|---|---|---|
+| **5 Muy alta** | | | | | |
+| **4 Alta** | | | R-09 | R-01, R-02 | R-05 |
+| **3 Media** | | | R-10 | R-03, R-06 | |
+| **2 Baja** | | | R-04 | R-08 | R-07 |
+| **1 Muy baja** | | | | | |
+
 ### Respuestas a los riesgos
 
+#### Plan de Mitigación
+
+| ID | Estrategia | Respuesta | Plan de contingencia | Dueño | Fecha de revisión | Disparador | Acción en el Sprint Backlog |
+|---|---|---|---|---|---|---|---|
+| R-05 | Mitigar | Confirmar las horas disponibles de cada integrante antes de cada Sprint Planning y ajustar el Sprint Backlog a esa capacidad; trabajar en pareja las historias de IA para repartir la curva de aprendizaje. | El Product Owner reduce el alcance del Sprint 5 y deja fuera la parte de menor valor de HU-06. | Joseph Salazar Araya (Scrum Master) | 2026-11-10 y luego semanal | A mitad de un Sprint más de la mitad de los puntos sigue en Por hacer, o un Sprint cierra con menos de 8 puntos en Hecho. | M-04 (RIG-65), Sprint 4 |
+| R-01 | Mitigar | Probar el OCR con fotografías reales de aretes antes de integrarlo; guiar al productor para encuadrar el arete; mantener siempre el ingreso manual (criterio 2 de HU-08). | El ingreso manual pasa a ser el flujo principal y la lectura del OCR queda como sugerencia opcional. | Joseph Salazar Araya | 2026-11-10 | El OCR lee correctamente menos del 70 % de los aretes en la prueba. | M-01 (RIG-62), Sprint 4 |
+| R-02 | Mitigar | Hacer una prueba de concepto por especie antes de integrar HU-09a y HU-09b; ofrecer la sugerencia solo en las especies donde funcione. | La sugerencia queda solo para bovinos; en las demás especies la raza y el color/patrón se eligen de una lista (HU-11) y se corrigen manualmente (HU-10). | Joseph Salazar Araya | 2026-11-10 | La prueba acierta en menos del 60 % de las fotografías de alguna especie. | M-02 (RIG-63), Sprint 4 |
+| R-03 | Mitigar | Encapsular el OCR y la IA detrás de una interfaz propia para poder cambiar de proveedor; configurar alertas de consumo; tener identificado un proveedor alterno (plan de adquisiciones). | Cambiar al proveedor alterno; mientras tanto, el registro sigue con ingreso manual. | Joseph Salazar Araya | 2026-11-10 | El consumo llega al 80 % de la cuota gratuita, el proveedor anuncia cambios de precio o el servicio falla más de una vez en una semana. | M-03 (RIG-64), Sprint 4 |
+| R-06 | Mitigar | Repetir la prueba de usabilidad del registro completo, ya con el módulo de IA, con productores reales o simulados; usar textos y botones grandes y pocos pasos. | Quitar pasos opcionales del registro guiado y dejar la fotografía y las sugerencias para después del registro básico. | Marco López Quesada | 2026-11-17 | Un productor no completa el registro sin ayuda o tarda más de 5 minutos. | M-07 (RIG-68), Sprint 5 |
+| R-09 | Mitigar | Comprimir la fotografía antes de subirla, reintentar la carga y guardar el registro sin esperar la lectura del arete. | Registrar el animal sin fotografía (HU-07 lo permite) y adjuntarla después. | Marco López Quesada | 2026-11-17 | Una carga o una lectura falla por conexión en las pruebas o tarda más de 30 segundos. | M-06 (RIG-67), Sprint 4 |
+| R-07 | Evitar | Recolectar solo la cédula y los datos necesarios, mostrar un aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias en las pruebas y la demostración. | Enmascarar la cédula en las pantallas y retirar cualquier dato real de la base de datos. | Joseph Salazar Araya | 2026-11-11 | Se planea mostrar, exportar o compartir la cédula fuera de la ficha del propietario, o aparece una cédula real en los datos de prueba. | M-08 (RIG-69), Sprint 5 |
+| R-10 | Mitigar | Definir con un médico veterinario los datos de salud, peso y reproducción antes del Sprint Planning 5 y reestimar HU-06 si cambia su tamaño. | Dividir HU-06 y dejar en el Product Backlog los datos de menor valor. | Marco López Quesada (Product Owner) | 2026-11-11 | La reestimación de HU-06 supera los 8 puntos. | M-05 (RIG-66), Sprint 4 |
+| R-08 | Aceptar (activa) | HU-12 guarda el arete solo como referencia, sin conexión con Trazar-Agro; se revisa la información pública de SENASA antes de desarrollarla. | Ajustar la validación del formato del arete. | Joseph Salazar Araya | 2026-11-11 | SENASA publica cambios en el formato del arete o en las reglas de Trazar-Agro. | M-09 (RIG-70), Sprint 5 |
+| R-04 | Aceptar (activa) | Usar solo planes gratuitos o estudiantiles y comprimir las imágenes; revisar el consumo al cierre de cada Sprint. | Reducir la resolución de las imágenes guardadas y borrar las fotografías de prueba. | Marco López Quesada | 2026-11-24 | Aparece un cargo en la facturación de algún servicio o el almacenamiento supera el 80 % del plan gratuito. | M-10 (RIG-71), Sprint 5 |
+
+Las acciones de mitigación se registran en Jira como tareas con la etiqueta `riesgo`,
+asignadas al dueño del riesgo y vinculadas a las historias que protegen. No llevan puntos de
+historia, por lo que no cuentan para la velocidad, pero sí se consideran en la capacidad del
+Sprint. Cuando un disparador se cumple, el dueño avisa al Scrum Master el mismo día y se
+aplica el plan de contingencia según el escalamiento de la Sección 10.
+
 ### Plan de adquisiciones
+
+El OCR y la IA se consumen como servicios externos y no se entrena un modelo propio
+(supuesto de la Sección 07): construirlo no cabe en la capacidad ni en el tiempo del equipo.
+
+| Adquisición | Para qué | Decisión hacer o comprar | Tipo de acuerdo | Criterios de selección | Cuándo | Responsable | Riesgos |
+|---|---|---|---|---|---|---|---|
+| Servicio de OCR en la nube | Leer el número de arete (HU-08, HU-12) | Comprar: consumir el servicio | Plan gratuito por consumo, sin costo dentro de la cuota | Lectura correcta en fotografías de aretes, cuota gratuita, documentación, tiempo de respuesta | Antes del Sprint 3 | Joseph Salazar Araya | R-01, R-03 |
+| Servicio de IA de reconocimiento de imágenes | Sugerir raza y color/patrón (HU-09a, HU-09b) | Comprar: consumir el servicio | Plan gratuito por consumo | Resultados por especie, cuota gratuita, posibilidad de etiquetas personalizadas | Antes del Sprint 4 | Joseph Salazar Araya | R-02, R-03 |
+| Proveedor alterno de OCR/IA | Reemplazo si el principal falla o cambia sus condiciones | Comprar | Plan gratuito por consumo | Mismos criterios; identificado, pero no integrado | Antes del Sprint 4 | Joseph Salazar Araya | R-03 |
+| Hosting de la aplicación y base de datos | Publicar la plataforma para las pruebas y la demostración | Comprar | Plan gratuito o estudiantil | Costo cero, disponibilidad, facilidad de despliegue | Antes del Sprint 1 | Marco López Quesada | R-04, R-09 |
+| Almacenamiento de imágenes | Guardar las fotografías de los animales (HU-07) | Comprar | Plan gratuito | Capacidad gratuita, costo por excedente | Antes del Sprint 2 | Marco López Quesada | R-04, R-09 |
+| Herramientas de gestión (Jira Software Free y GitHub) | Seguimiento del Sprint Backlog y control de versiones | Comprar | Planes gratuitos | Hasta 10 usuarios en Jira sin costo | Sprint 1 | Marco López Quesada | — |
 
 ---
 
@@ -774,6 +876,7 @@ Developers) se definen en la Sección 00.
 | 2026-10-29 | Se agrega el Tablero de Trabajo con las historias del Sprint Backlog 1, el Plan de Comunicaciones y la Definition of Done; el Sprint 1 pasa a tres historias; se ajustan los criterios de HU-01 y HU-02 y la composición del Scrum Team. | 00, 01, 02, 04, 05, 06, 09, 10 |
 | 2026-10-29 | Se agrega un Tablero de Trabajo por Sprint (Sprints 1 a 4), el Sprint Backlog de los Sprints 2 a 5 y el cronograma de entregas con las fechas de los 5 Sprints; HU-09 se divide en HU-09a y HU-09b; el Developer 3 pasa a ser Joseph Salazar Araya. | 00, 05, 07 |
 | 2026-11-04 | Se crea el Tablero de Trabajo en Jira (proyecto RIG): cada historia de usuario se registra como Historia con sus criterios, puntos y dependencias, y se convierte en tareas asignadas a su responsable, con una tarea final de verificación a cargo de otro integrante; los 5 Sprints se registran en Jira. Los impedimentos se marcan con la bandera de impedimento de Jira. | 05, 09, 10 |
+| 2026-11-04 | Se agrega la Matriz de Riesgos (registro con probabilidad, impacto y prioridad, y mapa de calor), el Plan de Mitigación (estrategia, respuesta, contingencia, dueño, fecha de revisión y disparador) y el Plan de adquisiciones; las 10 acciones de mitigación se agregan al Sprint Backlog de los Sprints 4 y 5 en Jira (RIG-62 a RIG-71). | 05, 08 |
 
 ### Evidencias
 
