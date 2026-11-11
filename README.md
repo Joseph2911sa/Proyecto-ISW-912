@@ -328,14 +328,17 @@ pelaje a partir de la fotografía del animal.
 
 **Acciones de mitigación (Sección 08):**
 
-| Acción | Riesgo | Responsable | Jira |
-|---|---|---|---|
-| M-01 Probar el OCR con al menos 20 fotografías reales de aretes y medir la tasa de lectura. | R-01 | Developer 2 | RIG-62 |
-| M-02 Prueba de concepto de sugerencia de raza y color/patrón con fotos de bovinos, porcinos y equinos. | R-02 | Developer 2 | RIG-63 |
-| M-03 Encapsular el OCR y la IA detrás de una interfaz propia y configurar alertas de cuota. | R-03 | Developer 2 | RIG-64 |
-| M-04 Confirmar la capacidad del equipo para los Sprints 4 y 5 y ajustar el Sprint Backlog. | R-05 | Joseph Salazar Araya (Scrum Master) | RIG-65 |
-| M-05 Definir con un médico veterinario los datos de HU-06a, HU-06b y HU-06c antes del Sprint Planning 5. | R-10 | Marco López Quesada (Product Owner) | RIG-66 |
-| M-06 Comprimir la fotografía antes de subirla y reintentar la carga cuando falle la conexión. | R-09 | Developer 1 | RIG-67 |
+| Acción | Riesgo | Responsable | Jira | Estado (10/11) |
+|---|---|---|---|---|
+| M-01 Medir la tasa de lectura del OCR integrado en HU-08 con al menos 20 fotografías reales de aretes. | R-01 | Developer 2 | RIG-62 | En progreso |
+| M-02 Medir por especie el acierto de la sugerencia de raza y color/patrón con fotos de bovinos, porcinos y equinos. | R-02 | Developer 2 | RIG-63 | En progreso |
+| M-03 Encapsular el OCR y la IA detrás de una interfaz propia y configurar alertas de cuota. | R-03 | Developer 2 | RIG-64 | En progreso |
+| M-04 Confirmar la capacidad del equipo para los Sprints 4 y 5 y ajustar el Sprint Backlog. | R-05 | Joseph Salazar Araya (Scrum Master) | RIG-65 | En progreso |
+| M-05 Definir con un médico veterinario los datos de HU-06a, HU-06b y HU-06c antes del Sprint Planning 5. | R-10 | Marco López Quesada (Product Owner) | RIG-66 | En progreso |
+| M-06 Comprimir la fotografía antes de subirla y reintentar la carga cuando falle la conexión. | R-09 | Developer 1 | RIG-67 | En progreso |
+
+Las acciones del Sprint 4 pasan a Hecho cuando su resultado queda registrado en la revisión de
+riesgos de la Sección 08.
 
 #### Sprint 5
 
@@ -353,12 +356,12 @@ referencia del registro oficial.
 
 **Acciones de mitigación (Sección 08):**
 
-| Acción | Riesgo | Responsable | Jira |
-|---|---|---|---|
-| M-07 Repetir la prueba de usabilidad del registro completo con al menos 3 productores reales o simulados. | R-06 | Developer 3 | RIG-68 |
-| M-08 Agregar aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias. | R-07 | Developer 1 | RIG-69 |
-| M-09 Revisar la información pública de SENASA/Trazar-Agro sobre el formato del arete antes de HU-12. | R-08 | Joseph Salazar Araya | RIG-70 |
-| M-10 Revisar el consumo y los límites gratuitos de hosting y almacenamiento de imágenes. | R-04 | Marco López Quesada | RIG-71 |
+| Acción | Riesgo | Responsable | Jira | Estado (10/11) |
+|---|---|---|---|---|
+| M-07 Repetir la prueba de usabilidad del registro completo con al menos 3 productores reales o simulados. | R-06 | Developer 3 | RIG-68 | Por hacer |
+| M-08 Agregar aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias. | R-07 | Developer 1 | RIG-69 | Por hacer |
+| M-09 Revisar la información pública de SENASA/Trazar-Agro sobre el formato del arete antes de HU-12. | R-08 | Joseph Salazar Araya | RIG-70 | Por hacer |
+| M-10 Revisar el consumo y los límites gratuitos de hosting y almacenamiento de imágenes. | R-04 | Marco López Quesada | RIG-71 | Por hacer |
 
 ### Mecanismo de seguimiento
 
@@ -371,13 +374,15 @@ Daily Scrum. El Scrum Master organiza el Daily Scrum y da seguimiento al Sprint 
 - Tablero del Sprint en curso: https://marcolopezquesada15.atlassian.net/jira/software/projects/RIG/boards/69
 - Backlog y Sprints: https://marcolopezquesada15.atlassian.net/jira/software/projects/RIG/boards/69/backlog
 
-| Sprint | Historias | Elementos en Jira | Estado |
-|---|---|---|---|
-| Sprint 1 | HU-01, HU-02, HU-03 | RIG-1, RIG-6, RIG-11 | Planificado |
-| Sprint 2 | HU-04, HU-07, HU-11 | RIG-15, RIG-19, RIG-24 | Planificado |
-| Sprint 3 | HU-05, HU-08 | RIG-29, RIG-33 | Planificado |
-| Sprint 4 | HU-09a, HU-09b | RIG-39, RIG-44 | Planificado |
-| Sprint 5 | HU-06a, HU-06b, HU-06c, HU-10, HU-12 | RIG-48, RIG-72, RIG-76, RIG-53, RIG-57 | Planificado |
+Estado tomado de Jira el 10/11/2026:
+
+| Sprint | Historias | Elementos en Jira | Estado del Sprint en Jira | Estado de las historias |
+|---|---|---|---|---|
+| Sprint 1 | HU-01, HU-02, HU-03 | RIG-1, RIG-6, RIG-11 | Cerrado | Hecho |
+| Sprint 2 | HU-04, HU-07, HU-11 | RIG-15, RIG-19, RIG-24 | Cerrado | Hecho |
+| Sprint 3 | HU-05, HU-08 | RIG-29, RIG-33 | Cerrado | Hecho |
+| Sprint 4 | HU-09a, HU-09b | RIG-39, RIG-44 | Activo (cierra el 10/11) | Hecho; M-01 a M-06 en progreso |
+| Sprint 5 | HU-06a, HU-06b, HU-06c, HU-10, HU-12 | RIG-48, RIG-72, RIG-76, RIG-53, RIG-57 | Planificado (inicia el 11/11) | Por hacer, en orden de prioridad |
 
 Cada historia de usuario es una *Historia* de Jira que lleva su enunciado, sus criterios de
 aceptación, su estimación en puntos, su prioridad, su línea de trabajo (etiqueta) y sus
@@ -716,16 +721,36 @@ El proyecto se organiza en 5 Sprints de 2 semanas. La entrega oficial del Expedi
 completo y la demostración del incremento se realizan en la Semana 11 (25 de noviembre de
 2026).
 
-| Sprint | Semanas | Fechas (2026) | Historias | Puntos | Puntos restantes al cierre | Estado |
-|---|---|---|---|---|---|---|
-| Sprint 1 | 1 y 2 | 16 al 29 de setiembre | HU-01, HU-02, HU-03 | 10 | 48 | Planificado |
-| Sprint 2 | 3 y 4 | 30 de setiembre al 13 de octubre | HU-04, HU-07, HU-11 | 10 | 38 | Planificado |
-| Sprint 3 | 5 y 6 | 14 al 27 de octubre | HU-05, HU-08 | 10 | 28 | Planificado |
-| Sprint 4 | 7 y 8 | 28 de octubre al 10 de noviembre | HU-09a, HU-09b | 13 | 15 | Planificado |
-| Sprint 5 | 9 y 10 | 11 al 24 de noviembre | HU-06a, HU-06b, HU-06c, HU-10, HU-12 | 15 | 0 | Planificado |
+Estado tomado de Jira el 10/11/2026. Un Sprint se marca como completado solo con las
+historias que quedan en Hecho y cumplen la Definition of Done, no porque pasó su fecha.
 
-**Velocidad:** se mide al cierre de cada Sprint con los puntos de las historias que quedan en
-Hecho en Jira.
+| Sprint | Fechas (2026) | Compromiso (HU / puntos) | Hecho real (HU / puntos) | No terminado | Impedimentos | Replanificación | Puntos restantes al cierre | Estado |
+|---|---|---|---|---|---|---|---|---|
+| Sprint 1 | 16/09 al 29/09 | HU-01, HU-02, HU-03 · 10 | HU-01, HU-02, HU-03 · 10 | — | Ninguno registrado en Jira | No hubo | 48 | Completado |
+| Sprint 2 | 30/09 al 13/10 | HU-04, HU-07, HU-11 · 10 | HU-04, HU-07, HU-11 · 10 | — | Ninguno registrado en Jira | No hubo | 38 | Completado |
+| Sprint 3 | 14/10 al 27/10 | HU-05, HU-08 · 10 | HU-05, HU-08 · 10 | — | Ninguno registrado en Jira | No hubo | 28 | Completado |
+| Sprint 4 | 28/10 al 10/11 | HU-09a, HU-09b · 13, más M-01 a M-06 | HU-09a, HU-09b · 13 | M-01 a M-06 en progreso | Ninguno registrado en Jira | Las acciones de mitigación se cierran al registrar su resultado (Sección 08) | 15 | En curso (cierra el 10/11) |
+| Sprint 5 | 11/11 al 24/11 | HU-06a, HU-06b, HU-06c, HU-10, HU-12 · 15, más M-07 a M-10 | — | — | — | Se revisa en el Sprint Planning 5 según la velocidad observada | 0 | Planificado |
+
+**Evidencia del trabajo terminado:** el código de las historias en Hecho se encuentra en
+[PENDIENTE: enlace al repositorio o carpeta del código de la aplicación]. Este repositorio
+contiene solo el Expediente.
+
+**Capacidad, compromiso y velocidad:**
+
+- **Capacidad estimada:** 10 puntos por Sprint, la estimación inicial del equipo antes del
+  Sprint 1.
+- **Compromiso del Sprint:** los puntos que el equipo toma en cada Sprint Planning.
+- **Velocidad observada:** los puntos de las historias que quedan en Hecho en Jira y cumplen
+  la Definition of Done. No se cuentan los puntos planificados ni las acciones de
+  mitigación, que no llevan puntos. Sprints 1 a 4: 10, 10, 10 y 13 puntos (promedio 10,75).
+
+El Sprint 5 compromete 15 puntos, por encima de la velocidad observada. Según el plan de
+contingencia de R-05 (Sección 08), en el Sprint Planning 5 (11/11) el Product Owner decide si
+devuelve al Product Backlog alguna de las historias de la ficha detallada (HU-06a, HU-06b o
+HU-06c); la decisión se registra en Jira y en la bitácora de la Sección 11. Las historias que
+no se terminen en un Sprint vuelven al Product Backlog y se documenta a dónde se mueven y
+quién lo decidió; no se modifica el Sprint Backlog de Sprints cerrados.
 
 #### Sprint 1
 
@@ -816,8 +841,8 @@ revisan además cada semana en el Daily Scrum.
 | ID | Estrategia | Respuesta | Plan de contingencia | Dueño | Fecha de revisión | Disparador | Acción en el Sprint Backlog |
 |---|---|---|---|---|---|---|---|
 | R-05 | Mitigar | Confirmar las horas disponibles de cada integrante antes de cada Sprint Planning y ajustar el Sprint Backlog a esa capacidad; trabajar en pareja las historias de IA para repartir la curva de aprendizaje. | El Product Owner reduce el alcance del Sprint 5 y devuelve al Product Backlog la historia de la ficha detallada (HU-06a, HU-06b o HU-06c) de menor valor. | Joseph Salazar Araya (Scrum Master) | 2026-11-10 y luego semanal | A mitad de un Sprint más de la mitad de los puntos sigue en Por hacer, o un Sprint cierra con menos de 8 puntos en Hecho. | M-04 (RIG-65), Sprint 4 |
-| R-01 | Mitigar | Probar el OCR con fotografías reales de aretes antes de integrarlo; guiar al productor para encuadrar el arete; mantener siempre el ingreso manual (criterio 2 de HU-08). | El ingreso manual pasa a ser el flujo principal y la lectura del OCR queda como sugerencia opcional. | Developer 2 | 2026-11-10 | El OCR lee correctamente menos del 70 % de los aretes en la prueba. | M-01 (RIG-62), Sprint 4 |
-| R-02 | Mitigar | Hacer una prueba de concepto por especie antes de integrar HU-09a y HU-09b; ofrecer la sugerencia solo en las especies donde funcione. | La sugerencia queda solo para bovinos; en las demás especies la raza y el color/patrón se eligen de una lista (HU-11) y se corrigen manualmente (HU-10). | Developer 2 | 2026-11-10 | La prueba acierta en menos del 60 % de las fotografías de alguna especie. | M-02 (RIG-63), Sprint 4 |
+| R-01 | Mitigar | Medir con fotografías reales de aretes la tasa de lectura del OCR integrado en HU-08; guiar al productor para encuadrar el arete; mantener siempre el ingreso manual (criterio 2 de HU-08). | El ingreso manual pasa a ser el flujo principal y la lectura del OCR queda como sugerencia opcional. | Developer 2 | 2026-11-10 | El OCR lee correctamente menos del 70 % de los aretes en la prueba. | M-01 (RIG-62), Sprint 4 |
+| R-02 | Mitigar | Medir por especie el acierto de la sugerencia integrada en HU-09a y HU-09b; ofrecer la sugerencia solo en las especies donde funcione. | La sugerencia queda solo para bovinos; en las demás especies la raza y el color/patrón se eligen de una lista (HU-11) y se corrigen manualmente (HU-10). | Developer 2 | 2026-11-10 | La prueba acierta en menos del 60 % de las fotografías de alguna especie. | M-02 (RIG-63), Sprint 4 |
 | R-03 | Mitigar | Encapsular el OCR y la IA detrás de una interfaz propia para poder cambiar de proveedor; configurar alertas de consumo; tener identificado un proveedor alterno (plan de adquisiciones). | Cambiar al proveedor alterno; mientras tanto, el registro sigue con ingreso manual. | Developer 2 | 2026-11-10 | El consumo llega al 80 % de la cuota gratuita, el proveedor anuncia cambios de precio o el servicio falla más de una vez en una semana. | M-03 (RIG-64), Sprint 4 |
 | R-06 | Mitigar | Repetir la prueba de usabilidad del registro completo, ya con el módulo de IA, con productores reales o simulados; usar textos y botones grandes y pocos pasos. | Quitar pasos opcionales del registro guiado y dejar la fotografía y las sugerencias para después del registro básico. | Developer 3 | 2026-11-17 | Un productor no completa el registro sin ayuda o tarda más de 5 minutos. | M-07 (RIG-68), Sprint 5 |
 | R-09 | Mitigar | Comprimir la fotografía antes de subirla, reintentar la carga y guardar el registro sin esperar la lectura del arete. | Registrar el animal sin fotografía (HU-07 lo permite) y adjuntarla después. | Developer 1 | 2026-11-17 | Una carga o una lectura falla por conexión en las pruebas o tarda más de 30 segundos. | M-06 (RIG-67), Sprint 4 |
@@ -831,6 +856,17 @@ asignadas al estudiante que las ejecuta y vinculadas a las historias que protege
 historia, por lo que no cuentan para la velocidad, pero sí se consideran en la capacidad del
 Sprint. Cuando un disparador se cumple, el dueño avisa al Scrum Master el mismo día y se
 aplica el plan de contingencia según el escalamiento de la Sección 10.
+
+HU-08 se completó en el Sprint 3 y HU-09a y HU-09b en el Sprint 4, antes o al mismo tiempo que
+se identificaron estos riesgos (04/11/2026). Por eso M-01 y M-02 pasaron de probar el servicio
+antes de integrarlo a medir la lectura y las sugerencias ya integradas.
+
+#### Revisión de riesgos
+
+| Fecha | Riesgos revisados | Resultado | Decisión |
+|---|---|---|---|
+| 2026-11-10 | R-05 | No se cumplió el disparador de cierre: ningún Sprint cerró con menos de 8 puntos en Hecho (10, 10, 10 y 13). El Sprint 5 compromete 15 puntos sobre una velocidad observada de 10,75. | El Product Owner revisa el alcance del Sprint 5 en el Sprint Planning 5 (11/11). |
+| 2026-11-10 | R-01, R-02, R-03 | [PENDIENTE: resultado de M-01, M-02 y M-03 (RIG-62 a RIG-64): tasa de lectura del OCR, acierto por especie y consumo de cuota] | [PENDIENTE] |
 
 ### Plan de adquisiciones
 
