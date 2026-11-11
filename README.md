@@ -228,9 +228,15 @@ El proyecto nace del problema descrito en la Sección 01: el sistema nacional Tr
 cubre el cumplimiento sanitario y comercial, pero los productores no cuentan con una
 herramienta propia, detallada y fácil de usar para el control individual de cada animal.
 
-La fecha de la entrega oficial del Expediente es fija (Semana 11, 25/11/2026) y el producto
-se planifica de forma adaptativa en 5 Sprints de 2 semanas, del 12/10/2026 al 18/12/2026, por
-lo que el ciclo de vida del proyecto es híbrido.
+El ciclo de vida del proyecto es híbrido:
+
+- **Parte predictiva:** la fecha de entrega del Expediente (Semana 11, 25/11/2026), la
+  duración del release (5 Sprints de 2 semanas, del 12/10/2026 al 18/12/2026) y el alcance
+  general, definido por los tres objetivos específicos, se fijan desde el inicio.
+- **Parte adaptativa:** la precisión del OCR y de la IA solo se conoce al probar los
+  servicios (R-01 y R-02), y la interfaz debe validarse con productores adultos mayores
+  (R-06). Estas partes se construyen en Sprints cortos que se revisan y se ajustan en cada
+  Sprint Review.
 
 El trabajo avanza por tres líneas, tomadas de los objetivos específicos:
 
@@ -759,8 +765,8 @@ cada historia se compara con ella.
   propio, HU-08, HU-09a y HU-09b se reestiman.
 - HU-05 no incluye inicio de sesión ni gestión de usuarios.
 - HU-12 no incluye conexión directa con los sistemas de Trazar-Agro/SENASA.
-- Los datos concretos de salud, peso y reproducción de HU-06a, HU-06b y HU-06c se definen
-  antes del Sprint en que se desarrollen; si son más de los previstos, se reestiman.
+- Los datos concretos de salud y reproducción de HU-06a y HU-06c se definen con un médico
+  veterinario antes del Sprint 5 (M-05); si son más de los previstos, se reestiman.
 - El equipo es junior: las primeras historias cargan con la curva de aprendizaje de las
   herramientas.
 
@@ -1052,6 +1058,16 @@ R = realiza, A = aprueba y responde por el resultado, C = es consultado.
 | Médicos veterinarios y asistentes técnicos | 2 | 3 | Datos que tendrá la ficha individual del animal | De forma ocasional, antes de desarrollar la ficha detallada | Consulta breve | Marco López Quesada |
 | PRODHAB | 4 | 2 | Cómo se maneja la cédula del propietario según la normativa | Al diseñar los datos del propietario y ante cambios que los afecten | Consulta de la normativa publicada | Joseph Salazar Araya |
 
+#### Eventos Scrum
+
+| Evento | Frecuencia | Duración máxima | Participantes | Propósito | Facilita |
+|---|---|---|---|---|---|
+| Sprint Planning | Primer día de cada Sprint | 2 horas | Scrum Team | Definir el Sprint Goal y pasar historias del Product Backlog al Sprint Backlog | Joseph Salazar Araya (Scrum Master) |
+| Daily Scrum | Todos los días hábiles | 15 minutos | Scrum Team | Revisar el avance hacia el Sprint Goal, los bloqueos y los límites WIP del tablero | Joseph Salazar Araya (Scrum Master) |
+| Refinamiento del Product Backlog | Una vez por semana | 30 minutos | Scrum Team | Revisar, estimar y ordenar las historias de los próximos Sprints | Marco López Quesada (Product Owner) |
+| Sprint Review | Último día de cada Sprint | 1 hora | Scrum Team y productores invitados | Mostrar las historias en Hecho y recoger observaciones para el Product Backlog | Marco López Quesada (Product Owner) |
+| Sprint Retrospective | Después de cada Sprint Review | 45 minutos | Scrum Team | Acordar al menos una mejora del proceso para el Sprint siguiente | Joseph Salazar Araya (Scrum Master) |
+
 #### Reglas del equipo
 
 - Las decisiones de alcance y de prioridad las toma el Product Owner en el Sprint Planning y
@@ -1125,6 +1141,7 @@ R = realiza, A = aprueba y responde por el resultado, C = es consultado.
 | 11/11/2026 | 0965a1d | La justificación cita el alcance de Trazar-Agro; el Product Goal se redacta como resultado para el productor; se quitan repeticiones de la Sección 02 y se justifica el tipo de estructura; las estrategias de SENASA y de los profesores coinciden con su cuadrante; se nombra a la PRODHAB; se actualiza la bibliografía. | 01, 02, 03, 10, Bibliografía |
 | 11/11/2026 | 1405946 | Se agrega la matriz de responsabilidades (RACI) y los Working Agreements; los profesores tienen acceso de lectura al proyecto de Jira. | 10 |
 | 11/11/2026 | 27d65cd | Se agregan las decisiones registradas, la tabla de evidencias y el modelo de datos del Objetivo específico 1; se ajustan las posiciones del Mapa Poder-Interés para que las etiquetas no se encimen. | 03, 11 |
+| 11/11/2026 | este commit | Se detallan las partes predictiva y adaptativa del ciclo de vida, se agregan los eventos Scrum al plan de comunicación y se ajusta el supuesto de la ficha detallada. | 04, 07, 10, 11 |
 
 #### Decisiones registradas
 
