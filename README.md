@@ -274,14 +274,14 @@ El backlog está ordenado por valor para el productor y por dependencia entre hi
 | HU-02 | Como productor, quiero registrar un animal en su categoría de especie, asociado a un propietario, para llevar su control individual. | Alta |
 | HU-03 | Como productor, quiero que cada animal reciba un código único generado automáticamente para identificarlo sin duplicados. | Alta |
 | HU-04 | Como productor, quiero consultar la ficha de un animal registrado para ver sus datos. | Alta |
-| HU-05 | Como productor, quiero administrar varios animales de un mismo propietario desde una sola cuenta. | Media |
+| HU-05 | Como productor, quiero administrar varios animales de un mismo propietario desde la ficha del propietario. | Media |
 | HU-06 | Como productor, quiero completar la ficha detallada del animal con su salud, peso y reproducción. | Media |
-| HU-07 | Como productor, quiero adjuntar una fotografía opcional del animal. | Media |
-| HU-08 | Como productor, quiero que la plataforma lea el número de arete a partir de la fotografía (OCR) para reducir errores de digitación. | Media |
+| HU-07 | Como productor, quiero adjuntar una fotografía opcional del animal. | Alta |
+| HU-08 | Como productor, quiero que la plataforma lea el número de arete a partir de la fotografía (OCR) para reducir errores de digitación. | Alta |
 | HU-09 | Como productor, quiero recibir sugerencias de raza y de color/patrón de pelaje a partir de la fotografía para completar la ficha con menos esfuerzo. | Media |
 | HU-10 | Como productor, quiero corregir manualmente los datos sugeridos por el módulo de IA. | Media |
-| HU-11 | Como productor, quiero registrar un animal mediante pasos guiados y con mínima digitación. | Media |
-| HU-12 | Como productor, quiero que, si el animal ya está registrado oficialmente, el número de arete se use como referencia para complementar su ficha sin duplicar el registro oficial. | Media |
+| HU-11 | Como productor, quiero registrar un animal mediante pasos guiados y con mínima digitación. | Alta |
+| HU-12 | Como productor, quiero indicar si el animal ya está registrado oficialmente para que su número de arete se use como referencia y complementar su ficha sin duplicar el registro oficial. | Media |
 
 ### Sprint Backlog
 
@@ -451,34 +451,44 @@ historia en Jira.
 
 ### Declaración de alcance
 
-El alcance incluye el registro y control individual del ganado multi-especie, la asociación
-de cada animal a un propietario mediante cédula, la generación automática del código único
-y el módulo de IA/OCR para la lectura del arete y la sugerencia de raza y color/patrón.
-Excluye la sustitución o duplicación del registro oficial de Trazar-Agro/SENASA. Los
-límites generales del proyecto se detallan en la Sección 01.
+**Alcance del producto:**
+
+| Dentro del alcance | Fuera del alcance |
+|---|---|
+| Registro y ficha individual de ganado multi-especie (bovino, porcino, equino y otras) | Sustitución o duplicación del registro oficial de Trazar-Agro/SENASA |
+| Asociación de cada animal a un propietario por cédula física o jurídica | Pagos, facturación o comercialización de ganado |
+| Código único por animal generado automáticamente | Módulo veterinario avanzado (diagnósticos e historiales clínicos detallados) |
+| Lectura del arete (OCR) y sugerencia de raza y color/patrón a partir de fotografía, con corrección manual | Conexión directa con los sistemas de Trazar-Agro/SENASA |
+| Interfaz guiada para productores con baja alfabetización digital | Inicio de sesión, gestión de usuarios y funcionamiento completamente sin conexión |
+
+**Alcance del proyecto:** el trabajo necesario para lograr el producto: las 15 historias del
+Product Backlog, las acciones de mitigación M-01 a M-10, dos pruebas de usabilidad con
+productores y el Expediente del Proyecto.
 
 ### Product Backlog priorizado
 
-El orden refleja el valor para el productor y la dependencia entre historias. La
-estimación se expresa en puntos de historia (secuencia de Fibonacci).
+El orden refleja el valor para el productor y las dependencias entre historias, y coincide
+con el orden de los Sprints. Prioridad Alta: sin ella no hay un registro usable. Media:
+completa el valor del producto. Baja: es lo primero que sale del release si falta capacidad.
+La estimación se expresa en puntos de historia (secuencia de Fibonacci).
 
-| Orden | ID | Historia | Prioridad | Estimación (puntos) |
-|---|---|---|---|---|
-| 1 | HU-01 | Registro de propietario por cédula | Alta | 3 |
-| 2 | HU-02 | Registro de animal asociado a un propietario | Alta | 5 |
-| 3 | HU-03 | Código único por animal | Alta | 2 |
-| 4 | HU-04 | Consulta de la ficha del animal | Alta | 2 |
-| 5 | HU-05 | Varios animales por propietario | Media | 2 |
-| 6 | HU-06a | Datos de salud en la ficha del animal | Media | 3 |
-| 7 | HU-06b | Datos de peso en la ficha del animal | Media | 2 |
-| 8 | HU-06c | Datos de reproducción en la ficha del animal | Media | 3 |
-| 9 | HU-07 | Fotografía opcional del animal | Media | 3 |
-| 10 | HU-08 | Lectura del número de arete (OCR) | Media | 8 |
-| 11 | HU-09a | Sugerencia de raza | Media | 8 |
-| 12 | HU-09b | Sugerencia de color/patrón de pelaje | Media | 5 |
-| 13 | HU-10 | Corrección manual de lo sugerido por la IA | Media | 2 |
-| 14 | HU-11 | Registro guiado con mínima digitación | Media | 5 |
-| 15 | HU-12 | Arete como referencia del registro oficial | Media | 5 |
+| Orden | ID | Historia | Prioridad | Estimación (puntos) | Sprint | Objetivo específico |
+|---|---|---|---|---|---|---|
+| 1 | HU-01 | Registro de propietario por cédula | Alta | 3 | 1 | 1 |
+| 2 | HU-02 | Registro de animal asociado a un propietario | Alta | 5 | 1 | 1 |
+| 3 | HU-03 | Código único por animal | Alta | 2 | 1 | 1 |
+| 4 | HU-04 | Consulta de la ficha del animal | Alta | 2 | 2 | 1 |
+| 5 | HU-05 | Varios animales por propietario | Media | 2 | 2 | 1 |
+| 6 | HU-07 | Fotografía opcional del animal | Alta | 3 | 2 | 1 |
+| 7 | HU-11 | Registro guiado con mínima digitación | Alta | 5 | 2 | 3 |
+| 8 | HU-08 | Lectura del número de arete (OCR) | Alta | 8 | 3 | 2 |
+| 9 | HU-06b | Datos de peso en la ficha del animal | Media | 2 | 3 | 1 |
+| 10 | HU-09a | Sugerencia de raza | Media | 8 | 4 | 2 |
+| 11 | HU-09b | Sugerencia de color/patrón de pelaje | Media | 5 | 4 | 2 |
+| 12 | HU-10 | Corrección manual de lo sugerido por la IA | Media | 2 | 5 | 2 |
+| 13 | HU-12 | Arete como referencia del registro oficial | Media | 5 | 5 | 1 y 2 |
+| 14 | HU-06a | Datos de salud en la ficha del animal | Baja | 3 | 5 | 1 |
+| 15 | HU-06c | Datos de reproducción en la ficha del animal | Baja | 3 | 5 | 1 |
 
 ### Criterios de aceptación
 
@@ -535,7 +545,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Campo | Detalle |
 |---|---|
 | Como | Productor |
-| Quiero | Administrar varios animales de un mismo propietario desde una sola cuenta |
+| Quiero | Administrar varios animales de un mismo propietario desde la ficha del propietario |
 | Para | Llevar el control de todo su ganado en un solo lugar |
 | Criterios de aceptación | 1. *Dado que* un propietario tiene animales registrados, *cuando* el productor consulta a ese propietario, *entonces* el sistema muestra la lista de todos sus animales.<br>2. *Dado que* el productor registra otro animal para el mismo propietario, *cuando* lo guarda, *entonces* el animal aparece en la lista junto con los anteriores. |
 | Prioridad | Media |
@@ -550,7 +560,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Quiero | Completar los datos de salud en la ficha del animal |
 | Para | Llevar el historial de cada animal |
 | Criterios de aceptación | 1. *Dado que* el animal está registrado, *cuando* el productor completa datos de salud y guarda, *entonces* la ficha conserva esos datos.<br>2. *Dado que* la ficha tiene datos de salud, *cuando* el productor la consulta, *entonces* el sistema los muestra junto con los datos básicos del animal. |
-| Prioridad | Media |
+| Prioridad | Baja |
 | Estimación | 3 puntos |
 | Notas | Depende de HU-02. Proviene de la división de HU-06. Los datos concretos de salud se definen con un médico veterinario (M-05). |
 
@@ -574,7 +584,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Quiero | Completar los datos de reproducción en la ficha del animal |
 | Para | Llevar el historial de cada animal |
 | Criterios de aceptación | 1. *Dado que* el animal está registrado, *cuando* el productor completa datos de reproducción y guarda, *entonces* la ficha conserva esos datos.<br>2. *Dado que* la ficha tiene datos de reproducción, *cuando* el productor la consulta, *entonces* el sistema los muestra junto con los datos básicos del animal. |
-| Prioridad | Media |
+| Prioridad | Baja |
 | Estimación | 3 puntos |
 | Notas | Depende de HU-02. Proviene de la división de HU-06. Los datos concretos de reproducción se definen con un médico veterinario (M-05). |
 
@@ -586,7 +596,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Quiero | Adjuntar una fotografía opcional del animal |
 | Para | Identificarlo visualmente en su ficha |
 | Criterios de aceptación | 1. *Dado que* el productor registra un animal, *cuando* no adjunta fotografía, *entonces* el registro se completa sin ella.<br>2. *Dado que* el productor adjunta una fotografía, *cuando* guarda el registro, *entonces* la fotografía queda asociada a la ficha y se muestra al consultarla. |
-| Prioridad | Media |
+| Prioridad | Alta |
 | Estimación | 3 puntos |
 | Notas | Depende de HU-02. |
 
@@ -597,10 +607,10 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Como | Productor |
 | Quiero | Que la plataforma lea el número de arete a partir de la fotografía (OCR) |
 | Para | Reducir errores de digitación |
-| Criterios de aceptación | 1. *Dado que* la fotografía muestra un arete legible, *cuando* el productor solicita la lectura, *entonces* el sistema sugiere el número de arete detectado.<br>2. *Dado que* el sistema no logra leer el arete, *cuando* termina el proceso, *entonces* informa que no se detectó el número y permite ingresarlo manualmente. |
-| Prioridad | Media |
+| Criterios de aceptación | 1. *Dado que* la fotografía muestra un arete legible, *cuando* el productor solicita la lectura, *entonces* el sistema sugiere el número de arete detectado.<br>2. *Dado que* el sistema no logra leer el arete, *cuando* termina el proceso, *entonces* informa que no se detectó el número y permite ingresarlo manualmente.<br>3. *Dado que* se prueba la lectura con al menos 20 fotografías de aretes legibles, *cuando* termina la prueba, *entonces* el número leído es correcto en al menos el 70 % de ellas. |
+| Prioridad | Alta |
 | Estimación | 8 puntos |
-| Notas | Depende de HU-07. |
+| Notas | Depende de HU-07. El servicio se prueba antes de integrarlo (M-01). |
 
 #### HU-09a — Sugerencia de raza
 
@@ -645,19 +655,19 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Como | Productor |
 | Quiero | Registrar un animal mediante pasos guiados y con mínima digitación |
 | Para | Hacerlo sin dificultad aunque tenga poca experiencia con plataformas digitales |
-| Criterios de aceptación | 1. *Dado que* el productor inicia el registro de un animal, *cuando* avanza en el proceso, *entonces* el sistema lo conduce por pasos guiados.<br>2. *Dado que* un dato tiene opciones definidas, como la categoría de especie, *cuando* el productor lo completa, *entonces* lo selecciona de una lista en lugar de digitarlo. |
-| Prioridad | Media |
+| Criterios de aceptación | 1. *Dado que* el productor inicia el registro de un animal, *cuando* avanza en el proceso, *entonces* el sistema lo conduce por pasos guiados.<br>2. *Dado que* un dato tiene opciones definidas, como la categoría de especie, *cuando* el productor lo completa, *entonces* lo selecciona de una lista en lugar de digitarlo.<br>3. *Dado que* 3 productores reales o simulados, al menos uno adulto mayor, prueban el registro guiado, *cuando* registran un propietario y un animal, *entonces* cada uno lo completa sin ayuda en menos de 5 minutos. |
+| Prioridad | Alta |
 | Estimación | 5 puntos |
-| Notas | Depende de HU-02. |
+| Notas | Depende de HU-02. La prueba se describe en la estrategia de validación (Sección 09). |
 
 #### HU-12 — Arete como referencia del registro oficial
 
 | Campo | Detalle |
 |---|---|
 | Como | Productor |
-| Quiero | Que, si el animal ya está registrado oficialmente, el número de arete se use como referencia |
+| Quiero | Indicar si el animal ya está registrado oficialmente para que su número de arete se use como referencia |
 | Para | Complementar su ficha sin duplicar el registro oficial |
-| Criterios de aceptación | 1. *Dado que* el animal ya está registrado oficialmente, *cuando* el productor registra el animal con su número de arete, *entonces* el número de arete se guarda como referencia en la ficha.<br>2. *Dado que* el animal no está registrado oficialmente, *cuando* el productor lo registra con su número de arete, *entonces* el número sirve de base para iniciar la ficha.<br>3. *Dado que* el animal se registra en la plataforma, *cuando* se guarda la ficha, *entonces* el registro oficial de Trazar-Agro/SENASA no se duplica ni se modifica. |
+| Criterios de aceptación | 1. *Dado que* el productor indica que el animal ya está registrado oficialmente, *cuando* guarda la ficha con su número de arete, *entonces* el número se guarda como referencia del registro oficial.<br>2. *Dado que* el productor indica que el animal no está registrado oficialmente, *cuando* guarda la ficha con su número de arete, *entonces* el número sirve de base para iniciar la ficha.<br>3. *Dado que* se guarda la ficha, *cuando* termina el registro, *entonces* la plataforma no envía ni modifica datos en Trazar-Agro/SENASA. |
 | Prioridad | Media |
 | Estimación | 5 puntos |
 | Notas | Depende de HU-02 y HU-08. |
@@ -710,16 +720,16 @@ cada historia se compara con ella.
 | HU-03 | Código único por animal | 2 | Alta | HU-02 | Una sola regla: generar el código al guardar el animal y garantizar que no se repita. Menor que HU-01 porque no monta estructura nueva. |
 | HU-04 | Consulta de la ficha del animal | 2 | Alta | HU-02, HU-03 | Muestra datos ya registrados (código, especie y propietario); no valida ni guarda información. |
 | HU-05 | Varios animales por propietario | 2 | Media | HU-01, HU-02 | La asociación entre animal y propietario ya existe desde HU-02; se agrega la lista de animales del propietario. |
-| HU-06a | Datos de salud en la ficha del animal | 3 | Media | HU-02 | Igual que HU-01: un grupo de datos que se guarda y se muestra, con incertidumbre sobre los datos concretos de salud, que se definen con un médico veterinario. |
+| HU-06a | Datos de salud en la ficha del animal | 3 | Baja | HU-02 | Igual que HU-01: un grupo de datos que se guarda y se muestra, con incertidumbre sobre los datos concretos de salud, que se definen con un médico veterinario. |
 | HU-06b | Datos de peso en la ficha del animal | 2 | Media | HU-02 | Menor que HU-06a: un solo dato conocido, el peso, sin incertidumbre sobre qué registrar. |
-| HU-06c | Datos de reproducción en la ficha del animal | 3 | Media | HU-02 | Igual que HU-06a: un grupo de datos con incertidumbre sobre los datos concretos de reproducción. |
-| HU-07 | Fotografía opcional del animal | 3 | Media | HU-02 | Similar a HU-01: además de guardar, maneja la carga y el almacenamiento de imágenes, algo nuevo para el equipo. |
-| HU-08 | Lectura del número de arete (OCR) | 8 | Media | HU-07 | Integra un servicio de OCR desconocido para el equipo, depende de la calidad de la fotografía y debe manejar el caso en que el arete no se lee. |
+| HU-06c | Datos de reproducción en la ficha del animal | 3 | Baja | HU-02 | Igual que HU-06a: un grupo de datos con incertidumbre sobre los datos concretos de reproducción. |
+| HU-07 | Fotografía opcional del animal | 3 | Alta | HU-02 | Similar a HU-01: además de guardar, maneja la carga y el almacenamiento de imágenes, algo nuevo para el equipo. |
+| HU-08 | Lectura del número de arete (OCR) | 8 | Alta | HU-07 | Integra un servicio de OCR desconocido para el equipo, depende de la calidad de la fotografía y debe manejar el caso en que el arete no se lee. |
 | HU-09a | Sugerencia de raza | 8 | Media | HU-07 | Integra por primera vez un servicio de IA desconocido para el equipo y debe reconocer razas de varias especies. |
 | HU-09b | Sugerencia de color/patrón de pelaje | 5 | Media | HU-07 | Usa el mismo servicio de IA que HU-09a, con menos incertidumbre que la raza. |
 | HU-10 | Corrección manual de lo sugerido por la IA | 2 | Media | HU-08, HU-09a, HU-09b | Los campos sugeridos se muestran editables antes de guardar; reutiliza el registro existente. |
-| HU-11 | Registro guiado con mínima digitación | 5 | Media | HU-02 | Reorganiza todo el registro en pasos y listas de selección, y requiere ajustes después de validar con productores. |
-| HU-12 | Arete como referencia del registro oficial | 5 | Media | HU-02, HU-08 | Guarda el arete como referencia y distingue si el animal está registrado oficialmente, sin duplicar ni modificar el registro oficial; hay incertidumbre en la relación con Trazar-Agro. |
+| HU-11 | Registro guiado con mínima digitación | 5 | Alta | HU-02 | Reorganiza todo el registro en pasos y listas de selección, y requiere ajustes después de validar con productores. |
+| HU-12 | Arete como referencia del registro oficial | 5 | Media | HU-02, HU-08 | Guarda el arete como referencia y registra si el productor indica que el animal está registrado oficialmente, sin duplicar ni modificar el registro oficial; hay incertidumbre en el formato del arete que usa Trazar-Agro. |
 
 **Total del Product Backlog:** 58 puntos.
 
@@ -1081,7 +1091,8 @@ Developers) se definen en la Sección 00.
 | 11/11/2026 | 98cb63d | Se reprograman los 5 Sprints del 12/10/2026 al 18/12/2026 como plan del producto; HU-05 pasa al Sprint 2 y HU-06b al Sprint 3; se agregan las tareas del Sprint 1 y se ubica cada acción de mitigación en el Sprint anterior a la historia que protege. | 04, 05 |
 | 11/11/2026 | 99dd5bb | Se actualiza el plan temporal con las fechas del release; se agregan el rango de Sprints necesarios, el incremento por Sprint, los hitos, el burndown del release, el costo del equipo y los proveedores con sus planes gratuitos; el desglose por línea de trabajo indica su objetivo específico. | 07 |
 | 11/11/2026 | df510a3 | Se ajustan R-05, R-10, el Plan de Mitigación y el calendario de revisión de riesgos a las fechas del release; las pruebas de OCR e IA se hacen antes de integrar cada servicio; el Plan de adquisiciones nombra a cada proveedor. | 08 |
-| 11/11/2026 | este commit | Se definen criterios de calidad medibles, aseguramiento y control de la calidad; la Definition of Done indica quién verifica cada criterio y en qué columna del tablero; se agrega la estrategia de validación con dos pruebas de usabilidad. | 09 |
+| 11/11/2026 | e5256af | Se definen criterios de calidad medibles, aseguramiento y control de la calidad; la Definition of Done indica quién verifica cada criterio y en qué columna del tablero; se agrega la estrategia de validación con dos pruebas de usabilidad. | 09 |
+| 11/11/2026 | este commit | La declaración de alcance separa alcance del producto y del proyecto; el Product Backlog se ordena según los Sprints con prioridad Alta, Media o Baja y su objetivo específico; HU-08 y HU-11 agregan un criterio medible; HU-12 depende de lo que indica el productor; HU-05 ya no menciona una cuenta. | 05, 06, 07 |
 
 ### Evidencias
 
