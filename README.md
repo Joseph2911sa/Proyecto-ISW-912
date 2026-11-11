@@ -647,6 +647,21 @@ HU-06 (8 puntos) y HU-09 (13 puntos) se reemplazan por las historias en que se d
 
 ### Plan temporal
 
+El proyecto sigue el calendario académico de 14 semanas del II Cuatrimestre 2026. El trabajo
+se organiza en 5 Sprints de 2 semanas (16 de setiembre al 24 de noviembre de 2026) y la
+entrega oficial del Expediente y la demostración del incremento se realizan en la Semana 11
+(25 de noviembre de 2026).
+
+**Hitos:** cierre de cada Sprint con Sprint Review y Retrospective; revisión de riesgos según
+el Plan de Mitigación (Sección 08); entrega oficial en la Semana 11.
+
+**Dependencias que condicionan el orden:** HU-01 → HU-02 → HU-03/HU-04; HU-07 → HU-08 →
+HU-09a/HU-09b → HU-10; HU-08 → HU-12.
+
+**Control del avance:** al cierre de cada Sprint se registra en la tabla del cronograma de
+entregas el estado real, los puntos en Hecho y las historias replanificadas. Las fechas solo
+cambian por decisiones registradas en Jira y en la bitácora de la Sección 11.
+
 ### Estimaciones
 
 #### Técnica y escala
@@ -785,6 +800,21 @@ manual de los datos sugeridos por el módulo de IA y el número de arete como re
 registro oficial, listo para la entrega oficial de la Semana 11.
 
 ### Costos
+
+Servicios del Plan de adquisiciones (Sección 08). Un costo se registra como USD 0 solo cuando el
+plan gratuito está confirmado; se distingue el costo actual del costo posible al exceder la
+cuota.
+
+| Recurso / servicio | Uso | Proveedor | Plan | Costo actual | Moneda / periodicidad | Costo si se excede la cuota | Observaciones |
+|---|---|---|---|---|---|---|---|
+| Hosting de la aplicación | Pruebas y demostración | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
+| Base de datos | Datos de propietarios y animales | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
+| Almacenamiento de imágenes | HU-07 | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
+| Servicio OCR | HU-08, HU-12 | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
+| Servicio de IA de imágenes | HU-09a, HU-09b | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
+| Jira Software | Seguimiento del Sprint Backlog | Atlassian | Free | USD 0 | Mensual | — | Hasta 10 usuarios; el equipo usa 2 |
+| GitHub | Control de versiones | GitHub | Free | USD 0 | Mensual | — | Repositorio del Expediente |
+| Tiempo del equipo | Desarrollo y gestión | Dos estudiantes | — | No monetizado | — | — | [PENDIENTE: indicar si se estima en horas] |
 
 ---
 
