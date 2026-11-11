@@ -1152,7 +1152,7 @@ R = realiza, A = aprueba y responde por el resultado, C = es consultado.
 | 11/11/2026 | 27d65cd | Se agregan las decisiones registradas, la tabla de evidencias y el modelo de datos del Objetivo específico 1; se ajustan las posiciones del Mapa Poder-Interés para que las etiquetas no se encimen. | 03, 11 |
 | 11/11/2026 | 858ace2 | Se detallan las partes predictiva y adaptativa del ciclo de vida, se agregan los eventos Scrum al plan de comunicación y se ajusta el supuesto de la ficha detallada. | 04, 07, 10, 11 |
 | 11/11/2026 | 5166e84 | La Matriz de Riesgos pasa a la escala de 1 a 3 con descripción «si ocurre X, entonces Y», categoría, tipo y dueño, y agrega la oportunidad R-11; el Plan de Mitigación agrega plan de respaldo y riesgo residual; el Plan de adquisiciones agrega tipo de contrato y plan de salida. | 08, 11 |
-| 11/11/2026 | este commit | El desarrollo y la verificación cruzada se atribuyen a las etiquetas Developer 1 a 3 en el Sprint Backlog 1, el tablero, la Definition of Done, el Plan de Mitigación, la matriz de responsabilidades y los Working Agreements. | 05, 08, 09, 10, 11 |
+| 11/11/2026 | e903520 | El desarrollo y la verificación cruzada se atribuyen a las etiquetas Developer 1 a 3 en el Sprint Backlog 1, el tablero, la Definition of Done, el Plan de Mitigación, la matriz de responsabilidades y los Working Agreements. | 05, 08, 09, 10, 11 |
 
 #### Decisiones registradas
 
