@@ -199,14 +199,14 @@ quadrantChart
     quadrant-2 Mantener satisfecho
     quadrant-3 Monitorear
     quadrant-4 Mantener informado
-    Productores pequeños y medianos: [0.85, 0.35]
-    Productores adultos mayores: [0.85, 0.30]
+    Productores pequeños y medianos: [0.72, 0.32]
+    Productores adultos mayores: [0.72, 0.18]
     SENASA / Trazar-Agro: [0.45, 0.85]
-    Equipo desarrollador: [0.9, 0.9]
+    Equipo desarrollador: [0.82, 0.9]
     Profesores del curso: [0.65, 0.7]
-    Proveedor OCR/IA: [0.25, 0.3]
-    Cooperativas y asociaciones: [0.65, 0.48]
-    Médicos veterinarios: [0.45, 0.30]
+    Proveedor OCR/IA: [0.15, 0.2]
+    Cooperativas y asociaciones: [0.72, 0.42]
+    Médicos veterinarios: [0.38, 0.32]
     PRODHAB: [0.25, 0.70]
 ```
 
@@ -1123,9 +1123,83 @@ R = realiza, A = aprueba y responde por el resultado, C = es consultado.
 | 11/11/2026 | e5256af | Se definen criterios de calidad medibles, aseguramiento y control de la calidad; la Definition of Done indica quién verifica cada criterio y en qué columna del tablero; se agrega la estrategia de validación con dos pruebas de usabilidad. | 09 |
 | 11/11/2026 | b653c69 | La declaración de alcance separa alcance del producto y del proyecto; el Product Backlog se ordena según los Sprints con prioridad Alta, Media o Baja y su objetivo específico; HU-08 y HU-11 agregan un criterio medible; HU-12 depende de lo que indica el productor; HU-05 ya no menciona una cuenta. | 05, 06, 07 |
 | 11/11/2026 | 0965a1d | La justificación cita el alcance de Trazar-Agro; el Product Goal se redacta como resultado para el productor; se quitan repeticiones de la Sección 02 y se justifica el tipo de estructura; las estrategias de SENASA y de los profesores coinciden con su cuadrante; se nombra a la PRODHAB; se actualiza la bibliografía. | 01, 02, 03, 10, Bibliografía |
-| 11/11/2026 | este commit | Se agrega la matriz de responsabilidades (RACI) y los Working Agreements; los profesores tienen acceso de lectura al proyecto de Jira. | 10 |
+| 11/11/2026 | 1405946 | Se agrega la matriz de responsabilidades (RACI) y los Working Agreements; los profesores tienen acceso de lectura al proyecto de Jira. | 10 |
+| 11/11/2026 | este commit | Se agregan las decisiones registradas, la tabla de evidencias y el modelo de datos del Objetivo específico 1; se ajustan las posiciones del Mapa Poder-Interés para que las etiquetas no se encimen. | 03, 11 |
+
+#### Decisiones registradas
+
+| Fecha | Decisión | Motivo | Quién decidió |
+|---|---|---|---|
+| 10/10/2026 | Ciclo de vida híbrido con 5 Sprints de 2 semanas. | La fecha de entrega es fija y el alcance se ajusta de forma adaptativa. | Scrum Team |
+| 29/10/2026 | El Sprint 1 se limita a HU-01, HU-02 y HU-03. | Son la base de todas las demás historias. | Marco López Quesada (Product Owner) |
+| 29/10/2026 | HU-09 se divide en HU-09a y HU-09b. | Una historia de 13 puntos esconde varias historias. | Scrum Team |
+| 04/11/2026 | Jira (proyecto RIG) es el tablero de trabajo. | Permite convertir cada historia en tareas asignadas y marcar impedimentos. | Scrum Team |
+| 10/11/2026 | HU-06 se divide en HU-06a, HU-06b y HU-06c. | Sus grupos de datos son independientes y uno puede salir del release sin afectar a los demás. | Marco López Quesada (Product Owner) |
+| 10/11/2026 | Las líneas de desarrollo se asignan con las etiquetas Developer 1 a 3. | Reparten el trabajo por línea entre los dos estudiantes. | Scrum Team |
+| 11/11/2026 | Los Sprints se fijan del 12/10/2026 al 18/12/2026. | El Sprint 1 debe empezar después de documentar el backlog, el primer Sprint y la Definition of Done. | Scrum Team |
+| 11/11/2026 | HU-05 pasa al Sprint 2 y HU-06b al Sprint 3. | Ningún Sprint supera la velocidad máxima esperada de 13 puntos. | Marco López Quesada (Product Owner) |
+| 11/11/2026 | Proveedores: Vercel, Supabase, Google Cloud Vision y Azure AI Custom Vision. | Sus planes gratuitos cubren las pruebas y la demostración. | Scrum Team |
 
 ### Evidencias
+
+| Evidencia | Ubicación |
+|---|---|
+| Historial de cambios del Expediente | [Commits del repositorio](https://github.com/Joseph2911sa/Proyecto-ISW-912/commits/main) |
+| Tablero y Sprints en Jira | [Proyecto RIG](https://marcolopezquesada15.atlassian.net/jira/software/projects/RIG/boards/69/backlog) |
+| Modelo de datos (Objetivo específico 1) | Diagrama siguiente |
+
+#### Modelo de datos
+
+Cada animal pertenece a un propietario y a una especie. Los datos de salud, peso y
+reproducción se guardan como registros con fecha, para conservar el historial de cada animal.
+
+```mermaid
+erDiagram
+    PROPIETARIO ||--o{ ANIMAL : "es dueño de"
+    ESPECIE ||--o{ ANIMAL : "clasifica"
+    ANIMAL ||--o{ REGISTRO_SALUD : "tiene"
+    ANIMAL ||--o{ REGISTRO_PESO : "tiene"
+    ANIMAL ||--o{ REGISTRO_REPRODUCCION : "tiene"
+    PROPIETARIO {
+        string cedula PK
+        string tipo_cedula "física o jurídica"
+        string nombre
+        boolean consentimiento_datos
+    }
+    ESPECIE {
+        int id PK
+        string nombre "bovino, porcino, equino u otra"
+    }
+    ANIMAL {
+        string codigo_unico PK
+        string cedula_propietario FK
+        int id_especie FK
+        string numero_arete
+        boolean registrado_oficialmente
+        string raza
+        string color_patron
+        string url_fotografia
+        date fecha_registro
+    }
+    REGISTRO_SALUD {
+        int id PK
+        string codigo_animal FK
+        date fecha
+        string detalle "definido con el médico veterinario (M-05)"
+    }
+    REGISTRO_PESO {
+        int id PK
+        string codigo_animal FK
+        date fecha
+        decimal peso_kg
+    }
+    REGISTRO_REPRODUCCION {
+        int id PK
+        string codigo_animal FK
+        date fecha
+        string detalle "definido con el médico veterinario (M-05)"
+    }
+```
 
 ### Preparación de la demostración
 
