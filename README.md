@@ -389,7 +389,7 @@ aceptación, su estimación en puntos, su prioridad, su línea de trabajo (etiqu
 dependencias, registradas como vínculos *bloquea / está bloqueada por*. Cada historia se
 convierte en **tareas (subtareas de Jira)** asignadas al integrante del Scrum Team que las
 desarrolla; la última tarea de cada historia es *Verificar criterios de aceptación y
-Definition of Done* y se asigna a un integrante distinto de quien la construyó. Las acciones de
+Definition of Done* y se asigna al estudiante que no construyó la historia. Las acciones de
 mitigación de la Sección 08 se registran como tareas con la etiqueta `riesgo`.
 
 > En Jira cada tarea aparece asignada a la cuenta del estudiante que la ejecuta; en el
@@ -400,9 +400,12 @@ mitigación de la Sección 08 se registran como tareas con la etiqueta `riesgo`.
 | Columna | Significado | Límite WIP | Justificación |
 |---|---|---|---|
 | Por hacer (To Do) | Historias y tareas del Sprint Backlog que todavía no se empiezan. | Sin límite | Es el Sprint Backlog del Sprint en curso. |
-| En progreso (In Progress) | Historias que un desarrollador está construyendo. | 3 | El Scrum Team tiene tres Developers: con más de tres historias abiertas el trabajo se dispersa y ninguna termina. |
-| En revisión (In Review) | Historias construidas que otro integrante del equipo verifica contra sus criterios de aceptación y la Definition of Done. | 2 | La revisión la hace otro integrante del equipo: con más de dos historias pendientes la revisión se vuelve el cuello de botella. |
+| En progreso (In Progress) | Historias que un estudiante está construyendo. | 2 | El equipo son dos estudiantes: una historia activa por estudiante. Con más historias abiertas el trabajo se dispersa y ninguna termina. |
+| En revisión (In Review) | Historias construidas que el estudiante que no las construyó verifica contra sus criterios de aceptación y la Definition of Done. | 2 | Cada estudiante revisa las historias del otro: con más de dos historias pendientes de revisión, la revisión se vuelve el cuello de botella. |
 | Hecho (Done) | Historias que cumplen la Definition of Done (Sección 09). | Sin límite | Solo lo terminado según la Definition of Done cuenta para la velocidad. |
+
+Los límites WIP aplican a las historias. Las acciones de mitigación (etiqueta `riesgo`) se
+siguen en el mismo tablero, pero no cuentan para el límite.
 
 **Impedimentos:** una historia o tarea detenida por un impedimento se marca con la bandera
 de impedimento (*Flagged*) de Jira, lo que la resalta en el tablero para escalarla según la
@@ -412,8 +415,11 @@ Sección 10.
 Scrum Team que la desarrolla.
 
 **Regla para mover una historia a Hecho:** una historia pasa a Hecho cuando todas sus tareas
-están en Hecho, incluida la verificación de sus criterios de aceptación por un integrante
-distinto de quien la construyó, y cumple la Definition of Done de la Sección 09.
+están en Hecho, incluida la verificación de sus criterios de aceptación por el estudiante que no
+la construyó, y cumple la Definition of Done de la Sección 09. Como las etiquetas Developer 1 a
+3 se reparten entre los mismos dos estudiantes, la regla se aplica por estudiante y no por
+etiqueta. La verificación queda registrada como comentario en la tarea de verificación de la
+historia en Jira.
 
 ---
 
@@ -894,19 +900,21 @@ Toda sugerencia generada por el módulo de IA puede corregirse manualmente.
 
 Una historia de usuario está terminada cuando cumple todas estas condiciones:
 
-1. Revisión del código: otro integrante del equipo revisó el código y no quedan
-   observaciones pendientes.
+1. Revisión del código: el estudiante que no construyó la historia revisó el código y no
+   quedan observaciones pendientes; la revisión se registra en la tarea de verificación de
+   Jira.
 2. Funcionamiento completo: se cumplen todos los criterios de aceptación de la historia,
    verificados en su tarea de verificación en Jira.
-3. Compatibilidad: la funcionalidad se comprobó en los dispositivos y sistemas operativos
-   en que se usará el producto.
+3. Compatibilidad: la funcionalidad se comprobó en los dispositivos y navegadores en que se
+   usará el producto: [PENDIENTE: dispositivos y navegadores definidos por el equipo].
 4. Documentación actualizada: se registró la información necesaria sobre la funcionalidad
    y los cambios realizados para facilitar su mantenimiento.
 5. Seguridad y rendimiento: se verificó que la funcionalidad protege los datos del
    usuario, en especial la cédula del propietario, y responde adecuadamente sin afectar el
    rendimiento del producto.
-6. Integración y pruebas: el código está integrado en la rama principal del repositorio y
-   las pruebas de lo nuevo pasan.
+6. Integración y pruebas: el código está integrado en la rama principal del repositorio de
+   la aplicación ([PENDIENTE: enlace al repositorio del código]) y las pruebas de lo nuevo
+   pasan. Este repositorio contiene solo el Expediente.
 
 ### Estrategia de validación
 
