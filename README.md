@@ -224,9 +224,9 @@ El proyecto nace del problema descrito en la Sección 01: el sistema nacional Tr
 cubre el cumplimiento sanitario y comercial, pero los productores no cuentan con una
 herramienta propia, detallada y fácil de usar para el control individual de cada animal.
 
-La fecha de la entrega oficial es fija (Semana 11) y el alcance se construye de forma
-adaptativa mediante 5 Sprints de 2 semanas, por lo que el ciclo de vida del proyecto es
-híbrido.
+La fecha de la entrega oficial del Expediente es fija (Semana 11, 25/11/2026) y el producto
+se planifica de forma adaptativa en 5 Sprints de 2 semanas, del 12/10/2026 al 18/12/2026, por
+lo que el ciclo de vida del proyecto es híbrido.
 
 El trabajo avanza por tres líneas, tomadas de los objetivos específicos:
 
@@ -237,12 +237,13 @@ El trabajo avanza por tres líneas, tomadas de los objetivos específicos:
 3. Interfaz simple y validación: pasos guiados y mínima digitación, validados con
    productores reales o simulados.
 
-El cierre del proyecto consiste en la entrega oficial del Expediente completo, la
-demostración del incremento y la defensa ante el docente en la Semana 11.
+En la Semana 11 (25/11/2026) se entrega el Expediente completo, con la planificación del
+release, y el equipo lo defiende ante los profesores del curso. El release planificado
+termina con el Sprint 5, el 18/12/2026.
 
 ### Primer Sprint
 
-**Duración:** 2 semanas (Sprint 1 de 5).
+**Duración:** 2 semanas, del 12/10/2026 al 23/10/2026 (Sprint 1 de 5).
 
 **Sprint Goal:** Permitir al productor registrar un animal asociado a un propietario
 identificado por cédula, con su código único generado automáticamente. Todo lo demás queda
@@ -284,7 +285,7 @@ El backlog está ordenado por valor para el productor y por dependencia entre hi
 
 ### Sprint Backlog
 
-#### Sprint 1
+#### Sprint 1 (12/10/2026 al 23/10/2026)
 
 **Sprint Goal:** Permitir al productor registrar un animal asociado a un propietario
 identificado por cédula, con su código único generado automáticamente.
@@ -295,28 +296,68 @@ identificado por cédula, con su código único generado automáticamente.
 | HU-02 | Definir la ficha del animal por categoría de especie y su registro asociado a un propietario. |
 | HU-03 | Definir la regla de generación automática del código único. |
 
-#### Sprint 2
+**Tareas del Sprint 1:**
 
-**Sprint Goal:** Permitir al productor consultar la ficha de un animal registrado, adjuntar
-una fotografía opcional y registrar un animal mediante pasos guiados con mínima digitación.
+| Historia | Tarea | Responsable |
+|---|---|---|
+| HU-01 | RIG-2 Montar la estructura del proyecto y la base de datos | Developer 1 |
+| HU-01 | RIG-3 Modelar la tabla de propietarios (cédula física y jurídica) | Developer 1 |
+| HU-01 | RIG-4 Implementar el registro de propietario y bloquear cédulas duplicadas | Developer 1 |
+| HU-01 | RIG-5 Verificar criterios de aceptación y Definition of Done | Joseph Salazar Araya |
+| HU-02 | RIG-7 Modelar la entidad animal y sus categorías de especie | Developer 1 |
+| HU-02 | RIG-8 Implementar el registro del animal asociado a un propietario | Developer 1 |
+| HU-02 | RIG-9 Validar que la especie y el propietario sean obligatorios | Developer 1 |
+| HU-02 | RIG-10 Verificar criterios de aceptación y Definition of Done | Joseph Salazar Araya |
+| HU-03 | RIG-12 Definir la regla de generación del código único | Developer 1 |
+| HU-03 | RIG-13 Generar el código automáticamente al guardar el animal y garantizar que no se repita | Developer 1 |
+| HU-03 | RIG-14 Verificar criterios de aceptación y Definition of Done | Joseph Salazar Araya |
+
+**Acciones de mitigación (Sección 08):**
+
+| Acción | Riesgo | Responsable | Jira |
+|---|---|---|---|
+| M-04 Confirmar la capacidad del equipo en cada Sprint Planning y ajustar el Sprint Backlog. | R-05 | Joseph Salazar Araya (Scrum Master) | RIG-65 |
+| M-08 Agregar aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias. | R-07 | Developer 1 | RIG-69 |
+
+#### Sprint 2 (26/10/2026 al 06/11/2026)
+
+**Sprint Goal:** Permitir al productor consultar la ficha de un animal, ver todos los animales
+de un propietario, adjuntar una fotografía opcional y registrar un animal mediante pasos
+guiados con mínima digitación.
 
 | Historia | Plan de entrega |
 |---|---|
 | HU-04 | Mostrar en la ficha del animal su código único, su especie y su propietario. |
+| HU-05 | Mostrar la lista de animales de cada propietario y agregar a ella los animales nuevos. |
 | HU-07 | Permitir adjuntar una fotografía opcional al registrar el animal, guardarla y mostrarla en la ficha. |
-| HU-11 | Organizar el registro del animal en pasos guiados y reemplazar la digitación por listas de selección en los datos con opciones definidas. |
+| HU-11 | Organizar el registro del animal en pasos guiados, reemplazar la digitación por listas de selección en los datos con opciones definidas y validarlo con 3 productores reales o simulados. |
 
-#### Sprint 3
+**Acciones de mitigación (Sección 08):**
 
-**Sprint Goal:** Permitir al productor ver todos los animales de un mismo propietario y
-obtener el número de arete leído automáticamente a partir de la fotografía.
+| Acción | Riesgo | Responsable | Jira |
+|---|---|---|---|
+| M-01 Probar el servicio de OCR con al menos 20 fotografías reales de aretes antes de integrarlo en HU-08. | R-01 | Developer 2 | RIG-62 |
+| M-06 Comprimir la fotografía antes de subirla y reintentar la carga cuando falle la conexión. | R-09 | Developer 1 | RIG-67 |
+| M-10 Revisar el consumo y los límites gratuitos de hosting, base de datos y almacenamiento de imágenes. | R-04 | Marco López Quesada | RIG-71 |
+
+#### Sprint 3 (09/11/2026 al 20/11/2026)
+
+**Sprint Goal:** Permitir al productor obtener el número de arete leído automáticamente a
+partir de la fotografía y registrar el peso del animal en su ficha.
 
 | Historia | Plan de entrega |
 |---|---|
-| HU-05 | Mostrar la lista de animales de cada propietario y agregar a ella los animales nuevos. |
 | HU-08 | Integrar el servicio de OCR para sugerir el número de arete a partir de la fotografía y permitir el ingreso manual cuando no se detecta. |
+| HU-06b | Guardar los datos de peso en la ficha y mostrarlos junto con los datos básicos del animal. |
 
-#### Sprint 4
+**Acciones de mitigación (Sección 08):**
+
+| Acción | Riesgo | Responsable | Jira |
+|---|---|---|---|
+| M-02 Probar por especie la sugerencia de raza y color/patrón con fotos de bovinos, porcinos y equinos antes de integrarla en HU-09a y HU-09b. | R-02 | Developer 2 | RIG-63 |
+| M-03 Encapsular el OCR y la IA detrás de una interfaz propia y configurar alertas de cuota. | R-03 | Developer 2 | RIG-64 |
+
+#### Sprint 4 (23/11/2026 al 04/12/2026)
 
 **Sprint Goal:** Permitir al productor recibir sugerencias de raza y de color/patrón de
 pelaje a partir de la fotografía del animal.
@@ -328,61 +369,50 @@ pelaje a partir de la fotografía del animal.
 
 **Acciones de mitigación (Sección 08):**
 
-| Acción | Riesgo | Responsable | Jira | Estado (10/11) |
-|---|---|---|---|---|
-| M-01 Medir la tasa de lectura del OCR integrado en HU-08 con al menos 20 fotografías reales de aretes. | R-01 | Developer 2 | RIG-62 | En progreso |
-| M-02 Medir por especie el acierto de la sugerencia de raza y color/patrón con fotos de bovinos, porcinos y equinos. | R-02 | Developer 2 | RIG-63 | En progreso |
-| M-03 Encapsular el OCR y la IA detrás de una interfaz propia y configurar alertas de cuota. | R-03 | Developer 2 | RIG-64 | En progreso |
-| M-04 Confirmar la capacidad del equipo para los Sprints 4 y 5 y ajustar el Sprint Backlog. | R-05 | Joseph Salazar Araya (Scrum Master) | RIG-65 | En progreso |
-| M-05 Definir con un médico veterinario los datos de HU-06a, HU-06b y HU-06c antes del Sprint Planning 5. | R-10 | Marco López Quesada (Product Owner) | RIG-66 | En progreso |
-| M-06 Comprimir la fotografía antes de subirla y reintentar la carga cuando falle la conexión. | R-09 | Developer 1 | RIG-67 | En progreso |
+| Acción | Riesgo | Responsable | Jira |
+|---|---|---|---|
+| M-05 Definir con un médico veterinario los datos de HU-06a y HU-06c antes del Sprint Planning 5. | R-10 | Marco López Quesada (Product Owner) | RIG-66 |
+| M-09 Revisar la información pública de SENASA/Trazar-Agro sobre el formato del arete antes de HU-12. | R-08 | Joseph Salazar Araya | RIG-70 |
 
-Las acciones del Sprint 4 pasan a Hecho cuando su resultado queda registrado en la revisión de
-riesgos de la Sección 08.
+#### Sprint 5 (07/12/2026 al 18/12/2026)
 
-#### Sprint 5
-
-**Sprint Goal:** Permitir al productor completar la ficha detallada del animal, corregir
-manualmente los datos sugeridos por el módulo de IA y usar el número de arete como
+**Sprint Goal:** Permitir al productor completar los datos de salud y reproducción del
+animal, corregir los datos sugeridos por el módulo de IA y usar el número de arete como
 referencia del registro oficial.
 
 | Historia | Plan de entrega |
 |---|---|
-| HU-06a | Definir los datos de salud, guardarlos en la ficha y mostrarlos junto con los datos básicos del animal. |
-| HU-06b | Guardar los datos de peso en la ficha y mostrarlos junto con los datos básicos del animal. |
-| HU-06c | Definir los datos de reproducción, guardarlos en la ficha y mostrarlos junto con los datos básicos del animal. |
 | HU-10 | Mostrar como editables los datos sugeridos por el módulo de IA y guardar el valor corregido o confirmado. |
-| HU-12 | Guardar el número de arete como referencia de la ficha y distinguir si el animal ya está registrado oficialmente, sin duplicar ni modificar el registro oficial. |
+| HU-12 | Guardar el número de arete como referencia de la ficha y registrar si el productor indica que el animal ya está registrado oficialmente, sin duplicar ni modificar el registro oficial. |
+| HU-06a | Definir los datos de salud, guardarlos en la ficha y mostrarlos junto con los datos básicos del animal. |
+| HU-06c | Definir los datos de reproducción, guardarlos en la ficha y mostrarlos junto con los datos básicos del animal. |
 
 **Acciones de mitigación (Sección 08):**
 
-| Acción | Riesgo | Responsable | Jira | Estado (10/11) |
-|---|---|---|---|---|
-| M-07 Repetir la prueba de usabilidad del registro completo con al menos 3 productores reales o simulados. | R-06 | Developer 3 | RIG-68 | Por hacer |
-| M-08 Agregar aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias. | R-07 | Developer 1 | RIG-69 | Por hacer |
-| M-09 Revisar la información pública de SENASA/Trazar-Agro sobre el formato del arete antes de HU-12. | R-08 | Joseph Salazar Araya | RIG-70 | Por hacer |
-| M-10 Revisar el consumo y los límites gratuitos de hosting y almacenamiento de imágenes. | R-04 | Marco López Quesada | RIG-71 | Por hacer |
+| Acción | Riesgo | Responsable | Jira |
+|---|---|---|---|
+| M-07 Repetir la prueba de usabilidad con el registro completo, ya con el módulo de IA, con al menos 3 productores reales o simulados. | R-06 | Developer 3 | RIG-68 |
 
 ### Mecanismo de seguimiento
 
 El Sprint Backlog se sigue en el proyecto de Jira **RIG — Plataforma de Registro Individual
-de Ganado**, con un Sprint de Jira por cada Sprint del proyecto. El tablero se actualiza en el
+de Ganado**, con un Sprint de Jira por cada Sprint del plan. El tablero se actualiza en cada
 Daily Scrum. El Scrum Master organiza el Daily Scrum y da seguimiento al Sprint Backlog.
 
 #### Tablero de Trabajo
 
-- Tablero del Sprint en curso: https://marcolopezquesada15.atlassian.net/jira/software/projects/RIG/boards/69
+- Tablero del Sprint: https://marcolopezquesada15.atlassian.net/jira/software/projects/RIG/boards/69
 - Backlog y Sprints: https://marcolopezquesada15.atlassian.net/jira/software/projects/RIG/boards/69/backlog
 
-Estado tomado de Jira el 10/11/2026:
+Sprints registrados en Jira:
 
-| Sprint | Historias | Elementos en Jira | Estado del Sprint en Jira | Estado de las historias |
-|---|---|---|---|---|
-| Sprint 1 | HU-01, HU-02, HU-03 | RIG-1, RIG-6, RIG-11 | Cerrado | Hecho |
-| Sprint 2 | HU-04, HU-07, HU-11 | RIG-15, RIG-19, RIG-24 | Cerrado | Hecho |
-| Sprint 3 | HU-05, HU-08 | RIG-29, RIG-33 | Cerrado | Hecho |
-| Sprint 4 | HU-09a, HU-09b | RIG-39, RIG-44 | Activo (cierra el 10/11) | Hecho; M-01 a M-06 en progreso |
-| Sprint 5 | HU-06a, HU-06b, HU-06c, HU-10, HU-12 | RIG-48, RIG-72, RIG-76, RIG-53, RIG-57 | Planificado (inicia el 11/11) | Por hacer, en orden de prioridad |
+| Sprint | Fechas | Historias | Elementos en Jira |
+|---|---|---|---|
+| Sprint 1 | 12/10/2026 al 23/10/2026 | HU-01, HU-02, HU-03 | RIG-1, RIG-6, RIG-11 |
+| Sprint 2 | 26/10/2026 al 06/11/2026 | HU-04, HU-05, HU-07, HU-11 | RIG-15, RIG-29, RIG-19, RIG-24 |
+| Sprint 3 | 09/11/2026 al 20/11/2026 | HU-08, HU-06b | RIG-33, RIG-72 |
+| Sprint 4 | 23/11/2026 al 04/12/2026 | HU-09a, HU-09b | RIG-39, RIG-44 |
+| Sprint 5 | 07/12/2026 al 18/12/2026 | HU-10, HU-12, HU-06a, HU-06c | RIG-53, RIG-57, RIG-48, RIG-76 |
 
 Cada historia de usuario es una *Historia* de Jira que lleva su enunciado, sus criterios de
 aceptación, su estimación en puntos, su prioridad, su línea de trabajo (etiqueta) y sus
@@ -1012,7 +1042,8 @@ Developers) se definen en la Sección 00.
 | 2026-11-10 | 2517c19 | Se ajustan los límites WIP, la verificación cruzada y la Definition of Done para un equipo de dos estudiantes. | 05, 09 |
 | 2026-11-10 | 3608062 | Se agregan el plan temporal y la plantilla de costos. | 07 |
 | 2026-11-10 | a58cb8a | Se agrega la columna Commit a la bitácora y se registran los commits anteriores sin entrada. | 11 |
-| 11/11/2026 | este commit | Se agrega la versión del expediente en la portada y se eliminan textos aclaratorios de las Secciones 00, 05, 06, 07 y 09. | 00, 05, 06, 07, 09, 11 |
+| 11/11/2026 | bf1d40f | Se agrega la versión del expediente en la portada y se eliminan textos aclaratorios de las Secciones 00, 05, 06, 07 y 09. | 00, 05, 06, 07, 09, 11 |
+| 11/11/2026 | este commit | Se reprograman los 5 Sprints del 12/10/2026 al 18/12/2026 como plan del producto; HU-05 pasa al Sprint 2 y HU-06b al Sprint 3; se agregan las tareas del Sprint 1 y se ubica cada acción de mitigación en el Sprint anterior a la historia que protege. | 04, 05 |
 
 ### Evidencias
 
