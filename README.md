@@ -6,7 +6,7 @@
 Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 2026
 
 **Estudiantes:** Marco López Quesada · Joseph Salazar Araya
-**Profesor:** Deiver Cubero Molina
+**Profesores:** Yesenia Calvo Araya · Deiver Cubero Molina
 
 ### Definición del Scrum Team
 
@@ -14,9 +14,13 @@ Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 
 |---|---|---|
 | Product Owner | Marco López Quesada | Define y prioriza el Product Backlog; representa la visión del producto y las necesidades de los productores; decide qué se construye en cada Sprint. |
 | Scrum Master | Joseph Salazar Araya | Facilita el proceso Scrum; da seguimiento al Sprint Backlog; elimina obstáculos del equipo; organiza Sprint Planning, Daily Scrum, Sprint Review y Retrospective. |
-| Developer 1 | Marco López Quesada | Modelo de datos y registro individual: modelo multi-especie, propietario por cédula, ficha por animal y código único. |
-| Developer 2 | Joseph Salazar Araya | Módulo de asistencia por IA: lectura del arete mediante OCR y sugerencia de raza y color/patrón, con corrección manual. |
-| Developer 3 | Joseph Salazar Araya | Interfaz simple y validación: pasos guiados y mínima digitación, validados con productores reales o simulados. |
+| Developer 1 | Developer 1 | Modelo de datos y registro individual: modelo multi-especie, propietario por cédula, ficha por animal y código único. |
+| Developer 2 | Developer 2 | Módulo de asistencia por IA: lectura del arete mediante OCR y sugerencia de raza y color/patrón, con corrección manual. |
+| Developer 3 | Developer 3 | Interfaz simple y validación: pasos guiados y mínima digitación, validados con productores reales o simulados. |
+
+> El equipo está integrado por dos estudiantes: Marco López Quesada y Joseph Salazar Araya.
+> Developer 1, Developer 2 y Developer 3 son etiquetas genéricas autorizadas por la
+> profesora para distribuir las líneas de trabajo; no representan a estudiantes adicionales.
 
 Duración del equipo: 14 semanas, correspondientes a la duración completa del curso.
 
@@ -84,7 +88,6 @@ que agilice el registro mediante fotografía.
   fase.
 - Soporte completamente offline; se asume conectividad intermitente, no ausencia total de
   red.
-- Scrum Team de 5 integrantes, trabajo acotado a las 14 semanas del curso.
 
 ### Product Goal
 
@@ -107,7 +110,7 @@ registro mediante fotografía.
 | Solución | Plataforma multi-especie con ficha por animal, código único, asociación a propietario por cédula y módulo de IA/OCR para lectura de arete y sugerencia de raza/color-patrón. |
 | Canales | Aplicación web/móvil; difusión a través de cooperativas y asociaciones de productores agropecuarios. |
 | Flujos de ingreso | Proyecto académico, sin modelo de ingresos definido en esta etapa. |
-| Estructura de costos | Tiempo de desarrollo del equipo (5 integrantes del Scrum Team); hosting; costo de servicios de OCR/IA en la nube. |
+| Estructura de costos | Tiempo de desarrollo de los dos estudiantes del equipo; hosting; costo de servicios de OCR/IA en la nube. |
 | Métricas clave | Número de animales registrados; tasa de precisión del OCR; tasa de adopción en pruebas con usuarios reales o simulados. |
 | Ventaja injusta | Diseño construido específicamente para el contexto costarricense (conectividad limitada, usuarios adultos mayores) e integración conceptual con Trazar-Agro/SENASA. |
 
@@ -115,8 +118,9 @@ registro mediante fotografía.
 
 **Internos**
 
-- Scrum Team de 5 integrantes (Product Owner, Scrum Master y 3 Developers), sin
-  estructura jerárquica formal; las decisiones se toman en conjunto.
+- Equipo de dos estudiantes que cubren las responsabilidades de Product Owner, Scrum
+  Master y las líneas Developer 1 a 3, sin estructura jerárquica formal; las decisiones se
+  toman en conjunto.
 - Tiempo disponible limitado al calendario académico de 14 semanas.
 - Presupuesto estudiantil, dependiente de servicios gratuitos o de bajo costo (APIs de
   OCR, hosting).
@@ -134,12 +138,12 @@ registro mediante fotografía.
 
 ### Tipo de estructura organizacional
 
-Orientada a proyectos: Scrum Team de 5 integrantes, sin estructura jerárquica formal; las
+Orientada a proyectos: equipo de dos estudiantes, sin estructura jerárquica formal; las
 decisiones se toman en conjunto.
 
 ### Restricciones
 
-- Scrum Team de 5 integrantes, trabajo acotado a las 14 semanas del curso.
+- Equipo de dos estudiantes; trabajo acotado a las 14 semanas del curso.
 - Presupuesto estudiantil, dependiente de servicios gratuitos o de bajo costo (APIs de
   OCR, hosting).
 - Conectividad rural limitada en muchas fincas costarricenses.
@@ -159,7 +163,7 @@ decisiones se toman en conjunto.
 | Productores adultos mayores | Segmento crítico de usuarios | Interfaz sencilla, mínima digitación | 2 | 5 | Mixta | Involucrar en pruebas de usabilidad tempranas | Marco López Quesada |
 | SENASA / Trazar-Agro | Entidad reguladora / sistema nacional | Que el proyecto no duplique ni interfiera con el registro oficial | 5 | 3 | Neutral | Mantener informado; diseñar como complemento | Joseph Salazar Araya |
 | Equipo desarrollador | Responsables del proyecto | Cumplir los objetivos del curso y del producto | 5 | 5 | Favorable | Gestionar de cerca | Marco López Quesada y Joseph Salazar Araya |
-| Profesor del curso | Evaluador / patrocinador académico | Evidencia de aplicación correcta de los conceptos del curso | 4 | 4 | Favorable | Mantener informado con avances semanales | Joseph Salazar Araya |
+| Profesores del curso (Yesenia Calvo Araya y Deiver Cubero Molina) | Evaluador / patrocinador académico | Evidencia de aplicación correcta de los conceptos del curso | 4 | 4 | Favorable | Mantener informado con avances semanales | Joseph Salazar Araya |
 | Proveedor de servicio OCR/IA | Tercero tecnológico | Uso correcto de su API/servicio | 2 | 2 | Neutral | Monitorear disponibilidad y costos | Joseph Salazar Araya |
 | Cooperativas y asociaciones de productores | Canal de difusión entre productores | Que la herramienta sea útil para sus asociados y fácil de recomendar | 3 | 4 | Favorable | Mantener informado y consultar sobre la difusión | Marco López Quesada |
 | Médicos veterinarios y asistentes técnicos | Usuarios secundarios; apoyo a los productores | Consultar con claridad los datos individuales de cada animal | 2 | 3 | Neutral | Monitorear y considerar su opinión sobre los datos de la ficha | Marco López Quesada |
@@ -195,7 +199,7 @@ quadrantChart
     Productores adultos mayores: [0.85, 0.30]
     SENASA / Trazar-Agro: [0.45, 0.85]
     Equipo desarrollador: [0.9, 0.9]
-    Profesor del curso: [0.65, 0.7]
+    Profesores del curso: [0.65, 0.7]
     Proveedor OCR/IA: [0.25, 0.3]
     Cooperativas y asociaciones: [0.65, 0.48]
     Medicos veterinarios: [0.45, 0.30]
@@ -208,7 +212,7 @@ quadrantChart
 |---|---|---|
 | Productores adultos mayores | De su adopción depende el cumplimiento del tercer objetivo específico y es el segmento con menor familiaridad tecnológica. | Pruebas de usabilidad tempranas del registro guiado con productores reales o simulados; sus observaciones se incorporan al Product Backlog y se revisan al cierre de cada Sprint. |
 | SENASA / Trazar-Agro | Su normativa y su sistema oficial determinan que el producto sea un complemento y no un duplicado del registro oficial. | Consulta de su información pública al definir cada Sprint, para confirmar que el alcance complementa el registro oficial sin duplicarlo. |
-| Profesor del curso | Evalúa cada entrega del Expediente, del repositorio y de la demostración. | Avance semanal del Expediente y del repositorio, y atención de su retroalimentación en el Sprint siguiente. |
+| Profesores del curso | Evalúan cada entrega del Expediente, del repositorio y de la demostración. | Avance semanal del Expediente y del repositorio, y atención de su retroalimentación en el Sprint siguiente. |
 
 ---
 
@@ -326,12 +330,12 @@ pelaje a partir de la fotografía del animal.
 
 | Acción | Riesgo | Responsable | Jira |
 |---|---|---|---|
-| M-01 Probar el OCR con al menos 20 fotografías reales de aretes y medir la tasa de lectura. | R-01 | Joseph Salazar Araya | RIG-62 |
-| M-02 Prueba de concepto de sugerencia de raza y color/patrón con fotos de bovinos, porcinos y equinos. | R-02 | Joseph Salazar Araya | RIG-63 |
-| M-03 Encapsular el OCR y la IA detrás de una interfaz propia y configurar alertas de cuota. | R-03 | Joseph Salazar Araya | RIG-64 |
-| M-04 Confirmar la capacidad del equipo para los Sprints 4 y 5 y ajustar el Sprint Backlog. | R-05 | Joseph Salazar Araya | RIG-65 |
-| M-05 Definir con un médico veterinario los datos de HU-06 antes del Sprint Planning 5. | R-10 | Marco López Quesada | RIG-66 |
-| M-06 Comprimir la fotografía antes de subirla y reintentar la carga cuando falle la conexión. | R-09 | Marco López Quesada | RIG-67 |
+| M-01 Probar el OCR con al menos 20 fotografías reales de aretes y medir la tasa de lectura. | R-01 | Developer 2 | RIG-62 |
+| M-02 Prueba de concepto de sugerencia de raza y color/patrón con fotos de bovinos, porcinos y equinos. | R-02 | Developer 2 | RIG-63 |
+| M-03 Encapsular el OCR y la IA detrás de una interfaz propia y configurar alertas de cuota. | R-03 | Developer 2 | RIG-64 |
+| M-04 Confirmar la capacidad del equipo para los Sprints 4 y 5 y ajustar el Sprint Backlog. | R-05 | Joseph Salazar Araya (Scrum Master) | RIG-65 |
+| M-05 Definir con un médico veterinario los datos de HU-06 antes del Sprint Planning 5. | R-10 | Marco López Quesada (Product Owner) | RIG-66 |
+| M-06 Comprimir la fotografía antes de subirla y reintentar la carga cuando falle la conexión. | R-09 | Developer 1 | RIG-67 |
 
 #### Sprint 5
 
@@ -349,8 +353,8 @@ referencia del registro oficial.
 
 | Acción | Riesgo | Responsable | Jira |
 |---|---|---|---|
-| M-07 Repetir la prueba de usabilidad del registro completo con al menos 3 productores reales o simulados. | R-06 | Marco López Quesada | RIG-68 |
-| M-08 Agregar aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias. | R-07 | Joseph Salazar Araya | RIG-69 |
+| M-07 Repetir la prueba de usabilidad del registro completo con al menos 3 productores reales o simulados. | R-06 | Developer 3 | RIG-68 |
+| M-08 Agregar aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias. | R-07 | Developer 1 | RIG-69 |
 | M-09 Revisar la información pública de SENASA/Trazar-Agro sobre el formato del arete antes de HU-12. | R-08 | Joseph Salazar Araya | RIG-70 |
 | M-10 Revisar el consumo y los límites gratuitos de hosting y almacenamiento de imágenes. | R-04 | Marco López Quesada | RIG-71 |
 
@@ -380,6 +384,11 @@ convierte en **tareas (subtareas de Jira)** asignadas al integrante del Scrum Te
 desarrolla; la última tarea de cada historia es *Verificar criterios de aceptación y
 Definition of Done* y se asigna a un integrante distinto de quien la construyó. Las acciones de
 mitigación de la Sección 08 se registran como tareas con la etiqueta `riesgo`.
+
+> En Jira cada tarea aparece asignada a la cuenta del estudiante que la ejecuta; en el
+> expediente el trabajo de desarrollo se identifica con la etiqueta Developer
+> correspondiente. Las responsabilidades de gestión (Product Owner, Scrum Master, relación
+> con interesados y adquisiciones) se mantienen con el nombre del estudiante.
 
 | Columna | Significado | Límite WIP | Justificación |
 |---|---|---|---|
@@ -724,7 +733,7 @@ revisan además cada semana en el Daily Scrum.
 
 | ID | Riesgo (causa → efecto) | Categoría | Historias afectadas | Probabilidad | Impacto | Prioridad |
 |---|---|---|---|---|---|---|
-| R-05 | Dos estudiantes cubren los cinco roles del Scrum Team, con carga de otros cursos y poca experiencia con IA; los Sprints 4 (13 puntos) y 5 (15 puntos) superan la velocidad planificada de 10 puntos → no se terminan las historias del Sprint y se compromete la entrega de la Semana 11. | Organizacional | Todas | 4 | 5 | **20 — Alta** |
+| R-05 | Dos estudiantes cubren las responsabilidades de Product Owner, Scrum Master y Developer 1 a 3, con carga de otros cursos y poca experiencia con IA; los Sprints 4 (13 puntos) y 5 (15 puntos) superan la velocidad planificada de 10 puntos → no se terminan las historias del Sprint y se compromete la entrega de la Semana 11. | Organizacional | Todas | 4 | 5 | **20 — Alta** |
 | R-01 | Las fotografías tomadas en la finca tienen poca luz, aretes sucios o ángulos difíciles → el servicio de OCR no lee el número de arete y HU-08 no cumple su propósito. | Técnico / tercero | HU-08, HU-12 | 4 | 4 | **16 — Alta** |
 | R-02 | Los servicios de IA disponibles reconocen sobre todo razas bovinas → la sugerencia de raza y de color/patrón falla en porcinos, equinos u otras especies. | Técnico / tercero | HU-09a, HU-09b, HU-10 | 4 | 4 | **16 — Alta** |
 | R-03 | El proveedor de OCR/IA agota la cuota gratuita, cambia sus precios o deja de estar disponible → se detiene el registro asistido por fotografía. | Tercero / adquisición | HU-08, HU-09a, HU-09b | 3 | 4 | 12 — Media |
@@ -752,18 +761,18 @@ revisan además cada semana en el Daily Scrum.
 | ID | Estrategia | Respuesta | Plan de contingencia | Dueño | Fecha de revisión | Disparador | Acción en el Sprint Backlog |
 |---|---|---|---|---|---|---|---|
 | R-05 | Mitigar | Confirmar las horas disponibles de cada integrante antes de cada Sprint Planning y ajustar el Sprint Backlog a esa capacidad; trabajar en pareja las historias de IA para repartir la curva de aprendizaje. | El Product Owner reduce el alcance del Sprint 5 y deja fuera la parte de menor valor de HU-06. | Joseph Salazar Araya (Scrum Master) | 2026-11-10 y luego semanal | A mitad de un Sprint más de la mitad de los puntos sigue en Por hacer, o un Sprint cierra con menos de 8 puntos en Hecho. | M-04 (RIG-65), Sprint 4 |
-| R-01 | Mitigar | Probar el OCR con fotografías reales de aretes antes de integrarlo; guiar al productor para encuadrar el arete; mantener siempre el ingreso manual (criterio 2 de HU-08). | El ingreso manual pasa a ser el flujo principal y la lectura del OCR queda como sugerencia opcional. | Joseph Salazar Araya | 2026-11-10 | El OCR lee correctamente menos del 70 % de los aretes en la prueba. | M-01 (RIG-62), Sprint 4 |
-| R-02 | Mitigar | Hacer una prueba de concepto por especie antes de integrar HU-09a y HU-09b; ofrecer la sugerencia solo en las especies donde funcione. | La sugerencia queda solo para bovinos; en las demás especies la raza y el color/patrón se eligen de una lista (HU-11) y se corrigen manualmente (HU-10). | Joseph Salazar Araya | 2026-11-10 | La prueba acierta en menos del 60 % de las fotografías de alguna especie. | M-02 (RIG-63), Sprint 4 |
-| R-03 | Mitigar | Encapsular el OCR y la IA detrás de una interfaz propia para poder cambiar de proveedor; configurar alertas de consumo; tener identificado un proveedor alterno (plan de adquisiciones). | Cambiar al proveedor alterno; mientras tanto, el registro sigue con ingreso manual. | Joseph Salazar Araya | 2026-11-10 | El consumo llega al 80 % de la cuota gratuita, el proveedor anuncia cambios de precio o el servicio falla más de una vez en una semana. | M-03 (RIG-64), Sprint 4 |
-| R-06 | Mitigar | Repetir la prueba de usabilidad del registro completo, ya con el módulo de IA, con productores reales o simulados; usar textos y botones grandes y pocos pasos. | Quitar pasos opcionales del registro guiado y dejar la fotografía y las sugerencias para después del registro básico. | Marco López Quesada | 2026-11-17 | Un productor no completa el registro sin ayuda o tarda más de 5 minutos. | M-07 (RIG-68), Sprint 5 |
-| R-09 | Mitigar | Comprimir la fotografía antes de subirla, reintentar la carga y guardar el registro sin esperar la lectura del arete. | Registrar el animal sin fotografía (HU-07 lo permite) y adjuntarla después. | Marco López Quesada | 2026-11-17 | Una carga o una lectura falla por conexión en las pruebas o tarda más de 30 segundos. | M-06 (RIG-67), Sprint 4 |
-| R-07 | Evitar | Recolectar solo la cédula y los datos necesarios, mostrar un aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias en las pruebas y la demostración. | Enmascarar la cédula en las pantallas y retirar cualquier dato real de la base de datos. | Joseph Salazar Araya | 2026-11-11 | Se planea mostrar, exportar o compartir la cédula fuera de la ficha del propietario, o aparece una cédula real en los datos de prueba. | M-08 (RIG-69), Sprint 5 |
+| R-01 | Mitigar | Probar el OCR con fotografías reales de aretes antes de integrarlo; guiar al productor para encuadrar el arete; mantener siempre el ingreso manual (criterio 2 de HU-08). | El ingreso manual pasa a ser el flujo principal y la lectura del OCR queda como sugerencia opcional. | Developer 2 | 2026-11-10 | El OCR lee correctamente menos del 70 % de los aretes en la prueba. | M-01 (RIG-62), Sprint 4 |
+| R-02 | Mitigar | Hacer una prueba de concepto por especie antes de integrar HU-09a y HU-09b; ofrecer la sugerencia solo en las especies donde funcione. | La sugerencia queda solo para bovinos; en las demás especies la raza y el color/patrón se eligen de una lista (HU-11) y se corrigen manualmente (HU-10). | Developer 2 | 2026-11-10 | La prueba acierta en menos del 60 % de las fotografías de alguna especie. | M-02 (RIG-63), Sprint 4 |
+| R-03 | Mitigar | Encapsular el OCR y la IA detrás de una interfaz propia para poder cambiar de proveedor; configurar alertas de consumo; tener identificado un proveedor alterno (plan de adquisiciones). | Cambiar al proveedor alterno; mientras tanto, el registro sigue con ingreso manual. | Developer 2 | 2026-11-10 | El consumo llega al 80 % de la cuota gratuita, el proveedor anuncia cambios de precio o el servicio falla más de una vez en una semana. | M-03 (RIG-64), Sprint 4 |
+| R-06 | Mitigar | Repetir la prueba de usabilidad del registro completo, ya con el módulo de IA, con productores reales o simulados; usar textos y botones grandes y pocos pasos. | Quitar pasos opcionales del registro guiado y dejar la fotografía y las sugerencias para después del registro básico. | Developer 3 | 2026-11-17 | Un productor no completa el registro sin ayuda o tarda más de 5 minutos. | M-07 (RIG-68), Sprint 5 |
+| R-09 | Mitigar | Comprimir la fotografía antes de subirla, reintentar la carga y guardar el registro sin esperar la lectura del arete. | Registrar el animal sin fotografía (HU-07 lo permite) y adjuntarla después. | Developer 1 | 2026-11-17 | Una carga o una lectura falla por conexión en las pruebas o tarda más de 30 segundos. | M-06 (RIG-67), Sprint 4 |
+| R-07 | Evitar | Recolectar solo la cédula y los datos necesarios, mostrar un aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias en las pruebas y la demostración. | Enmascarar la cédula en las pantallas y retirar cualquier dato real de la base de datos. | Developer 1 | 2026-11-11 | Se planea mostrar, exportar o compartir la cédula fuera de la ficha del propietario, o aparece una cédula real en los datos de prueba. | M-08 (RIG-69), Sprint 5 |
 | R-10 | Mitigar | Definir con un médico veterinario los datos de salud, peso y reproducción antes del Sprint Planning 5 y reestimar HU-06 si cambia su tamaño. | Dividir HU-06 y dejar en el Product Backlog los datos de menor valor. | Marco López Quesada (Product Owner) | 2026-11-11 | La reestimación de HU-06 supera los 8 puntos. | M-05 (RIG-66), Sprint 4 |
 | R-08 | Aceptar (activa) | HU-12 guarda el arete solo como referencia, sin conexión con Trazar-Agro; se revisa la información pública de SENASA antes de desarrollarla. | Ajustar la validación del formato del arete. | Joseph Salazar Araya | 2026-11-11 | SENASA publica cambios en el formato del arete o en las reglas de Trazar-Agro. | M-09 (RIG-70), Sprint 5 |
 | R-04 | Aceptar (activa) | Usar solo planes gratuitos o estudiantiles y comprimir las imágenes; revisar el consumo al cierre de cada Sprint. | Reducir la resolución de las imágenes guardadas y borrar las fotografías de prueba. | Marco López Quesada | 2026-11-24 | Aparece un cargo en la facturación de algún servicio o el almacenamiento supera el 80 % del plan gratuito. | M-10 (RIG-71), Sprint 5 |
 
 Las acciones de mitigación se registran en Jira como tareas con la etiqueta `riesgo`,
-asignadas al dueño del riesgo y vinculadas a las historias que protegen. No llevan puntos de
+asignadas al estudiante que las ejecuta y vinculadas a las historias que protegen. No llevan puntos de
 historia, por lo que no cuentan para la velocidad, pero sí se consideran en la capacidad del
 Sprint. Cuando un disparador se cumple, el dueño avisa al Scrum Master el mismo día y se
 aplica el plan de contingencia según el escalamiento de la Sección 10.
@@ -832,7 +841,7 @@ Developers) se definen en la Sección 00.
 | Productores adultos mayores | 2 | 5 | Cambios hechos a partir de sus observaciones de usabilidad | Pruebas tempranas; sus observaciones se revisan al cierre de cada Sprint | Sesión de prueba de usabilidad y Sprint Review | Marco López Quesada |
 | SENASA / Trazar-Agro | 5 | 3 | Que el alcance complementa el registro oficial sin duplicarlo | Al definir cada Sprint, en el Sprint Planning | Consulta de su información pública | Joseph Salazar Araya |
 | Equipo desarrollador | 5 | 5 | Avance, bloqueos y decisiones técnicas | Todos los días en el Daily Scrum; cada Sprint en la Review y la Retrospective | Daily Scrum de 15 minutos, tablero de Jira y comentarios en la historia o tarea | Joseph Salazar Araya |
-| Profesor del curso | 4 | 4 | Avance del Expediente y del repositorio | Semanal y en la entrega oficial de la Semana 11 | Repositorio Git, enlace al proyecto de Jira y clase | Joseph Salazar Araya |
+| Profesores del curso | 4 | 4 | Avance del Expediente y del repositorio | Semanal y en la entrega oficial de la Semana 11 | Repositorio Git, enlace al proyecto de Jira y clase | Joseph Salazar Araya |
 | Proveedor de servicio OCR/IA | 2 | 2 | Condiciones de uso, disponibilidad y costo de su servicio | Antes del Sprint en que se integre y de forma ocasional después | Documentación pública del servicio | Joseph Salazar Araya |
 | Cooperativas y asociaciones de productores | 3 | 4 | Avance del producto y su utilidad para los asociados | Al cierre de cada Sprint | Resumen breve del incremento por correo | Marco López Quesada |
 | Médicos veterinarios y asistentes técnicos | 2 | 3 | Datos que tendrá la ficha individual del animal | De forma ocasional, antes de desarrollar la ficha detallada | Consulta breve | Marco López Quesada |
@@ -858,10 +867,10 @@ Developers) se definen en la Sección 00.
 2. El Scrum Master intenta resolverlo antes del siguiente Daily Scrum.
 3. Si resolverlo exige decidir sobre el alcance o la prioridad, el Scrum Master lo lleva al
    Product Owner.
-4. Si el impedimento sigue sin resolverse después de 2 días hábiles, se informa al profesor
-   del curso.
+4. Si el impedimento sigue sin resolverse después de 2 días hábiles, se informa a los
+   profesores del curso.
 5. Un conflicto entre los integrantes del equipo se conversa en la Retrospective o en una
-   reunión aparte; si persiste, se consulta al profesor del curso.
+   reunión aparte; si persiste, se consulta a los profesores del curso.
 
 ### Working Agreements
 
@@ -874,7 +883,7 @@ Developers) se definen en la Sección 00.
 | Fecha | Cambio | Sección |
 |---|---|---|
 | 2026-10-29 | Se agrega el Tablero de Trabajo con las historias del Sprint Backlog 1, el Plan de Comunicaciones y la Definition of Done; el Sprint 1 pasa a tres historias; se ajustan los criterios de HU-01 y HU-02 y la composición del Scrum Team. | 00, 01, 02, 04, 05, 06, 09, 10 |
-| 2026-10-29 | Se agrega un Tablero de Trabajo por Sprint (Sprints 1 a 4), el Sprint Backlog de los Sprints 2 a 5 y el cronograma de entregas con las fechas de los 5 Sprints; HU-09 se divide en HU-09a y HU-09b; el Developer 3 pasa a ser Joseph Salazar Araya. | 00, 05, 07 |
+| 2026-10-29 | Se agrega un Tablero de Trabajo por Sprint (Sprints 1 a 4), el Sprint Backlog de los Sprints 2 a 5 y el cronograma de entregas con las fechas de los 5 Sprints; HU-09 se divide en HU-09a y HU-09b; se reasigna la etiqueta Developer 3. | 00, 05, 07 |
 | 2026-11-04 | Se crea el Tablero de Trabajo en Jira (proyecto RIG): cada historia de usuario se registra como Historia con sus criterios, puntos y dependencias, y se convierte en tareas asignadas a su responsable, con una tarea final de verificación a cargo de otro integrante; los 5 Sprints se registran en Jira. Los impedimentos se marcan con la bandera de impedimento de Jira. | 05, 09, 10 |
 | 2026-11-04 | Se agrega la Matriz de Riesgos (registro con probabilidad, impacto y prioridad, y mapa de calor), el Plan de Mitigación (estrategia, respuesta, contingencia, dueño, fecha de revisión y disparador) y el Plan de adquisiciones; las 10 acciones de mitigación se agregan al Sprint Backlog de los Sprints 4 y 5 en Jira (RIG-62 a RIG-71). | 05, 08 |
 
