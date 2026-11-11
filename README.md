@@ -668,20 +668,20 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 
 ### Plan temporal
 
-El proyecto sigue el calendario académico de 14 semanas del II Cuatrimestre 2026. El trabajo
-se organiza en 5 Sprints de 2 semanas (16 de setiembre al 24 de noviembre de 2026) y la
-entrega oficial del Expediente y la demostración del incremento se realizan en la Semana 11
-(25 de noviembre de 2026).
+El proyecto sigue el calendario académico del II Cuatrimestre 2026. El producto se planifica
+en 5 Sprints de 2 semanas, del 12/10/2026 al 18/12/2026. El Expediente completo se entrega y
+se defiende en la Semana 11 (25/11/2026), durante el Sprint 4.
 
-**Hitos:** cierre de cada Sprint con Sprint Review y Retrospective; revisión de riesgos según
-el Plan de Mitigación (Sección 08); entrega oficial en la Semana 11.
+**Hitos:** inicio del Sprint 1 (12/10/2026); primera prueba de usabilidad del registro guiado
+(Sprint 2, HU-11); entrega y defensa del Expediente (25/11/2026); segunda prueba de
+usabilidad (Sprint 5, M-07); cierre del release en la Sprint Review del Sprint 5 (18/12/2026).
 
-**Dependencias que condicionan el orden:** HU-01 → HU-02 → HU-03/HU-04; HU-07 → HU-08 →
-HU-09a/HU-09b → HU-10; HU-08 → HU-12.
+**Dependencias que condicionan el orden:** HU-01 → HU-02 → HU-03, HU-04 y HU-05;
+HU-02 → HU-07 → HU-08 → HU-09a y HU-09b → HU-10; HU-08 → HU-12.
 
-**Control del avance:** al cierre de cada Sprint se registra en la tabla del cronograma de
-entregas el estado real, los puntos en Hecho y las historias replanificadas. Las fechas solo
-cambian por decisiones registradas en Jira y en la bitácora de la Sección 11.
+**Control del avance:** al cierre de cada Sprint se registran en el burndown del release los
+puntos pendientes reales y se comparan con el plan. Las fechas solo cambian por decisiones
+registradas en Jira y en la Sección 11.
 
 ### Estimaciones
 
@@ -725,12 +725,12 @@ cada historia se compara con ella.
 
 #### Desglose por línea de trabajo
 
-| Línea de trabajo | Historias | Puntos |
-|---|---|---|
-| Modelo de datos y registro individual | HU-01, HU-02, HU-03, HU-04, HU-05, HU-06a, HU-06b, HU-06c, HU-07, HU-12 | 30 |
-| Módulo de asistencia por IA | HU-08, HU-09a, HU-09b, HU-10 | 23 |
-| Interfaz simple y validación | HU-11 | 5 |
-| Total | | 58 |
+| Línea de trabajo | Objetivo específico | Historias | Puntos |
+|---|---|---|---|
+| Modelo de datos y registro individual | 1 | HU-01, HU-02, HU-03, HU-04, HU-05, HU-06a, HU-06b, HU-06c, HU-07, HU-12 | 30 |
+| Módulo de asistencia por IA | 2 | HU-08, HU-09a, HU-09b, HU-10 | 23 |
+| Interfaz simple y validación | 3 | HU-11 | 5 |
+| Total | | | 58 |
 
 #### Historias para dividir
 
@@ -752,83 +752,92 @@ cada historia se compara con ella.
 
 ### Cronograma de entregas
 
-El proyecto se organiza en 5 Sprints de 2 semanas. La entrega oficial del Expediente
-completo y la demostración del incremento se realizan en la Semana 11 (25 de noviembre de
-2026).
+**Duración del Sprint:** 2 semanas. **Inicio del Sprint 1:** lunes 12/10/2026. **Fin del
+Sprint 5:** viernes 18/12/2026.
 
-Estado tomado de Jira el 10/11/2026. Un Sprint se marca como completado solo con las
-historias que quedan en Hecho y cumplen la Definition of Done, no porque pasó su fecha.
+**Velocidad inicial:** 12 puntos por Sprint, acordada en planning poker a partir de la
+capacidad del equipo, con un rango esperado de 10 a 13 puntos. Se actualiza al cierre de cada
+Sprint con los puntos de las historias que quedan en Hecho y cumplen la Definition of Done.
+Las acciones de mitigación no llevan puntos: no cuentan para la velocidad, pero sí consumen
+capacidad del Sprint.
 
-| Sprint | Fechas (2026) | Compromiso (HU / puntos) | Hecho real (HU / puntos) | No terminado | Impedimentos | Replanificación | Puntos restantes al cierre | Estado |
-|---|---|---|---|---|---|---|---|---|
-| Sprint 1 | 16/09 al 29/09 | HU-01, HU-02, HU-03 · 10 | HU-01, HU-02, HU-03 · 10 | — | Ninguno registrado en Jira | No hubo | 48 | Completado |
-| Sprint 2 | 30/09 al 13/10 | HU-04, HU-07, HU-11 · 10 | HU-04, HU-07, HU-11 · 10 | — | Ninguno registrado en Jira | No hubo | 38 | Completado |
-| Sprint 3 | 14/10 al 27/10 | HU-05, HU-08 · 10 | HU-05, HU-08 · 10 | — | Ninguno registrado en Jira | No hubo | 28 | Completado |
-| Sprint 4 | 28/10 al 10/11 | HU-09a, HU-09b · 13, más M-01 a M-06 | HU-09a, HU-09b · 13 | M-01 a M-06 en progreso | Ninguno registrado en Jira | Las acciones de mitigación se cierran al registrar su resultado (Sección 08) | 15 | En curso (cierra el 10/11) |
-| Sprint 5 | 11/11 al 24/11 | HU-06a, HU-06b, HU-06c, HU-10, HU-12 · 15, más M-07 a M-10 | — | — | — | Se revisa en el Sprint Planning 5 según la velocidad observada | 0 | Planificado |
+#### Sprints necesarios
 
-**Evidencia del trabajo terminado:** el código de las historias en Hecho se encuentra en
-[PENDIENTE: enlace al repositorio o carpeta del código de la aplicación]. Este repositorio
-contiene solo el Expediente.
+| Velocidad | Puntos por Sprint | Cálculo | Sprints |
+|---|---|---|---|
+| Mínima | 10 | 58 ÷ 10 = 5,8 | 6 |
+| Inicial | 12 | 58 ÷ 12 = 4,8 | 5 |
+| Máxima | 13 | 58 ÷ 13 = 4,5 | 5 |
 
-**Capacidad, compromiso y velocidad:**
+El release necesita entre 5 y 6 Sprints. El plazo se fija en 5 Sprints: si la velocidad real
+queda en 10 puntos, el Product Owner devuelve al Product Backlog primero HU-06c y luego HU-06a,
+las historias de menor prioridad (contingencia de R-05).
 
-- **Capacidad estimada:** 10 puntos por Sprint, la estimación inicial del equipo antes del
-  Sprint 1.
-- **Compromiso del Sprint:** los puntos que el equipo toma en cada Sprint Planning.
-- **Velocidad observada:** los puntos de las historias que quedan en Hecho en Jira y cumplen
-  la Definition of Done. No se cuentan los puntos planificados ni las acciones de
-  mitigación, que no llevan puntos. Sprints 1 a 4: 10, 10, 10 y 13 puntos (promedio 10,75).
+#### Incremento por Sprint
 
-El Sprint 5 compromete 15 puntos, por encima de la velocidad observada. Según el plan de
-contingencia de R-05 (Sección 08), en el Sprint Planning 5 (11/11) el Product Owner decide si
-devuelve al Product Backlog alguna de las historias de la ficha detallada (HU-06a, HU-06b o
-HU-06c); la decisión se registra en Jira y en la bitácora de la Sección 11. Las historias que
-no se terminen en un Sprint vuelven al Product Backlog y se documenta a dónde se mueven y
-quién lo decidió; no se modifica el Sprint Backlog de Sprints cerrados.
+| Sprint | Fechas | Historias | Puntos | Incremento |
+|---|---|---|---|---|
+| 1 | 12/10/2026 al 23/10/2026 | HU-01, HU-02, HU-03 | 10 | El productor registra un propietario por su cédula y un animal asociado a él, con su código único generado automáticamente. |
+| 2 | 26/10/2026 al 06/11/2026 | HU-04, HU-05, HU-07, HU-11 | 12 | El productor consulta la ficha del animal, ve todos los animales de un propietario, adjunta una fotografía opcional y registra un animal mediante pasos guiados validados con productores. |
+| 3 | 09/11/2026 al 20/11/2026 | HU-08, HU-06b | 10 | La plataforma sugiere el número de arete leído a partir de la fotografía y la ficha registra el peso del animal. |
+| 4 | 23/11/2026 al 04/12/2026 | HU-09a, HU-09b | 13 | La plataforma sugiere la raza y el color/patrón de pelaje del animal a partir de la fotografía. |
+| 5 | 07/12/2026 al 18/12/2026 | HU-10, HU-12, HU-06a, HU-06c | 13 | El producto queda completo: datos de salud y reproducción, corrección manual de las sugerencias del módulo de IA y número de arete como referencia del registro oficial. |
+| Total | | 15 historias | 58 | |
 
-#### Sprint 1
+#### Hitos de entrega
 
-**Incremento al cierre:** el productor registra un propietario por su cédula y un animal
-asociado a él, con su código único generado automáticamente.
+| Hito | Fecha | Con quién |
+|---|---|---|
+| Sprint Review de cada Sprint | 23/10, 06/11, 20/11, 04/12 y 18/12/2026 | Scrum Team y productores invitados |
+| Prueba de usabilidad 1 (HU-11) | Sprint 2 | 3 productores reales o simulados |
+| Entrega y defensa del Expediente | 25/11/2026 | Profesores del curso |
+| Prueba de usabilidad 2 (M-07) | Sprint 5 | 3 productores reales o simulados |
+| Cierre del release | 18/12/2026 | Scrum Team |
 
-#### Sprint 2
+#### Burndown del release
 
-**Incremento al cierre:** el productor consulta la ficha del animal, adjunta una fotografía
-opcional y registra un animal mediante pasos guiados con listas de selección.
+| Momento | Puntos pendientes según el plan |
+|---|---|
+| Inicio del Sprint 1 (12/10/2026) | 58 |
+| Fin del Sprint 1 (23/10/2026) | 48 |
+| Fin del Sprint 2 (06/11/2026) | 36 |
+| Fin del Sprint 3 (20/11/2026) | 26 |
+| Fin del Sprint 4 (04/12/2026) | 13 |
+| Fin del Sprint 5 (18/12/2026) | 0 |
 
-#### Sprint 3
-
-**Incremento al cierre:** el productor ve todos los animales de un propietario y la
-plataforma sugiere el número de arete leído a partir de la fotografía.
-
-#### Sprint 4
-
-**Incremento al cierre:** la plataforma sugiere la raza y el color/patrón de pelaje del
-animal a partir de la fotografía.
-
-#### Sprint 5
-
-**Incremento al cierre:** el producto queda completo, con la ficha detallada, la corrección
-manual de los datos sugeridos por el módulo de IA y el número de arete como referencia del
-registro oficial, listo para la entrega oficial de la Semana 11.
+Al cierre de cada Sprint se agrega una columna con los puntos pendientes reales. Si superan
+los del plan, se aplica la contingencia de R-05.
 
 ### Costos
 
-Servicios del Plan de adquisiciones (Sección 08). Un costo se registra como USD 0 solo cuando el
-plan gratuito está confirmado; se distingue el costo actual del costo posible al exceder la
-cuota.
+El costo dominante es el tiempo del equipo. Los servicios técnicos se contratan en planes
+gratuitos, por lo que su costo actual es cero; la tabla de servicios indica también el costo
+si se excede la cuota.
 
-| Recurso / servicio | Uso | Proveedor | Plan | Costo actual | Moneda / periodicidad | Costo si se excede la cuota | Observaciones |
-|---|---|---|---|---|---|---|---|
-| Hosting de la aplicación | Pruebas y demostración | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
-| Base de datos | Datos de propietarios y animales | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
-| Almacenamiento de imágenes | HU-07 | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
-| Servicio OCR | HU-08, HU-12 | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
-| Servicio de IA de imágenes | HU-09a, HU-09b | Por confirmar | Por confirmar | Por confirmar | | Por confirmar | |
-| Jira Software | Seguimiento del Sprint Backlog | Atlassian | Free | USD 0 | Mensual | — | Hasta 10 usuarios; el equipo usa 2 |
-| GitHub | Control de versiones | GitHub | Free | USD 0 | Mensual | — | Repositorio del Expediente |
-| Tiempo del equipo | Desarrollo y gestión | Dos estudiantes | — | No monetizado | — | — | [PENDIENTE: indicar si se estima en horas] |
+#### Costo del equipo
+
+| Concepto | Valor |
+|---|---|
+| Tarifa por hora | ₡3.509 (salario mínimo 2026 de Bachiller universitario, ₡664.078,07 al mes, más 26,83 % de cargas sociales patronales, ÷ 30 días ÷ 8 horas) |
+| Dedicación | 12 horas por semana por estudiante |
+| Horas por Sprint | 2 estudiantes × 12 h × 2 semanas = 48 h |
+| Costo por Sprint | ₡168.432 (48 h × ₡3.509) |
+| Subtotal del release (5 Sprints) | ₡842.160 |
+| Reserva de contingencia (10 %) | ₡84.216, equivalente a medio Sprint adicional (24 h) |
+| Total del release | ₡926.376 |
+
+#### Servicios
+
+| Recurso / servicio | Uso | Proveedor | Plan | Costo actual | Límite del plan gratuito | Costo si se excede la cuota |
+|---|---|---|---|---|---|---|
+| Hosting de la aplicación | Pruebas y demostración | Vercel | Hobby | USD 0 | 100 GB de transferencia y 1 000 000 de invocaciones de funciones al mes; solo uso personal y no comercial | Plan Pro: USD 20 por usuario al mes |
+| Base de datos | Datos de propietarios y animales | Supabase | Free | USD 0 | 500 MB por proyecto y 2 proyectos activos; el proyecto se pausa después de una semana sin actividad | Plan Pro: desde USD 25 al mes |
+| Almacenamiento de imágenes | HU-07 | Supabase Storage | Free | USD 0 | 1 GB de archivos y 5 GB de transferencia | Plan Pro: desde USD 25 al mes |
+| Servicio OCR | HU-08, HU-12 | Google Cloud Vision (detección de texto) | Gratuito por consumo | USD 0 | 1 000 unidades al mes | USD 1,50 por cada 1 000 unidades |
+| Servicio de IA de imágenes | HU-09a, HU-09b | Azure AI Custom Vision | F0 | USD 0 | 2 proyectos, 5 000 imágenes de entrenamiento por proyecto, 1 hora de entrenamiento y 10 000 predicciones al mes | Plan S0, de pago por cada 1 000 predicciones y por hora de entrenamiento |
+| OCR alterno | Reemplazo de Google Cloud Vision | Azure AI Vision (Read) | F0 | USD 0 | 5 000 transacciones al mes, 20 por minuto | Plan S1, de pago por cada 1 000 transacciones |
+| Jira Software | Seguimiento del Sprint Backlog | Atlassian | Free | USD 0 | Hasta 10 usuarios | — |
+| GitHub | Control de versiones | GitHub | Free | USD 0 | Repositorios públicos y privados ilimitados | — |
 
 ---
 
@@ -1043,7 +1052,8 @@ Developers) se definen en la Sección 00.
 | 2026-11-10 | 3608062 | Se agregan el plan temporal y la plantilla de costos. | 07 |
 | 2026-11-10 | a58cb8a | Se agrega la columna Commit a la bitácora y se registran los commits anteriores sin entrada. | 11 |
 | 11/11/2026 | bf1d40f | Se agrega la versión del expediente en la portada y se eliminan textos aclaratorios de las Secciones 00, 05, 06, 07 y 09. | 00, 05, 06, 07, 09, 11 |
-| 11/11/2026 | este commit | Se reprograman los 5 Sprints del 12/10/2026 al 18/12/2026 como plan del producto; HU-05 pasa al Sprint 2 y HU-06b al Sprint 3; se agregan las tareas del Sprint 1 y se ubica cada acción de mitigación en el Sprint anterior a la historia que protege. | 04, 05 |
+| 11/11/2026 | 98cb63d | Se reprograman los 5 Sprints del 12/10/2026 al 18/12/2026 como plan del producto; HU-05 pasa al Sprint 2 y HU-06b al Sprint 3; se agregan las tareas del Sprint 1 y se ubica cada acción de mitigación en el Sprint anterior a la historia que protege. | 04, 05 |
+| 11/11/2026 | este commit | Se actualiza el plan temporal con las fechas del release; se agregan el rango de Sprints necesarios, el incremento por Sprint, los hitos, el burndown del release, el costo del equipo y los proveedores con sus planes gratuitos; el desglose por línea de trabajo indica su objetivo específico. | 07 |
 
 ### Evidencias
 
