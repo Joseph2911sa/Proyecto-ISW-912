@@ -274,10 +274,10 @@ El backlog está ordenado por valor para el productor y por dependencia entre hi
 | HU-03 | Como productor, quiero que cada animal reciba un código único generado automáticamente para identificarlo sin duplicados. | Alta |
 | HU-04 | Como productor, quiero consultar la ficha de un animal registrado para ver sus datos. | Alta |
 | HU-05 | Como productor, quiero administrar varios animales de un mismo propietario desde una sola cuenta. | Media |
-| HU-06 | Como productor, quiero completar la ficha detallada del animal con su salud, peso y reproducción. | Media |
+| HU-06 | Como productor, quiero completar la ficha detallada del animal con su salud, peso y reproducción. *Dividida en HU-06a, HU-06b y HU-06c (ver Sección 07).* | Media |
 | HU-07 | Como productor, quiero adjuntar una fotografía opcional del animal. | Media |
 | HU-08 | Como productor, quiero que la plataforma lea el número de arete a partir de la fotografía (OCR) para reducir errores de digitación. | Media |
-| HU-09 | Como productor, quiero recibir sugerencias de raza y de color/patrón de pelaje a partir de la fotografía para completar la ficha con menos esfuerzo. | Media |
+| HU-09 | Como productor, quiero recibir sugerencias de raza y de color/patrón de pelaje a partir de la fotografía para completar la ficha con menos esfuerzo. *Dividida en HU-09a y HU-09b (ver Sección 07).* | Media |
 | HU-10 | Como productor, quiero corregir manualmente los datos sugeridos por el módulo de IA. | Media |
 | HU-11 | Como productor, quiero registrar un animal mediante pasos guiados y con mínima digitación. | Media |
 | HU-12 | Como productor, quiero que, si el animal ya está registrado oficialmente, el número de arete se use como referencia para complementar su ficha sin duplicar el registro oficial. | Media |
@@ -334,7 +334,7 @@ pelaje a partir de la fotografía del animal.
 | M-02 Prueba de concepto de sugerencia de raza y color/patrón con fotos de bovinos, porcinos y equinos. | R-02 | Developer 2 | RIG-63 |
 | M-03 Encapsular el OCR y la IA detrás de una interfaz propia y configurar alertas de cuota. | R-03 | Developer 2 | RIG-64 |
 | M-04 Confirmar la capacidad del equipo para los Sprints 4 y 5 y ajustar el Sprint Backlog. | R-05 | Joseph Salazar Araya (Scrum Master) | RIG-65 |
-| M-05 Definir con un médico veterinario los datos de HU-06 antes del Sprint Planning 5. | R-10 | Marco López Quesada (Product Owner) | RIG-66 |
+| M-05 Definir con un médico veterinario los datos de HU-06a, HU-06b y HU-06c antes del Sprint Planning 5. | R-10 | Marco López Quesada (Product Owner) | RIG-66 |
 | M-06 Comprimir la fotografía antes de subirla y reintentar la carga cuando falle la conexión. | R-09 | Developer 1 | RIG-67 |
 
 #### Sprint 5
@@ -345,7 +345,9 @@ referencia del registro oficial.
 
 | Historia | Plan de entrega |
 |---|---|
-| HU-06 | Definir los datos de salud, peso y reproducción, guardarlos en la ficha y mostrarlos junto con los datos básicos del animal. |
+| HU-06a | Definir los datos de salud, guardarlos en la ficha y mostrarlos junto con los datos básicos del animal. |
+| HU-06b | Guardar los datos de peso en la ficha y mostrarlos junto con los datos básicos del animal. |
+| HU-06c | Definir los datos de reproducción, guardarlos en la ficha y mostrarlos junto con los datos básicos del animal. |
 | HU-10 | Mostrar como editables los datos sugeridos por el módulo de IA y guardar el valor corregido o confirmado. |
 | HU-12 | Guardar el número de arete como referencia de la ficha y distinguir si el animal ya está registrado oficialmente, sin duplicar ni modificar el registro oficial. |
 
@@ -375,7 +377,7 @@ Daily Scrum. El Scrum Master organiza el Daily Scrum y da seguimiento al Sprint 
 | Sprint 2 | HU-04, HU-07, HU-11 | RIG-15, RIG-19, RIG-24 | Planificado |
 | Sprint 3 | HU-05, HU-08 | RIG-29, RIG-33 | Planificado |
 | Sprint 4 | HU-09a, HU-09b | RIG-39, RIG-44 | Planificado |
-| Sprint 5 | HU-06, HU-10, HU-12 | RIG-48, RIG-53, RIG-57 | Planificado |
+| Sprint 5 | HU-06a, HU-06b, HU-06c, HU-10, HU-12 | RIG-48, RIG-72, RIG-76, RIG-53, RIG-57 | Planificado |
 
 Cada historia de usuario es una *Historia* de Jira que lleva su enunciado, sus criterios de
 aceptación, su estimación en puntos, su prioridad, su línea de trabajo (etiqueta) y sus
@@ -432,13 +434,19 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | 3 | HU-03 | Código único por animal | Alta | 2 |
 | 4 | HU-04 | Consulta de la ficha del animal | Alta | 2 |
 | 5 | HU-05 | Varios animales por propietario | Media | 2 |
-| 6 | HU-06 | Ficha detallada del animal | Media | 8 |
-| 7 | HU-07 | Fotografía opcional del animal | Media | 3 |
-| 8 | HU-08 | Lectura del número de arete (OCR) | Media | 8 |
-| 9 | HU-09 | Sugerencia de raza y color/patrón | Media | 13 |
-| 10 | HU-10 | Corrección manual de lo sugerido por la IA | Media | 2 |
-| 11 | HU-11 | Registro guiado con mínima digitación | Media | 5 |
-| 12 | HU-12 | Arete como referencia del registro oficial | Media | 5 |
+| 6 | HU-06a | Datos de salud en la ficha del animal | Media | 3 |
+| 7 | HU-06b | Datos de peso en la ficha del animal | Media | 2 |
+| 8 | HU-06c | Datos de reproducción en la ficha del animal | Media | 3 |
+| 9 | HU-07 | Fotografía opcional del animal | Media | 3 |
+| 10 | HU-08 | Lectura del número de arete (OCR) | Media | 8 |
+| 11 | HU-09a | Sugerencia de raza | Media | 8 |
+| 12 | HU-09b | Sugerencia de color/patrón de pelaje | Media | 5 |
+| 13 | HU-10 | Corrección manual de lo sugerido por la IA | Media | 2 |
+| 14 | HU-11 | Registro guiado con mínima digitación | Media | 5 |
+| 15 | HU-12 | Arete como referencia del registro oficial | Media | 5 |
+
+HU-06 (8 puntos) y HU-09 (13 puntos) se reemplazan por las historias en que se dividieron
+(Sección 07); sus puntos no se suman a los de las historias hijas.
 
 ### Criterios de aceptación
 
@@ -502,17 +510,41 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Estimación | 2 puntos |
 | Notas | Depende de HU-01 y HU-02. |
 
-#### HU-06 — Ficha detallada del animal
+#### HU-06a — Datos de salud en la ficha del animal
 
 | Campo | Detalle |
 |---|---|
 | Como | Productor |
-| Quiero | Completar la ficha detallada del animal con su salud, peso y reproducción |
+| Quiero | Completar los datos de salud en la ficha del animal |
 | Para | Llevar el historial de cada animal |
-| Criterios de aceptación | 1. *Dado que* el animal está registrado, *cuando* el productor completa datos de salud, peso o reproducción y guarda, *entonces* la ficha conserva esos datos.<br>2. *Dado que* la ficha tiene datos de salud, peso o reproducción, *cuando* el productor la consulta, *entonces* el sistema los muestra junto con los datos básicos del animal. |
+| Criterios de aceptación | 1. *Dado que* el animal está registrado, *cuando* el productor completa datos de salud y guarda, *entonces* la ficha conserva esos datos.<br>2. *Dado que* la ficha tiene datos de salud, *cuando* el productor la consulta, *entonces* el sistema los muestra junto con los datos básicos del animal. |
 | Prioridad | Media |
-| Estimación | 8 puntos |
-| Notas | Depende de HU-02. |
+| Estimación | 3 puntos |
+| Notas | Depende de HU-02. Proviene de la división de HU-06. Los datos concretos de salud se definen con un médico veterinario (M-05). |
+
+#### HU-06b — Datos de peso en la ficha del animal
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Completar los datos de peso en la ficha del animal |
+| Para | Llevar el historial de cada animal |
+| Criterios de aceptación | 1. *Dado que* el animal está registrado, *cuando* el productor completa datos de peso y guarda, *entonces* la ficha conserva esos datos.<br>2. *Dado que* la ficha tiene datos de peso, *cuando* el productor la consulta, *entonces* el sistema los muestra junto con los datos básicos del animal. |
+| Prioridad | Media |
+| Estimación | 2 puntos |
+| Notas | Depende de HU-02. Proviene de la división de HU-06. |
+
+#### HU-06c — Datos de reproducción en la ficha del animal
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Completar los datos de reproducción en la ficha del animal |
+| Para | Llevar el historial de cada animal |
+| Criterios de aceptación | 1. *Dado que* el animal está registrado, *cuando* el productor completa datos de reproducción y guarda, *entonces* la ficha conserva esos datos.<br>2. *Dado que* la ficha tiene datos de reproducción, *cuando* el productor la consulta, *entonces* el sistema los muestra junto con los datos básicos del animal. |
+| Prioridad | Media |
+| Estimación | 3 puntos |
+| Notas | Depende de HU-02. Proviene de la división de HU-06. Los datos concretos de reproducción se definen con un médico veterinario (M-05). |
 
 #### HU-07 — Fotografía opcional del animal
 
@@ -538,17 +570,29 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Estimación | 8 puntos |
 | Notas | Depende de HU-07. |
 
-#### HU-09 — Sugerencia de raza y color/patrón
+#### HU-09a — Sugerencia de raza
 
 | Campo | Detalle |
 |---|---|
 | Como | Productor |
-| Quiero | Recibir sugerencias de raza y de color/patrón de pelaje a partir de la fotografía |
+| Quiero | Recibir una sugerencia de raza a partir de la fotografía |
 | Para | Completar la ficha con menos esfuerzo |
-| Criterios de aceptación | 1. *Dado que* el animal tiene fotografía, *cuando* el productor solicita la sugerencia, *entonces* el sistema propone una raza y un color/patrón de pelaje como apoyo al llenado de la ficha.<br>2. *Dado que* el sistema no logra proponer una raza o un color/patrón, *cuando* termina el proceso, *entonces* el productor puede completar esos datos manualmente. |
+| Criterios de aceptación | 1. *Dado que* el animal tiene fotografía, *cuando* el productor solicita la sugerencia, *entonces* el sistema propone una raza como apoyo al llenado de la ficha.<br>2. *Dado que* el sistema no logra proponer una raza, *cuando* termina el proceso, *entonces* el productor puede completarla manualmente. |
 | Prioridad | Media |
-| Estimación | 13 puntos |
-| Notas | Depende de HU-07. |
+| Estimación | 8 puntos |
+| Notas | Depende de HU-07. Proviene de la división de HU-09. |
+
+#### HU-09b — Sugerencia de color/patrón de pelaje
+
+| Campo | Detalle |
+|---|---|
+| Como | Productor |
+| Quiero | Recibir una sugerencia de color/patrón de pelaje a partir de la fotografía |
+| Para | Completar la ficha con menos esfuerzo |
+| Criterios de aceptación | 1. *Dado que* el animal tiene fotografía, *cuando* el productor solicita la sugerencia, *entonces* el sistema propone un color/patrón de pelaje como apoyo al llenado de la ficha.<br>2. *Dado que* el sistema no logra proponer un color/patrón, *cuando* termina el proceso, *entonces* el productor puede completarlo manualmente. |
+| Prioridad | Media |
+| Estimación | 5 puntos |
+| Notas | Depende de HU-07. Proviene de la división de HU-09. |
 
 #### HU-10 — Corrección manual de lo sugerido por la IA
 
@@ -560,7 +604,7 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | Criterios de aceptación | 1. *Dado que* el módulo de IA sugirió el número de arete, la raza o el color/patrón, *cuando* el productor modifica cualquiera de esos valores, *entonces* la ficha guarda el valor corregido y no la sugerencia.<br>2. *Dado que* el módulo de IA sugirió valores, *cuando* el productor los confirma, *entonces* la ficha guarda los valores confirmados. |
 | Prioridad | Media |
 | Estimación | 2 puntos |
-| Notas | Depende de HU-08 y HU-09. |
+| Notas | Depende de HU-08, HU-09a y HU-09b. |
 
 #### HU-11 — Registro guiado con mínima digitación
 
@@ -619,11 +663,14 @@ cada historia se compara con ella.
 | HU-03 | Código único por animal | 2 | Alta | HU-02 | Una sola regla: generar el código al guardar el animal y garantizar que no se repita. Menor que HU-01 porque no monta estructura nueva. |
 | HU-04 | Consulta de la ficha del animal | 2 | Alta | HU-02, HU-03 | Muestra datos ya registrados (código, especie y propietario); no valida ni guarda información. |
 | HU-05 | Varios animales por propietario | 2 | Media | HU-01, HU-02 | La asociación entre animal y propietario ya existe desde HU-02; se agrega la lista de animales del propietario. |
-| HU-06 | Ficha detallada del animal | 8 | Media | HU-02 | Tres grupos de datos distintos (salud, peso y reproducción) que se guardan y se muestran, con mucha incertidumbre sobre los datos concretos de cada grupo. |
+| HU-06a | Datos de salud en la ficha del animal | 3 | Media | HU-02 | Igual que HU-01: un grupo de datos que se guarda y se muestra, con incertidumbre sobre los datos concretos de salud, que se definen con un médico veterinario. |
+| HU-06b | Datos de peso en la ficha del animal | 2 | Media | HU-02 | Menor que HU-06a: un solo dato conocido, el peso, sin incertidumbre sobre qué registrar. |
+| HU-06c | Datos de reproducción en la ficha del animal | 3 | Media | HU-02 | Igual que HU-06a: un grupo de datos con incertidumbre sobre los datos concretos de reproducción. |
 | HU-07 | Fotografía opcional del animal | 3 | Media | HU-02 | Similar a HU-01: además de guardar, maneja la carga y el almacenamiento de imágenes, algo nuevo para el equipo. |
 | HU-08 | Lectura del número de arete (OCR) | 8 | Media | HU-07 | Integra un servicio de OCR desconocido para el equipo, depende de la calidad de la fotografía y debe manejar el caso en que el arete no se lee. |
-| HU-09 | Sugerencia de raza y color/patrón | 13 | Media | HU-07 | Dos sugerencias distintas a partir de la fotografía, para varias especies, con un servicio de IA desconocido para el equipo. Esconde dos historias. |
-| HU-10 | Corrección manual de lo sugerido por la IA | 2 | Media | HU-08, HU-09 | Los campos sugeridos se muestran editables antes de guardar; reutiliza el registro existente. |
+| HU-09a | Sugerencia de raza | 8 | Media | HU-07 | Integra por primera vez un servicio de IA desconocido para el equipo y debe reconocer razas de varias especies. |
+| HU-09b | Sugerencia de color/patrón de pelaje | 5 | Media | HU-07 | Usa el mismo servicio de IA que HU-09a, con menos incertidumbre que la raza. |
+| HU-10 | Corrección manual de lo sugerido por la IA | 2 | Media | HU-08, HU-09a, HU-09b | Los campos sugeridos se muestran editables antes de guardar; reutiliza el registro existente. |
 | HU-11 | Registro guiado con mínima digitación | 5 | Media | HU-02 | Reorganiza todo el registro en pasos y listas de selección, y requiere ajustes después de validar con productores. |
 | HU-12 | Arete como referencia del registro oficial | 5 | Media | HU-02, HU-08 | Guarda el arete como referencia y distingue si el animal está registrado oficialmente, sin duplicar ni modificar el registro oficial; hay incertidumbre en la relación con Trazar-Agro. |
 
@@ -633,8 +680,8 @@ cada historia se compara con ella.
 
 | Línea de trabajo | Historias | Puntos |
 |---|---|---|
-| Modelo de datos y registro individual | HU-01, HU-02, HU-03, HU-04, HU-05, HU-06, HU-07, HU-12 | 30 |
-| Módulo de asistencia por IA | HU-08, HU-09, HU-10 | 23 |
+| Modelo de datos y registro individual | HU-01, HU-02, HU-03, HU-04, HU-05, HU-06a, HU-06b, HU-06c, HU-07, HU-12 | 30 |
+| Módulo de asistencia por IA | HU-08, HU-09a, HU-09b, HU-10 | 23 |
 | Interfaz simple y validación | HU-11 | 5 |
 | Total | | 58 |
 
@@ -642,16 +689,24 @@ cada historia se compara con ella.
 
 | Historia | Puntos | División |
 |---|---|---|
-| HU-09 | 13 | HU-09a: sugerencia de raza a partir de la fotografía. HU-09b: sugerencia de color/patrón de pelaje a partir de la fotografía. |
+| HU-09 | 13 | HU-09a (8): sugerencia de raza a partir de la fotografía. HU-09b (5): sugerencia de color/patrón de pelaje a partir de la fotografía. |
+| HU-06 | 8 | HU-06a (3): datos de salud. HU-06b (2): datos de peso. HU-06c (3): datos de reproducción. |
+
+**Revisión de tamaños (10/11/2026):** a pedido de la profesora se revisaron los puntos de todas
+las historias. Ninguna supera 8 puntos; 13 es el tamaño que obliga a dividir. HU-06 se divide
+porque todavía no se inicia y sus tres grupos de datos son independientes: se pueden construir,
+probar y priorizar por separado, y el Product Owner puede dejar uno fuera del Sprint 5 sin
+afectar a los demás (contingencia de R-05). HU-08 y HU-09a se mantienen en 8 puntos: ya están
+en Hecho y dividirlas ahora no cambia el trabajo realizado ni la velocidad medida.
 
 #### Supuestos y riesgos de la estimación
 
 - El OCR y la IA se consumen como servicios externos; si se requiere entrenar un modelo
-  propio, HU-08 y HU-09 se reestiman.
+  propio, HU-08, HU-09a y HU-09b se reestiman.
 - HU-05 no incluye inicio de sesión ni gestión de usuarios.
 - HU-12 no incluye conexión directa con los sistemas de Trazar-Agro/SENASA.
-- Los datos concretos de salud, peso y reproducción de HU-06 se definen antes del Sprint
-  en que se desarrolle; si son más de los previstos, se reestima.
+- Los datos concretos de salud, peso y reproducción de HU-06a, HU-06b y HU-06c se definen
+  antes del Sprint en que se desarrollen; si son más de los previstos, se reestiman.
 - El equipo es junior: las primeras historias cargan con la curva de aprendizaje de las
   herramientas.
 
@@ -667,7 +722,7 @@ completo y la demostración del incremento se realizan en la Semana 11 (25 de no
 | Sprint 2 | 3 y 4 | 30 de setiembre al 13 de octubre | HU-04, HU-07, HU-11 | 10 | 38 | Planificado |
 | Sprint 3 | 5 y 6 | 14 al 27 de octubre | HU-05, HU-08 | 10 | 28 | Planificado |
 | Sprint 4 | 7 y 8 | 28 de octubre al 10 de noviembre | HU-09a, HU-09b | 13 | 15 | Planificado |
-| Sprint 5 | 9 y 10 | 11 al 24 de noviembre | HU-06, HU-10, HU-12 | 15 | 0 | Planificado |
+| Sprint 5 | 9 y 10 | 11 al 24 de noviembre | HU-06a, HU-06b, HU-06c, HU-10, HU-12 | 15 | 0 | Planificado |
 
 **Velocidad:** se mide al cierre de cada Sprint con los puntos de las historias que quedan en
 Hecho en Jira.
@@ -740,7 +795,7 @@ revisan además cada semana en el Daily Scrum.
 | R-06 | Los productores adultos mayores tienen poca experiencia con plataformas digitales → no logran completar el registro sin ayuda y no se cumple el tercer objetivo específico. | Usuario | HU-11 | 3 | 4 | 12 — Media |
 | R-09 | La conectividad en las fincas es intermitente → la carga de la fotografía y la lectura del arete fallan o tardan demasiado. | Externo | HU-07, HU-08, HU-09a, HU-09b | 4 | 3 | 12 — Media |
 | R-07 | La cédula del propietario es un dato personal protegido por la Ley N.º 8968 → un manejo inadecuado expone al proyecto a incumplir la normativa. | Legal | HU-01, HU-05 | 2 | 5 | 10 — Media |
-| R-10 | Los datos de salud, peso y reproducción de HU-06 no están definidos → al definirlos crece el alcance y la historia no cabe en el Sprint 5. | Alcance | HU-06 | 3 | 3 | 9 — Media |
+| R-10 | Los datos de salud, peso y reproducción no están definidos → al definirlos crece el alcance y las historias de la ficha detallada no caben en el Sprint 5. | Alcance | HU-06a, HU-06b, HU-06c | 3 | 3 | 9 — Media |
 | R-08 | SENASA/Trazar-Agro cambia el formato del arete o sus reglas → la referencia al registro oficial queda desactualizada. | Externo / regulatorio | HU-12 | 2 | 4 | 8 — Media |
 | R-04 | El hosting, el almacenamiento de imágenes o los servicios de OCR/IA superan su plan gratuito → aparecen costos que el presupuesto estudiantil no cubre. | Adquisición / costos | HU-07, HU-08, HU-09a, HU-09b | 2 | 3 | 6 — Baja |
 
@@ -760,14 +815,14 @@ revisan además cada semana en el Daily Scrum.
 
 | ID | Estrategia | Respuesta | Plan de contingencia | Dueño | Fecha de revisión | Disparador | Acción en el Sprint Backlog |
 |---|---|---|---|---|---|---|---|
-| R-05 | Mitigar | Confirmar las horas disponibles de cada integrante antes de cada Sprint Planning y ajustar el Sprint Backlog a esa capacidad; trabajar en pareja las historias de IA para repartir la curva de aprendizaje. | El Product Owner reduce el alcance del Sprint 5 y deja fuera la parte de menor valor de HU-06. | Joseph Salazar Araya (Scrum Master) | 2026-11-10 y luego semanal | A mitad de un Sprint más de la mitad de los puntos sigue en Por hacer, o un Sprint cierra con menos de 8 puntos en Hecho. | M-04 (RIG-65), Sprint 4 |
+| R-05 | Mitigar | Confirmar las horas disponibles de cada integrante antes de cada Sprint Planning y ajustar el Sprint Backlog a esa capacidad; trabajar en pareja las historias de IA para repartir la curva de aprendizaje. | El Product Owner reduce el alcance del Sprint 5 y devuelve al Product Backlog la historia de la ficha detallada (HU-06a, HU-06b o HU-06c) de menor valor. | Joseph Salazar Araya (Scrum Master) | 2026-11-10 y luego semanal | A mitad de un Sprint más de la mitad de los puntos sigue en Por hacer, o un Sprint cierra con menos de 8 puntos en Hecho. | M-04 (RIG-65), Sprint 4 |
 | R-01 | Mitigar | Probar el OCR con fotografías reales de aretes antes de integrarlo; guiar al productor para encuadrar el arete; mantener siempre el ingreso manual (criterio 2 de HU-08). | El ingreso manual pasa a ser el flujo principal y la lectura del OCR queda como sugerencia opcional. | Developer 2 | 2026-11-10 | El OCR lee correctamente menos del 70 % de los aretes en la prueba. | M-01 (RIG-62), Sprint 4 |
 | R-02 | Mitigar | Hacer una prueba de concepto por especie antes de integrar HU-09a y HU-09b; ofrecer la sugerencia solo en las especies donde funcione. | La sugerencia queda solo para bovinos; en las demás especies la raza y el color/patrón se eligen de una lista (HU-11) y se corrigen manualmente (HU-10). | Developer 2 | 2026-11-10 | La prueba acierta en menos del 60 % de las fotografías de alguna especie. | M-02 (RIG-63), Sprint 4 |
 | R-03 | Mitigar | Encapsular el OCR y la IA detrás de una interfaz propia para poder cambiar de proveedor; configurar alertas de consumo; tener identificado un proveedor alterno (plan de adquisiciones). | Cambiar al proveedor alterno; mientras tanto, el registro sigue con ingreso manual. | Developer 2 | 2026-11-10 | El consumo llega al 80 % de la cuota gratuita, el proveedor anuncia cambios de precio o el servicio falla más de una vez en una semana. | M-03 (RIG-64), Sprint 4 |
 | R-06 | Mitigar | Repetir la prueba de usabilidad del registro completo, ya con el módulo de IA, con productores reales o simulados; usar textos y botones grandes y pocos pasos. | Quitar pasos opcionales del registro guiado y dejar la fotografía y las sugerencias para después del registro básico. | Developer 3 | 2026-11-17 | Un productor no completa el registro sin ayuda o tarda más de 5 minutos. | M-07 (RIG-68), Sprint 5 |
 | R-09 | Mitigar | Comprimir la fotografía antes de subirla, reintentar la carga y guardar el registro sin esperar la lectura del arete. | Registrar el animal sin fotografía (HU-07 lo permite) y adjuntarla después. | Developer 1 | 2026-11-17 | Una carga o una lectura falla por conexión en las pruebas o tarda más de 30 segundos. | M-06 (RIG-67), Sprint 4 |
 | R-07 | Evitar | Recolectar solo la cédula y los datos necesarios, mostrar un aviso de consentimiento en el registro del propietario y usar solo cédulas ficticias en las pruebas y la demostración. | Enmascarar la cédula en las pantallas y retirar cualquier dato real de la base de datos. | Developer 1 | 2026-11-11 | Se planea mostrar, exportar o compartir la cédula fuera de la ficha del propietario, o aparece una cédula real en los datos de prueba. | M-08 (RIG-69), Sprint 5 |
-| R-10 | Mitigar | Definir con un médico veterinario los datos de salud, peso y reproducción antes del Sprint Planning 5 y reestimar HU-06 si cambia su tamaño. | Dividir HU-06 y dejar en el Product Backlog los datos de menor valor. | Marco López Quesada (Product Owner) | 2026-11-11 | La reestimación de HU-06 supera los 8 puntos. | M-05 (RIG-66), Sprint 4 |
+| R-10 | Mitigar | Definir con un médico veterinario los datos de salud, peso y reproducción antes del Sprint Planning 5 y reestimar HU-06a, HU-06b y HU-06c si cambia su tamaño. | Dejar en el Product Backlog la historia de la ficha detallada de menor valor. | Marco López Quesada (Product Owner) | 2026-11-11 | La reestimación de HU-06a, HU-06b y HU-06c suma más de 8 puntos. | M-05 (RIG-66), Sprint 4 |
 | R-08 | Aceptar (activa) | HU-12 guarda el arete solo como referencia, sin conexión con Trazar-Agro; se revisa la información pública de SENASA antes de desarrollarla. | Ajustar la validación del formato del arete. | Joseph Salazar Araya | 2026-11-11 | SENASA publica cambios en el formato del arete o en las reglas de Trazar-Agro. | M-09 (RIG-70), Sprint 5 |
 | R-04 | Aceptar (activa) | Usar solo planes gratuitos o estudiantiles y comprimir las imágenes; revisar el consumo al cierre de cada Sprint. | Reducir la resolución de las imágenes guardadas y borrar las fotografías de prueba. | Marco López Quesada | 2026-11-24 | Aparece un cargo en la facturación de algún servicio o el almacenamiento supera el 80 % del plan gratuito. | M-10 (RIG-71), Sprint 5 |
 
