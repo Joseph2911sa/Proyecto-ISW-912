@@ -1020,8 +1020,21 @@ Sección 11. Si la meta no se cumple, se aplica la contingencia de R-06.
 
 ### Matriz de responsabilidades
 
-Los roles y las responsabilidades del Scrum Team (Product Owner, Scrum Master y
-Developers) se definen en la Sección 00.
+R = realiza, A = aprueba y responde por el resultado, C = es consultado.
+
+| Actividad | Marco López Quesada (Product Owner) | Joseph Salazar Araya (Scrum Master) |
+|---|---|---|
+| Ordenar y refinar el Product Backlog | A, R | C |
+| Definir los criterios de aceptación | A, R | C |
+| Facilitar Sprint Planning, Daily Scrum, Sprint Review y Retrospective | C | A, R |
+| Desarrollar las historias (Developer 1 a 3) | R | R |
+| Verificación cruzada y revisión del código | R (historias que construyó Joseph) | R (historias que construyó Marco) |
+| Aceptar historias en Hecho | A | C |
+| Remover impedimentos | C | A, R |
+| Mantener y revisar el registro de riesgos | C | A, R |
+| Adquisiciones | A, R (hosting, base de datos, almacenamiento, herramientas) | R (OCR e IA) |
+| Comunicación con interesados | A, R (productores, cooperativas, médicos veterinarios) | R (SENASA, profesores, proveedor de OCR/IA, PRODHAB) |
+| Actualizar el Expediente y su bitácora | R | R |
 
 ### Plan de comunicación
 
@@ -1033,7 +1046,7 @@ Developers) se definen en la Sección 00.
 | Productores adultos mayores | 2 | 5 | Cambios hechos a partir de sus observaciones de usabilidad | Pruebas tempranas; sus observaciones se revisan al cierre de cada Sprint | Sesión de prueba de usabilidad y Sprint Review | Marco López Quesada |
 | SENASA / Trazar-Agro | 5 | 3 | Que el alcance complementa el registro oficial sin duplicarlo | Al definir cada Sprint, en el Sprint Planning | Consulta de su información pública | Joseph Salazar Araya |
 | Equipo desarrollador | 5 | 5 | Avance, bloqueos y decisiones técnicas | Todos los días en el Daily Scrum; cada Sprint en la Review y la Retrospective | Daily Scrum de 15 minutos, tablero de Jira y comentarios en la historia o tarea | Joseph Salazar Araya |
-| Profesores del curso | 4 | 4 | Avance del Expediente y del repositorio | Semanal y en la entrega oficial de la Semana 11 | Repositorio Git, enlace al proyecto de Jira y clase | Joseph Salazar Araya |
+| Profesores del curso | 4 | 4 | Avance del Expediente y del repositorio | Semanal y en la entrega oficial de la Semana 11 | Repositorio Git, acceso de lectura al proyecto RIG en Jira y clase | Joseph Salazar Araya |
 | Proveedor de servicio OCR/IA | 2 | 2 | Condiciones de uso, disponibilidad y costo de su servicio | Antes del Sprint en que se integre y de forma ocasional después | Documentación pública del servicio | Joseph Salazar Araya |
 | Cooperativas y asociaciones de productores | 3 | 4 | Avance del producto y su utilidad para los asociados | Al cierre de cada Sprint | Resumen breve del incremento por correo | Marco López Quesada |
 | Médicos veterinarios y asistentes técnicos | 2 | 3 | Datos que tendrá la ficha individual del animal | De forma ocasional, antes de desarrollar la ficha detallada | Consulta breve | Marco López Quesada |
@@ -1066,6 +1079,18 @@ Developers) se definen en la Sección 00.
 
 ### Working Agreements
 
+- La Daily Scrum dura 15 minutos y se hace todos los días hábiles a la hora acordada en el
+  Sprint Planning; quien no puede asistir deja su avance y sus bloqueos como comentario en
+  Jira antes de esa hora.
+- Nadie empieza una historia nueva si la columna En progreso llegó a su límite WIP: primero
+  ayuda a revisar o terminar otra.
+- Cada historia se trabaja en una rama propia con su ID (por ejemplo, `HU-08-lectura-arete`) y
+  entra a la rama principal solo con la revisión del otro estudiante.
+- Jira se actualiza el mismo día en que cambia el estado de una tarea.
+- Las observaciones se hacen sobre el trabajo, no sobre la persona; los desacuerdos se
+  resuelven con el escalamiento de esta sección.
+- Los acuerdos se revisan en cada Retrospective y cualquier cambio se registra en la Sección 11.
+
 ---
 
 ## Sección 11 — Decisiones, cambios y evidencias — integración final
@@ -1097,7 +1122,8 @@ Developers) se definen en la Sección 00.
 | 11/11/2026 | df510a3 | Se ajustan R-05, R-10, el Plan de Mitigación y el calendario de revisión de riesgos a las fechas del release; las pruebas de OCR e IA se hacen antes de integrar cada servicio; el Plan de adquisiciones nombra a cada proveedor. | 08 |
 | 11/11/2026 | e5256af | Se definen criterios de calidad medibles, aseguramiento y control de la calidad; la Definition of Done indica quién verifica cada criterio y en qué columna del tablero; se agrega la estrategia de validación con dos pruebas de usabilidad. | 09 |
 | 11/11/2026 | b653c69 | La declaración de alcance separa alcance del producto y del proyecto; el Product Backlog se ordena según los Sprints con prioridad Alta, Media o Baja y su objetivo específico; HU-08 y HU-11 agregan un criterio medible; HU-12 depende de lo que indica el productor; HU-05 ya no menciona una cuenta. | 05, 06, 07 |
-| 11/11/2026 | este commit | La justificación cita el alcance de Trazar-Agro; el Product Goal se redacta como resultado para el productor; se quitan repeticiones de la Sección 02 y se justifica el tipo de estructura; las estrategias de SENASA y de los profesores coinciden con su cuadrante; se nombra a la PRODHAB; se actualiza la bibliografía. | 01, 02, 03, 10, Bibliografía |
+| 11/11/2026 | 0965a1d | La justificación cita el alcance de Trazar-Agro; el Product Goal se redacta como resultado para el productor; se quitan repeticiones de la Sección 02 y se justifica el tipo de estructura; las estrategias de SENASA y de los profesores coinciden con su cuadrante; se nombra a la PRODHAB; se actualiza la bibliografía. | 01, 02, 03, 10, Bibliografía |
+| 11/11/2026 | este commit | Se agrega la matriz de responsabilidades (RACI) y los Working Agreements; los profesores tienen acceso de lectura al proyecto de Jira. | 10 |
 
 ### Evidencias
 
