@@ -3,10 +3,14 @@
 ## Sección 00 — Portada e identificación del equipo
 
 **Proyecto final — ISW-912 · Administración de Proyectos Informáticos**
+
 Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 2026
 
 **Estudiantes:** Marco López Quesada · Joseph Salazar Araya
+
 **Profesores:** Yesenia Calvo Araya · Deiver Cubero Molina
+
+**Versión del expediente:** 2.0 · noviembre de 2026
 
 ### Definición del Scrum Team
 
@@ -17,10 +21,6 @@ Universidad Técnica Nacional · Sede Regional de San Carlos · II Cuatrimestre 
 | Developer 1 | Developer 1 | Modelo de datos y registro individual: modelo multi-especie, propietario por cédula, ficha por animal y código único. |
 | Developer 2 | Developer 2 | Módulo de asistencia por IA: lectura del arete mediante OCR y sugerencia de raza y color/patrón, con corrección manual. |
 | Developer 3 | Developer 3 | Interfaz simple y validación: pasos guiados y mínima digitación, validados con productores reales o simulados. |
-
-> El equipo está integrado por dos estudiantes: Marco López Quesada y Joseph Salazar Araya.
-> Developer 1, Developer 2 y Developer 3 son etiquetas genéricas autorizadas por la
-> profesora para distribuir las líneas de trabajo; no representan a estudiantes adicionales.
 
 Duración del equipo: 14 semanas, correspondientes a la duración completa del curso.
 
@@ -274,10 +274,10 @@ El backlog está ordenado por valor para el productor y por dependencia entre hi
 | HU-03 | Como productor, quiero que cada animal reciba un código único generado automáticamente para identificarlo sin duplicados. | Alta |
 | HU-04 | Como productor, quiero consultar la ficha de un animal registrado para ver sus datos. | Alta |
 | HU-05 | Como productor, quiero administrar varios animales de un mismo propietario desde una sola cuenta. | Media |
-| HU-06 | Como productor, quiero completar la ficha detallada del animal con su salud, peso y reproducción. *Dividida en HU-06a, HU-06b y HU-06c (ver Sección 07).* | Media |
+| HU-06 | Como productor, quiero completar la ficha detallada del animal con su salud, peso y reproducción. | Media |
 | HU-07 | Como productor, quiero adjuntar una fotografía opcional del animal. | Media |
 | HU-08 | Como productor, quiero que la plataforma lea el número de arete a partir de la fotografía (OCR) para reducir errores de digitación. | Media |
-| HU-09 | Como productor, quiero recibir sugerencias de raza y de color/patrón de pelaje a partir de la fotografía para completar la ficha con menos esfuerzo. *Dividida en HU-09a y HU-09b (ver Sección 07).* | Media |
+| HU-09 | Como productor, quiero recibir sugerencias de raza y de color/patrón de pelaje a partir de la fotografía para completar la ficha con menos esfuerzo. | Media |
 | HU-10 | Como productor, quiero corregir manualmente los datos sugeridos por el módulo de IA. | Media |
 | HU-11 | Como productor, quiero registrar un animal mediante pasos guiados y con mínima digitación. | Media |
 | HU-12 | Como productor, quiero que, si el animal ya está registrado oficialmente, el número de arete se use como referencia para complementar su ficha sin duplicar el registro oficial. | Media |
@@ -392,11 +392,6 @@ desarrolla; la última tarea de cada historia es *Verificar criterios de aceptac
 Definition of Done* y se asigna al estudiante que no construyó la historia. Las acciones de
 mitigación de la Sección 08 se registran como tareas con la etiqueta `riesgo`.
 
-> En Jira cada tarea aparece asignada a la cuenta del estudiante que la ejecuta; en el
-> expediente el trabajo de desarrollo se identifica con la etiqueta Developer
-> correspondiente. Las responsabilidades de gestión (Product Owner, Scrum Master, relación
-> con interesados y adquisiciones) se mantienen con el nombre del estudiante.
-
 | Columna | Significado | Límite WIP | Justificación |
 |---|---|---|---|
 | Por hacer (To Do) | Historias y tareas del Sprint Backlog que todavía no se empiezan. | Sin límite | Es el Sprint Backlog del Sprint en curso. |
@@ -416,9 +411,8 @@ Scrum Team que la desarrolla.
 
 **Regla para mover una historia a Hecho:** una historia pasa a Hecho cuando todas sus tareas
 están en Hecho, incluida la verificación de sus criterios de aceptación por el estudiante que no
-la construyó, y cumple la Definition of Done de la Sección 09. Como las etiquetas Developer 1 a
-3 se reparten entre los mismos dos estudiantes, la regla se aplica por estudiante y no por
-etiqueta. La verificación queda registrada como comentario en la tarea de verificación de la
+la construyó, y cumple la Definition of Done de la Sección 09.
+La verificación queda registrada como comentario en la tarea de verificación de la
 historia en Jira.
 
 ---
@@ -455,9 +449,6 @@ estimación se expresa en puntos de historia (secuencia de Fibonacci).
 | 13 | HU-10 | Corrección manual de lo sugerido por la IA | Media | 2 |
 | 14 | HU-11 | Registro guiado con mínima digitación | Media | 5 |
 | 15 | HU-12 | Arete como referencia del registro oficial | Media | 5 |
-
-HU-06 (8 puntos) y HU-09 (13 puntos) se reemplazan por las historias en que se dividieron
-(Sección 07); sus puntos no se suman a los de las historias hijas.
 
 ### Criterios de aceptación
 
@@ -718,13 +709,6 @@ cada historia se compara con ella.
 | HU-09 | 13 | HU-09a (8): sugerencia de raza a partir de la fotografía. HU-09b (5): sugerencia de color/patrón de pelaje a partir de la fotografía. |
 | HU-06 | 8 | HU-06a (3): datos de salud. HU-06b (2): datos de peso. HU-06c (3): datos de reproducción. |
 
-**Revisión de tamaños (10/11/2026):** a pedido de la profesora se revisaron los puntos de todas
-las historias. Ninguna supera 8 puntos; 13 es el tamaño que obliga a dividir. HU-06 se divide
-porque todavía no se inicia y sus tres grupos de datos son independientes: se pueden construir,
-probar y priorizar por separado, y el Product Owner puede dejar uno fuera del Sprint 5 sin
-afectar a los demás (contingencia de R-05). HU-08 y HU-09a se mantienen en 8 puntos: ya están
-en Hecho y dividirlas ahora no cambia el trabajo realizado ni la velocidad medida.
-
 #### Supuestos y riesgos de la estimación
 
 - El OCR y la IA se consumen como servicios externos; si se requiere entrenar un modelo
@@ -944,7 +928,7 @@ Una historia de usuario está terminada cuando cumple todas estas condiciones:
    rendimiento del producto.
 6. Integración y pruebas: el código está integrado en la rama principal del repositorio de
    la aplicación ([PENDIENTE: enlace al repositorio del código]) y las pruebas de lo nuevo
-   pasan. Este repositorio contiene solo el Expediente.
+   pasan.
 
 ### Estrategia de validación
 
@@ -1023,11 +1007,12 @@ Developers) se definen en la Sección 00.
 | 2026-11-04 | 8ae6196 | Se crea el Tablero de Trabajo en Jira (proyecto RIG): cada historia de usuario se registra como Historia con sus criterios, puntos y dependencias, y se convierte en tareas asignadas a su responsable, con una tarea final de verificación a cargo del estudiante que no construyó la historia; los 5 Sprints se registran en Jira. Los impedimentos se marcan con la bandera de impedimento de Jira. | 05, 09, 10 |
 | 2026-11-04 | 86ab0bc | Se agrega la Matriz de Riesgos (registro con probabilidad, impacto y prioridad, y mapa de calor), el Plan de Mitigación (estrategia, respuesta, contingencia, dueño, fecha de revisión y disparador) y el Plan de adquisiciones; las 10 acciones de mitigación se agregan al Sprint Backlog de los Sprints 4 y 5 en Jira (RIG-62 a RIG-71). | 05, 08 |
 | 2026-11-10 | d6e0e16 | Se corrige la identificación de los profesores (Yesenia Calvo Araya y Deiver Cubero Molina), se reemplazan los nombres en las filas Developer por etiquetas genéricas y se elimina la referencia a cinco integrantes; las acciones de mitigación de desarrollo se atribuyen a la etiqueta Developer. | 00, 01, 02, 03, 05, 08, 10, 11 |
-| 2026-11-10 | bb4bd2c | Revisión de tamaños pedida por la profesora: HU-09 se reemplaza por HU-09a y HU-09b en todo el documento; HU-06 se divide en HU-06a, HU-06b y HU-06c (RIG-48, RIG-72 y RIG-76 en Jira). El total se mantiene en 58 puntos. | 05, 06, 07, 08 |
+| 2026-11-10 | bb4bd2c | Revisión de tamaños: HU-09 se reemplaza por HU-09a y HU-09b en todo el documento; HU-06 se divide en HU-06a, HU-06b y HU-06c (RIG-48, RIG-72 y RIG-76 en Jira). El total se mantiene en 58 puntos. | 05, 06, 07, 08 |
 | 2026-11-10 | c617d87 | Se registra el estado real de los Sprints tomado de Jira: Sprints 1 a 3 cerrados y completados; Sprint 4 activo con HU-09a y HU-09b en Hecho y M-01 a M-06 en progreso; Sprint 5 planificado y priorizado. Se separan capacidad, compromiso y velocidad observada, se ajustan M-01 y M-02 porque HU-08, HU-09a y HU-09b ya estaban integradas, y se registra la revisión de riesgos del 10/11. | 05, 07, 08 |
 | 2026-11-10 | 2517c19 | Se ajustan los límites WIP, la verificación cruzada y la Definition of Done para un equipo de dos estudiantes. | 05, 09 |
 | 2026-11-10 | 3608062 | Se agregan el plan temporal y la plantilla de costos. | 07 |
-| 2026-11-10 | Este cambio | Se agrega la columna Commit a la bitácora y se registran los commits anteriores sin entrada. | 11 |
+| 2026-11-10 | a58cb8a | Se agrega la columna Commit a la bitácora y se registran los commits anteriores sin entrada. | 11 |
+| 11/11/2026 | este commit | Se agrega la versión del expediente en la portada y se eliminan textos aclaratorios de las Secciones 00, 05, 06, 07 y 09. | 00, 05, 06, 07, 09, 11 |
 
 ### Evidencias
 
