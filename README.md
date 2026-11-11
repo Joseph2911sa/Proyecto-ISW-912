@@ -32,13 +32,15 @@ Duración del equipo: 14 semanas, correspondientes a la duración completa del c
 
 #### Justificación del proyecto
 
-En Costa Rica, el sistema nacional de trazabilidad Trazar-Agro está enfocado casi
-exclusivamente en el cumplimiento sanitario y comercial del ganado bovino y porcino, sin
-ofrecer a los productores —en particular a los pequeños y medianos, muchos de ellos
-adultos mayores con poca familiaridad tecnológica— una herramienta de uso interno para
-administrar el historial detallado de cada animal (salud, peso, reproducción,
-fotografías, propietario). El registro manual del número de arete es, además, propenso a
-errores de digitación, y la conectividad en las fincas rurales suele ser limitada.
+En Costa Rica, el sistema nacional de trazabilidad Trazar-Agro, del SENASA, se centra en la
+identificación oficial de cada animal y en el control sanitario y de movilización, y en su
+primera etapa cubre a bovinos y búfalos, según el Decreto Ejecutivo
+N.° 44336-MAG-S-SP-MOPT (MAG, s. f.).
+No ofrece a los productores —en particular a los pequeños y medianos, muchos de ellos adultos
+mayores con poca familiaridad tecnológica— una herramienta de uso interno para administrar el
+historial detallado de cada animal (salud, peso, reproducción, fotografías, propietario).
+Además, el número de arete se digita a mano, lo que se presta a errores, y la conectividad en
+las fincas rurales suele ser limitada.
 
 El proyecto se justifica porque complementa, sin duplicar, el sistema oficial: ofrece a
 los productores una plataforma propia para el control individual de su ganado, con una
@@ -91,10 +93,9 @@ que agilice el registro mediante fotografía.
 
 ### Product Goal
 
-Una plataforma digital de registro y control individual detallado del ganado en Costa
-Rica, organizada por categorías de especie, con cada animal asociado a un propietario
-mediante cédula, código único generado automáticamente y un módulo de IA que agilice el
-registro mediante fotografía.
+Que el productor costarricense registre cada animal de su finca en pocos pasos, con su ficha
+individual, su propietario y su código único, y que una fotografía le ahorre digitar el
+arete, la raza y el color, como complemento del registro oficial.
 
 ---
 
@@ -119,8 +120,7 @@ registro mediante fotografía.
 **Internos**
 
 - Equipo de dos estudiantes que cubren las responsabilidades de Product Owner, Scrum
-  Master y las líneas Developer 1 a 3, sin estructura jerárquica formal; las decisiones se
-  toman en conjunto.
+  Master y las líneas Developer 1 a 3.
 - Tiempo disponible limitado al calendario académico de 14 semanas.
 - Presupuesto estudiantil, dependiente de servicios gratuitos o de bajo costo (APIs de
   OCR, hosting).
@@ -133,13 +133,16 @@ registro mediante fotografía.
 - Perfil demográfico del usuario final (productores adultos mayores, baja alfabetización
   digital), que condiciona el diseño de la interfaz.
 - Disponibilidad y costo de servicios de IA/OCR en la nube (dependencia de terceros).
-- Normativa de protección de datos personales (cédula del propietario) aplicable en Costa
-  Rica.
+- Ley N.° 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales,
+  supervisada por la PRODHAB, que aplica a la cédula del propietario.
 
 ### Tipo de estructura organizacional
 
-Orientada a proyectos: equipo de dos estudiantes, sin estructura jerárquica formal; las
-decisiones se toman en conjunto.
+Orientada a proyectos. El equipo existe solo para este proyecto y no depende de una
+organización funcional: el Product Owner decide el alcance y la prioridad, el Scrum Master
+facilita el proceso sin autoridad jerárquica sobre los Developers y las decisiones técnicas
+las toman los Developers (Sección 10). Esta estructura da al equipo control completo sobre
+su tiempo y sus recursos, dentro de las restricciones del curso.
 
 ### Restricciones
 
@@ -149,7 +152,6 @@ decisiones se toman en conjunto.
 - Conectividad rural limitada en muchas fincas costarricenses.
 - Perfil demográfico del usuario final (productores adultos mayores, baja alfabetización
   digital), que condiciona el diseño de la interfaz.
-- El proyecto complementa, sin duplicar, el sistema oficial.
 
 ---
 
@@ -161,13 +163,13 @@ decisiones se toman en conjunto.
 |---|---|---|---|---|---|---|---|
 | Productores pequeños/medianos | Usuarios principales | Control simple y rápido de su ganado | 2 | 5 | Favorable | Informar y validar la interfaz con ellos | Marco López Quesada |
 | Productores adultos mayores | Segmento crítico de usuarios | Interfaz sencilla, mínima digitación | 2 | 5 | Mixta | Involucrar en pruebas de usabilidad tempranas | Marco López Quesada |
-| SENASA / Trazar-Agro | Entidad reguladora / sistema nacional | Que el proyecto no duplique ni interfiera con el registro oficial | 5 | 3 | Neutral | Mantener informado; diseñar como complemento | Joseph Salazar Araya |
+| SENASA / Trazar-Agro | Entidad reguladora / sistema nacional | Que el proyecto no duplique ni interfiera con el registro oficial | 5 | 3 | Neutral | Mantener satisfecho; diseñar el producto como complemento del registro oficial | Joseph Salazar Araya |
 | Equipo desarrollador | Responsables del proyecto | Cumplir los objetivos del curso y del producto | 5 | 5 | Favorable | Gestionar de cerca | Marco López Quesada y Joseph Salazar Araya |
-| Profesores del curso (Yesenia Calvo Araya y Deiver Cubero Molina) | Evaluador / patrocinador académico | Evidencia de aplicación correcta de los conceptos del curso | 4 | 4 | Favorable | Mantener informado con avances semanales | Joseph Salazar Araya |
+| Profesores del curso (Yesenia Calvo Araya y Deiver Cubero Molina) | Evaluador / patrocinador académico | Evidencia de aplicación correcta de los conceptos del curso | 4 | 4 | Favorable | Gestionar de cerca con avances semanales | Joseph Salazar Araya |
 | Proveedor de servicio OCR/IA | Tercero tecnológico | Uso correcto de su API/servicio | 2 | 2 | Neutral | Monitorear disponibilidad y costos | Joseph Salazar Araya |
 | Cooperativas y asociaciones de productores | Canal de difusión entre productores | Que la herramienta sea útil para sus asociados y fácil de recomendar | 3 | 4 | Favorable | Mantener informado y consultar sobre la difusión | Marco López Quesada |
 | Médicos veterinarios y asistentes técnicos | Usuarios secundarios; apoyo a los productores | Consultar con claridad los datos individuales de cada animal | 2 | 3 | Neutral | Monitorear y considerar su opinión sobre los datos de la ficha | Marco López Quesada |
-| Entidad de protección de datos personales | Entidad reguladora | Que el manejo de la cédula del propietario cumpla la normativa | 4 | 2 | Neutral | Mantener satisfecho; aplicar la normativa en el diseño de los datos | Joseph Salazar Araya |
+| Agencia de Protección de Datos de los Habitantes (PRODHAB) | Entidad reguladora | Que el manejo de la cédula del propietario cumpla la normativa | 4 | 2 | Neutral | Mantener satisfecho; aplicar la normativa en el diseño de los datos | Joseph Salazar Araya |
 
 ### Justificación de las valoraciones discutibles
 
@@ -180,30 +182,32 @@ decisiones se toman en conjunto.
   específico; la actitud es mixta por su poca familiaridad con plataformas digitales.
 - **Cooperativas y asociaciones de productores (poder 3, interés 4):** no deciden el alcance
   del producto, pero pueden facilitar o dificultar su difusión entre los asociados.
-- **Entidad de protección de datos personales (poder 4, interés 2):** puede exigir el
+- **PRODHAB (poder 4, interés 2):** puede exigir el
   cumplimiento de la normativa sobre la cédula del propietario, pero no sigue de cerca el
   avance del proyecto.
 
 ### Mapa Poder-Interés
 
+Para ubicar a cada interesado, la escala de 1 a 5 se divide en bajo (1 a 3) y alto (4 a 5).
+
 ```mermaid
 quadrantChart
-    title Mapa Poder-Interes
-    x-axis Bajo Interes --> Alto Interes
-    y-axis Bajo Poder --> Alto Poder
+    title Mapa Poder-Interés
+    x-axis Bajo interés --> Alto interés
+    y-axis Bajo poder --> Alto poder
     quadrant-1 Gestionar de cerca
     quadrant-2 Mantener satisfecho
     quadrant-3 Monitorear
     quadrant-4 Mantener informado
-    Productores pequenos/medianos: [0.85, 0.35]
+    Productores pequeños y medianos: [0.85, 0.35]
     Productores adultos mayores: [0.85, 0.30]
     SENASA / Trazar-Agro: [0.45, 0.85]
     Equipo desarrollador: [0.9, 0.9]
     Profesores del curso: [0.65, 0.7]
     Proveedor OCR/IA: [0.25, 0.3]
     Cooperativas y asociaciones: [0.65, 0.48]
-    Medicos veterinarios: [0.45, 0.30]
-    Entidad de proteccion de datos: [0.25, 0.70]
+    Médicos veterinarios: [0.45, 0.30]
+    PRODHAB: [0.25, 0.70]
 ```
 
 ### Interesados críticos
@@ -1033,7 +1037,7 @@ Developers) se definen en la Sección 00.
 | Proveedor de servicio OCR/IA | 2 | 2 | Condiciones de uso, disponibilidad y costo de su servicio | Antes del Sprint en que se integre y de forma ocasional después | Documentación pública del servicio | Joseph Salazar Araya |
 | Cooperativas y asociaciones de productores | 3 | 4 | Avance del producto y su utilidad para los asociados | Al cierre de cada Sprint | Resumen breve del incremento por correo | Marco López Quesada |
 | Médicos veterinarios y asistentes técnicos | 2 | 3 | Datos que tendrá la ficha individual del animal | De forma ocasional, antes de desarrollar la ficha detallada | Consulta breve | Marco López Quesada |
-| Entidad de protección de datos personales | 4 | 2 | Cómo se maneja la cédula del propietario según la normativa | Al diseñar los datos del propietario y ante cambios que los afecten | Consulta de la normativa publicada | Joseph Salazar Araya |
+| PRODHAB | 4 | 2 | Cómo se maneja la cédula del propietario según la normativa | Al diseñar los datos del propietario y ante cambios que los afecten | Consulta de la normativa publicada | Joseph Salazar Araya |
 
 #### Reglas del equipo
 
@@ -1092,7 +1096,8 @@ Developers) se definen en la Sección 00.
 | 11/11/2026 | 99dd5bb | Se actualiza el plan temporal con las fechas del release; se agregan el rango de Sprints necesarios, el incremento por Sprint, los hitos, el burndown del release, el costo del equipo y los proveedores con sus planes gratuitos; el desglose por línea de trabajo indica su objetivo específico. | 07 |
 | 11/11/2026 | df510a3 | Se ajustan R-05, R-10, el Plan de Mitigación y el calendario de revisión de riesgos a las fechas del release; las pruebas de OCR e IA se hacen antes de integrar cada servicio; el Plan de adquisiciones nombra a cada proveedor. | 08 |
 | 11/11/2026 | e5256af | Se definen criterios de calidad medibles, aseguramiento y control de la calidad; la Definition of Done indica quién verifica cada criterio y en qué columna del tablero; se agrega la estrategia de validación con dos pruebas de usabilidad. | 09 |
-| 11/11/2026 | este commit | La declaración de alcance separa alcance del producto y del proyecto; el Product Backlog se ordena según los Sprints con prioridad Alta, Media o Baja y su objetivo específico; HU-08 y HU-11 agregan un criterio medible; HU-12 depende de lo que indica el productor; HU-05 ya no menciona una cuenta. | 05, 06, 07 |
+| 11/11/2026 | b653c69 | La declaración de alcance separa alcance del producto y del proyecto; el Product Backlog se ordena según los Sprints con prioridad Alta, Media o Baja y su objetivo específico; HU-08 y HU-11 agregan un criterio medible; HU-12 depende de lo que indica el productor; HU-05 ya no menciona una cuenta. | 05, 06, 07 |
+| 11/11/2026 | este commit | La justificación cita el alcance de Trazar-Agro; el Product Goal se redacta como resultado para el productor; se quitan repeticiones de la Sección 02 y se justifica el tipo de estructura; las estrategias de SENASA y de los profesores coinciden con su cuadrante; se nombra a la PRODHAB; se actualiza la bibliografía. | 01, 02, 03, 10, Bibliografía |
 
 ### Evidencias
 
@@ -1112,10 +1117,25 @@ Developers) se definen en la Sección 00.
 
 ---
 
-## Bibliografía y fuentes base
+## Bibliografía y fuentes
 
-- Universidad Técnica Nacional. *ISW-912 Administración de Proyectos Informáticos* —
-  material de Lección 1, Lección 2, Semana 2, Semana 3 y Semana 4.
-- Project Management Institute. *A Guide to the Project Management Body of Knowledge
-  (PMBOK® Guide), Eighth Edition.*
-- Schwaber, K. & Sutherland, J. *The Scrum Guide.* November 2020.
+- Alegra. (2026). *Cargas sociales CCSS 2026 para patronos en Costa Rica*.
+  https://blog.alegra.com/costa-rica/cargas-sociales-ccss-2026-patronos-costa-rica/
+- Asamblea Legislativa de la República de Costa Rica. (2011). *Ley N.° 8968, Ley de
+  Protección de la Persona frente al Tratamiento de sus Datos Personales*.
+- Google Cloud. (2026). *Cloud Vision pricing*. https://cloud.google.com/vision/pricing
+- Microsoft. (2026). *Azure AI Custom Vision: limits and quotas*.
+  https://learn.microsoft.com/azure/ai-services/custom-vision-service/limits-and-quotas
+- Microsoft. (2026). *Azure AI Vision pricing*.
+  https://azure.microsoft.com/pricing/details/cognitive-services/computer-vision/
+- Ministerio de Agricultura y Ganadería. (s. f.). *Preguntas frecuentes: trazabilidad bovina
+  y bufalina*. https://www.mag.go.cr/trazabilidad-bovina-y-bufalina/Preguntas-frecuentes-TRAZABILIDAD.pdf
+- Ministerio de Trabajo y Seguridad Social. (2025). *Decreto Ejecutivo N.° 45303-MTSS:
+  salarios mínimos para el sector privado, año 2026*.
+- Project Management Institute. (2025). *A Guide to the Project Management Body of Knowledge
+  (PMBOK® Guide)* (8.ª ed.).
+- Schwaber, K. y Sutherland, J. (2020). *La Guía Scrum*. https://scrumguides.org
+- Supabase. (2026). *Pricing*. https://supabase.com/pricing
+- Universidad Técnica Nacional. (2026). *ISW-912 Administración de Proyectos Informáticos:
+  material del Proyecto Incremental y de las lecciones del II Cuatrimestre 2026*.
+- Vercel. (2026). *Hobby plan*. https://vercel.com/docs/plans/hobby
