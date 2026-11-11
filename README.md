@@ -1009,12 +1009,25 @@ Developers) se definen en la Sección 00.
 
 ### Decisiones y cambios
 
-| Fecha | Cambio | Sección |
-|---|---|---|
-| 2026-10-29 | Se agrega el Tablero de Trabajo con las historias del Sprint Backlog 1, el Plan de Comunicaciones y la Definition of Done; el Sprint 1 pasa a tres historias; se ajustan los criterios de HU-01 y HU-02 y la composición del Scrum Team. | 00, 01, 02, 04, 05, 06, 09, 10 |
-| 2026-10-29 | Se agrega un Tablero de Trabajo por Sprint (Sprints 1 a 4), el Sprint Backlog de los Sprints 2 a 5 y el cronograma de entregas con las fechas de los 5 Sprints; HU-09 se divide en HU-09a y HU-09b; se reasigna la etiqueta Developer 3. | 00, 05, 07 |
-| 2026-11-04 | Se crea el Tablero de Trabajo en Jira (proyecto RIG): cada historia de usuario se registra como Historia con sus criterios, puntos y dependencias, y se convierte en tareas asignadas a su responsable, con una tarea final de verificación a cargo de otro integrante; los 5 Sprints se registran en Jira. Los impedimentos se marcan con la bandera de impedimento de Jira. | 05, 09, 10 |
-| 2026-11-04 | Se agrega la Matriz de Riesgos (registro con probabilidad, impacto y prioridad, y mapa de calor), el Plan de Mitigación (estrategia, respuesta, contingencia, dueño, fecha de revisión y disparador) y el Plan de adquisiciones; las 10 acciones de mitigación se agregan al Sprint Backlog de los Sprints 4 y 5 en Jira (RIG-62 a RIG-71). | 05, 08 |
+| Fecha | Commit | Cambio | Sección |
+|---|---|---|---|
+| 2026-09-27 | 2ec1379 | Primer avance: propuesta inicial del proyecto (problema, interesados, necesidad, propuesta de valor y objetivos). | 01 |
+| 2026-10-02 | 407a752 | Segundo avance: la propuesta inicial se reorganiza como Acta de Inicio (Project Charter). | 01 |
+| 2026-10-10 | 1e0b369, dbfbc21, 5578d3b, 3f8977a, 4091d8f | Reorganización del Expediente por secciones: portada y Scrum Team, Product Goal, contexto organizacional, interesados, ciclo de vida y primer Sprint, backlog inicial, y estructura de las Secciones 06 a 12, incluida la primera versión de la Definition of Done. | 00 a 12 |
+| 2026-10-10 | 63c6949 | Se actualiza la bibliografía con el material de las Semanas 3 y 4. | Bibliografía |
+| 2026-10-14 | caa0e5e | Se agregan el Product Backlog priorizado y los criterios de aceptación en tablas. | 06 |
+| 2026-10-21 | cd2c9e4 | Se ordenan por Sprint el Sprint Backlog y el cronograma. | 05, 07 |
+| 2026-10-21 | bfb3668 | Se agrega la matriz de estimación y se actualizan las estimaciones del Product Backlog. | 06, 07 |
+| 2026-10-29 | 4e1ee11 | Se agrega el Tablero de Trabajo con las historias del Sprint Backlog 1, el Plan de Comunicaciones y se actualiza la Definition of Done; el Sprint 1 pasa a tres historias; se ajustan los criterios de HU-01 y HU-02 y la composición del Scrum Team. | 00, 01, 02, 04, 05, 06, 09, 10 |
+| 2026-10-29 | b1061cc | Se agrega un Tablero de Trabajo por Sprint (Sprints 1 a 4), el Sprint Backlog de los Sprints 2 a 5 y el cronograma de entregas con las fechas de los 5 Sprints; HU-09 se divide en HU-09a y HU-09b; se reasigna la etiqueta Developer 3. | 00, 05, 07 |
+| 2026-11-04 | 8ae6196 | Se crea el Tablero de Trabajo en Jira (proyecto RIG): cada historia de usuario se registra como Historia con sus criterios, puntos y dependencias, y se convierte en tareas asignadas a su responsable, con una tarea final de verificación a cargo del estudiante que no construyó la historia; los 5 Sprints se registran en Jira. Los impedimentos se marcan con la bandera de impedimento de Jira. | 05, 09, 10 |
+| 2026-11-04 | 86ab0bc | Se agrega la Matriz de Riesgos (registro con probabilidad, impacto y prioridad, y mapa de calor), el Plan de Mitigación (estrategia, respuesta, contingencia, dueño, fecha de revisión y disparador) y el Plan de adquisiciones; las 10 acciones de mitigación se agregan al Sprint Backlog de los Sprints 4 y 5 en Jira (RIG-62 a RIG-71). | 05, 08 |
+| 2026-11-10 | d6e0e16 | Se corrige la identificación de los profesores (Yesenia Calvo Araya y Deiver Cubero Molina), se reemplazan los nombres en las filas Developer por etiquetas genéricas y se elimina la referencia a cinco integrantes; las acciones de mitigación de desarrollo se atribuyen a la etiqueta Developer. | 00, 01, 02, 03, 05, 08, 10, 11 |
+| 2026-11-10 | bb4bd2c | Revisión de tamaños pedida por la profesora: HU-09 se reemplaza por HU-09a y HU-09b en todo el documento; HU-06 se divide en HU-06a, HU-06b y HU-06c (RIG-48, RIG-72 y RIG-76 en Jira). El total se mantiene en 58 puntos. | 05, 06, 07, 08 |
+| 2026-11-10 | c617d87 | Se registra el estado real de los Sprints tomado de Jira: Sprints 1 a 3 cerrados y completados; Sprint 4 activo con HU-09a y HU-09b en Hecho y M-01 a M-06 en progreso; Sprint 5 planificado y priorizado. Se separan capacidad, compromiso y velocidad observada, se ajustan M-01 y M-02 porque HU-08, HU-09a y HU-09b ya estaban integradas, y se registra la revisión de riesgos del 10/11. | 05, 07, 08 |
+| 2026-11-10 | 2517c19 | Se ajustan los límites WIP, la verificación cruzada y la Definition of Done para un equipo de dos estudiantes. | 05, 09 |
+| 2026-11-10 | 3608062 | Se agregan el plan temporal y la plantilla de costos. | 07 |
+| 2026-11-10 | Este cambio | Se agrega la columna Commit a la bitácora y se registran los commits anteriores sin entrada. | 11 |
 
 ### Evidencias
 
