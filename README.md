@@ -1141,7 +1141,7 @@ R = realiza, A = aprueba y responde por el resultado, C = es consultado.
 | 11/11/2026 | 0965a1d | La justificación cita el alcance de Trazar-Agro; el Product Goal se redacta como resultado para el productor; se quitan repeticiones de la Sección 02 y se justifica el tipo de estructura; las estrategias de SENASA y de los profesores coinciden con su cuadrante; se nombra a la PRODHAB; se actualiza la bibliografía. | 01, 02, 03, 10, Bibliografía |
 | 11/11/2026 | 1405946 | Se agrega la matriz de responsabilidades (RACI) y los Working Agreements; los profesores tienen acceso de lectura al proyecto de Jira. | 10 |
 | 11/11/2026 | 27d65cd | Se agregan las decisiones registradas, la tabla de evidencias y el modelo de datos del Objetivo específico 1; se ajustan las posiciones del Mapa Poder-Interés para que las etiquetas no se encimen. | 03, 11 |
-| 11/11/2026 | este commit | Se detallan las partes predictiva y adaptativa del ciclo de vida, se agregan los eventos Scrum al plan de comunicación y se ajusta el supuesto de la ficha detallada. | 04, 07, 10, 11 |
+| 11/11/2026 | 858ace2 | Se detallan las partes predictiva y adaptativa del ciclo de vida, se agregan los eventos Scrum al plan de comunicación y se ajusta el supuesto de la ficha detallada. | 04, 07, 10, 11 |
 
 #### Decisiones registradas
 
