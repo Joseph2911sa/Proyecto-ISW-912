@@ -950,32 +950,55 @@ El OCR y la IA se consumen como servicios externos y no se entrena un modelo pro
 
 ### Criterios de calidad
 
-Toda sugerencia generada por el módulo de IA puede corregirse manualmente.
+El producto cumple estos criterios medibles; cada uno se verifica en la historia o la acción
+indicada.
+
+| Criterio | Meta | Dónde se verifica |
+|---|---|---|
+| Lectura del número de arete | El OCR lee correctamente al menos el 70 % de los aretes legibles de la prueba | Criterio 3 de HU-08; M-01 |
+| Sugerencia de raza y color/patrón | Acierta en al menos el 60 % de las fotografías de cada especie donde se ofrece | M-02 |
+| Usabilidad | Un productor completa el registro de un animal sin ayuda en menos de 5 minutos | Criterio 3 de HU-11; M-07 |
+| Corrección de sugerencias | Toda sugerencia del módulo de IA se puede editar antes de guardar | HU-10 |
+| Tiempo de respuesta | Cada pantalla responde en menos de 3 segundos y la lectura del arete termina en menos de 30 segundos con conexión 4G | Criterio 5 de la Definition of Done |
+| Protección de datos | La cédula solo se muestra en la ficha del propietario y las pruebas usan cédulas ficticias | Criterio 6 de la Definition of Done; M-08 |
+
+**Aseguramiento de la calidad (QA):** revisión del código por el estudiante que no construyó
+la historia, verificación cruzada de los criterios de aceptación en Jira y acciones de mejora
+de la Retrospective, que entran al Sprint Backlog siguiente.
+
+**Control de la calidad (QC):** pruebas unitarias de la lógica nueva, pruebas de integración
+de los servicios de OCR e IA con fotografías de prueba y verificación de los criterios de
+aceptación en la Sprint Review.
 
 ### Definition of Done
 
-Una historia de usuario está terminada cuando cumple todas estas condiciones:
+Una historia de usuario está terminada cuando cumple todos estos criterios. Si no los cumple,
+no se presenta en la Sprint Review y vuelve al Product Backlog.
 
-1. Revisión del código: el estudiante que no construyó la historia revisó el código y no
-   quedan observaciones pendientes; la revisión se registra en la tarea de verificación de
-   Jira.
-2. Funcionamiento completo: se cumplen todos los criterios de aceptación de la historia,
-   verificados en su tarea de verificación en Jira.
-3. Compatibilidad: la funcionalidad se comprobó en los dispositivos y navegadores en que se
-   usará el producto: [PENDIENTE: dispositivos y navegadores definidos por el equipo].
-4. Documentación actualizada: se registró la información necesaria sobre la funcionalidad
-   y los cambios realizados para facilitar su mantenimiento.
-5. Seguridad y rendimiento: se verificó que la funcionalidad protege los datos del
-   usuario, en especial la cédula del propietario, y responde adecuadamente sin afectar el
-   rendimiento del producto.
-6. Integración y pruebas: el código está integrado en la rama principal del repositorio de
-   la aplicación ([PENDIENTE: enlace al repositorio del código]) y las pruebas de lo nuevo
-   pasan.
+| # | Criterio | Quién lo verifica | Columna del tablero |
+|---|---|---|---|
+| 1 | Pruebas: las pruebas unitarias de la lógica nueva y las de integración de la historia pasan. | Estudiante que construyó la historia | Sale de En progreso |
+| 2 | Criterios de aceptación: se cumplen todos y quedan verificados en la tarea de verificación de Jira. | Estudiante que no construyó la historia | Sale de En revisión |
+| 3 | Revisión del código: no quedan observaciones pendientes y la revisión se registra en la tarea de verificación. | Estudiante que no construyó la historia | Sale de En revisión |
+| 4 | Compatibilidad: funciona en Google Chrome y Mozilla Firefox de escritorio y en Chrome para Android en un teléfono con pantalla de 6 pulgadas o más. | Estudiante que no construyó la historia | Sale de En revisión |
+| 5 | Rendimiento: cada pantalla responde en menos de 3 segundos y la carga de la fotografía con la lectura del arete termina en menos de 30 segundos con conexión 4G. | Estudiante que no construyó la historia | Sale de En revisión |
+| 6 | Seguridad: la cédula solo se muestra en la ficha del propietario y los datos de prueba usan cédulas ficticias. | Estudiante que no construyó la historia | Sale de En revisión |
+| 7 | Integración: el código está integrado en la rama principal y desplegado en el ambiente de pruebas de Vercel. | Estudiante que construyó la historia | Entra a Hecho |
+| 8 | Documentación: el README del módulo y, si cambió algún dato, el modelo de datos de la Sección 11 están actualizados. | Estudiante que construyó la historia | Entra a Hecho |
+| 9 | Aceptación: el Product Owner acepta la historia frente a sus criterios de aceptación. | Marco López Quesada (Product Owner) | Entra a Hecho |
 
 ### Estrategia de validación
 
-La interfaz se valida con productores reales o simulados, priorizando la accesibilidad
-para usuarios adultos mayores con poca experiencia en plataformas digitales.
+La validación comprueba con productores que el registro sirve a usuarios adultos mayores con
+poca experiencia en plataformas digitales (Objetivo específico 3).
+
+| Prueba | Cuándo | Con quién | Qué hacen | Meta | Responsable |
+|---|---|---|---|---|---|
+| Prueba 1: registro guiado | Sprint 2, antes de la Sprint Review del 06/11/2026 | 3 productores reales o simulados, al menos uno adulto mayor | Registrar un propietario y un animal con los pasos guiados | Cada uno completa el registro sin ayuda en menos de 5 minutos | Developer 3; Marco López Quesada (Product Owner) observa |
+| Prueba 2: registro completo | Sprint 5, antes de la Sprint Review del 18/12/2026 | 3 productores reales o simulados, al menos uno adulto mayor | Registrar un animal con fotografía y revisar y corregir las sugerencias del módulo de IA | La misma meta, ya con el módulo de IA | Developer 3; Marco López Quesada (Product Owner) observa |
+
+Las observaciones de cada prueba entran al Product Backlog y su resultado se registra en la
+Sección 11. Si la meta no se cumple, se aplica la contingencia de R-06.
 
 ---
 
@@ -1057,7 +1080,8 @@ Developers) se definen en la Sección 00.
 | 11/11/2026 | bf1d40f | Se agrega la versión del expediente en la portada y se eliminan textos aclaratorios de las Secciones 00, 05, 06, 07 y 09. | 00, 05, 06, 07, 09, 11 |
 | 11/11/2026 | 98cb63d | Se reprograman los 5 Sprints del 12/10/2026 al 18/12/2026 como plan del producto; HU-05 pasa al Sprint 2 y HU-06b al Sprint 3; se agregan las tareas del Sprint 1 y se ubica cada acción de mitigación en el Sprint anterior a la historia que protege. | 04, 05 |
 | 11/11/2026 | 99dd5bb | Se actualiza el plan temporal con las fechas del release; se agregan el rango de Sprints necesarios, el incremento por Sprint, los hitos, el burndown del release, el costo del equipo y los proveedores con sus planes gratuitos; el desglose por línea de trabajo indica su objetivo específico. | 07 |
-| 11/11/2026 | este commit | Se ajustan R-05, R-10, el Plan de Mitigación y el calendario de revisión de riesgos a las fechas del release; las pruebas de OCR e IA se hacen antes de integrar cada servicio; el Plan de adquisiciones nombra a cada proveedor. | 08 |
+| 11/11/2026 | df510a3 | Se ajustan R-05, R-10, el Plan de Mitigación y el calendario de revisión de riesgos a las fechas del release; las pruebas de OCR e IA se hacen antes de integrar cada servicio; el Plan de adquisiciones nombra a cada proveedor. | 08 |
+| 11/11/2026 | este commit | Se definen criterios de calidad medibles, aseguramiento y control de la calidad; la Definition of Done indica quién verifica cada criterio y en qué columna del tablero; se agrega la estrategia de validación con dos pruebas de usabilidad. | 09 |
 
 ### Evidencias
 
