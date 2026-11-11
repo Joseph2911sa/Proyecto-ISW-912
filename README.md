@@ -313,14 +313,14 @@ identificado por cédula, con su código único generado automáticamente.
 | HU-01 | RIG-2 Montar la estructura del proyecto y la base de datos | Developer 1 |
 | HU-01 | RIG-3 Modelar la tabla de propietarios (cédula física y jurídica) | Developer 1 |
 | HU-01 | RIG-4 Implementar el registro de propietario y bloquear cédulas duplicadas | Developer 1 |
-| HU-01 | RIG-5 Verificar criterios de aceptación y Definition of Done | Joseph Salazar Araya |
+| HU-01 | RIG-5 Verificar criterios de aceptación y Definition of Done | Developer 2 |
 | HU-02 | RIG-7 Modelar la entidad animal y sus categorías de especie | Developer 1 |
 | HU-02 | RIG-8 Implementar el registro del animal asociado a un propietario | Developer 1 |
 | HU-02 | RIG-9 Validar que la especie y el propietario sean obligatorios | Developer 1 |
-| HU-02 | RIG-10 Verificar criterios de aceptación y Definition of Done | Joseph Salazar Araya |
+| HU-02 | RIG-10 Verificar criterios de aceptación y Definition of Done | Developer 2 |
 | HU-03 | RIG-12 Definir la regla de generación del código único | Developer 1 |
 | HU-03 | RIG-13 Generar el código automáticamente al guardar el animal y garantizar que no se repita | Developer 1 |
-| HU-03 | RIG-14 Verificar criterios de aceptación y Definition of Done | Joseph Salazar Araya |
+| HU-03 | RIG-14 Verificar criterios de aceptación y Definition of Done | Developer 2 |
 
 **Acciones de mitigación (Sección 08):**
 
@@ -429,14 +429,14 @@ aceptación, su estimación en puntos, su prioridad, su línea de trabajo (etiqu
 dependencias, registradas como vínculos *bloquea / está bloqueada por*. Cada historia se
 convierte en **tareas (subtareas de Jira)** asignadas al integrante del Scrum Team que las
 desarrolla; la última tarea de cada historia es *Verificar criterios de aceptación y
-Definition of Done* y se asigna al estudiante que no construyó la historia. Las acciones de
+Definition of Done* y se asigna a un Developer que no construyó la historia. Las acciones de
 mitigación de la Sección 08 se registran como tareas con la etiqueta `riesgo`.
 
 | Columna | Significado | Límite WIP | Justificación |
 |---|---|---|---|
 | Por hacer (To Do) | Historias y tareas del Sprint Backlog que todavía no se empiezan. | Sin límite | Es el Sprint Backlog del Sprint en curso. |
-| En progreso (In Progress) | Historias que un estudiante está construyendo. | 2 | El equipo son dos estudiantes: una historia activa por estudiante. Con más historias abiertas el trabajo se dispersa y ninguna termina. |
-| En revisión (In Review) | Historias construidas que el estudiante que no las construyó verifica contra sus criterios de aceptación y la Definition of Done. | 2 | Cada estudiante revisa las historias del otro: con más de dos historias pendientes de revisión, la revisión se vuelve el cuello de botella. |
+| En progreso (In Progress) | Historias que un Developer está construyendo. | 2 | El equipo son dos estudiantes: una historia activa por estudiante. Con más historias abiertas el trabajo se dispersa y ninguna termina. |
+| En revisión (In Review) | Historias construidas que un Developer que no las construyó verifica contra sus criterios de aceptación y la Definition of Done. | 2 | Cada historia la revisa un Developer que no la construyó: con más de dos historias pendientes de revisión, la revisión se vuelve el cuello de botella. |
 | Hecho (Done) | Historias que cumplen la Definition of Done (Sección 09). | Sin límite | Solo lo terminado según la Definition of Done cuenta para la velocidad. |
 
 Los límites WIP aplican a las historias. Las acciones de mitigación (etiqueta `riesgo`) se
@@ -450,7 +450,7 @@ Sección 10.
 Scrum Team que la desarrolla.
 
 **Regla para mover una historia a Hecho:** una historia pasa a Hecho cuando todas sus tareas
-están en Hecho, incluida la verificación de sus criterios de aceptación por el estudiante que no
+están en Hecho, incluida la verificación de sus criterios de aceptación por un Developer que no
 la construyó, y cumple la Definition of Done de la Sección 09.
 La verificación queda registrada como comentario en la tarea de verificación de la
 historia en Jira.
@@ -921,7 +921,7 @@ respuesta.
 
 | ID | Estrategia | Acciones concretas | Ítem en el backlog | Disparador | Plan de contingencia | Plan de respaldo | Dueño | Fecha de revisión | Riesgo residual |
 |---|---|---|---|---|---|---|---|---|---|
-| R-05 | Mitigar | Confirmar las horas disponibles de cada estudiante antes de cada Sprint Planning y ajustar el Sprint Backlog a esa capacidad; el estudiante que no construye una historia de IA revisa su diseño desde la primera tarea. | M-04 (RIG-65), Sprints 1 a 5 | A mitad de un Sprint más de la mitad de los puntos sigue en Por hacer, o un Sprint cierra con menos de 8 puntos en Hecho. | El Product Owner devuelve al Product Backlog HU-06c y luego HU-06a. | Se informa a los profesores con una propuesta de ajuste de alcance, según el escalamiento de la Sección 10. | Joseph Salazar Araya (Scrum Master) | Cada Sprint Planning: 12/10, 26/10, 09/11, 23/11 y 07/12/2026 | 2 × 2 = 4 · Vigilar |
+| R-05 | Mitigar | Confirmar las horas disponibles de cada estudiante antes de cada Sprint Planning y ajustar el Sprint Backlog a esa capacidad; un Developer que no construye la historia de IA revisa su diseño desde la primera tarea. | M-04 (RIG-65), Sprints 1 a 5 | A mitad de un Sprint más de la mitad de los puntos sigue en Por hacer, o un Sprint cierra con menos de 8 puntos en Hecho. | El Product Owner devuelve al Product Backlog HU-06c y luego HU-06a. | Se informa a los profesores con una propuesta de ajuste de alcance, según el escalamiento de la Sección 10. | Joseph Salazar Araya (Scrum Master) | Cada Sprint Planning: 12/10, 26/10, 09/11, 23/11 y 07/12/2026 | 2 × 2 = 4 · Vigilar |
 | R-01 | Mitigar | Probar el servicio de OCR con al menos 20 fotografías reales de aretes antes de integrarlo en HU-08; guiar al productor para encuadrar el arete; mantener siempre el ingreso manual (criterio 2 de HU-08). | M-01 (RIG-62), Sprint 2 | La prueba lee correctamente menos del 70 % de los aretes. | El ingreso manual pasa a ser el flujo principal y la lectura del OCR queda como sugerencia opcional. | Se prueba el proveedor alterno de OCR (Azure AI Vision) con las mismas fotografías. | Developer 2 | 06/11/2026 | 1 × 2 = 2 · Aceptar |
 | R-02 | Mitigar | Probar por especie la sugerencia de raza y color/patrón antes de integrarla en HU-09a y HU-09b; ofrecer la sugerencia solo en las especies donde funcione. | M-02 (RIG-63), Sprint 3 | La prueba acierta en menos del 60 % de las fotografías de alguna especie. | La sugerencia queda solo para bovinos; en las demás especies la raza y el color/patrón se eligen de una lista (HU-11) y se corrigen manualmente (HU-10). | Se retira la sugerencia de raza y color/patrón y todos los datos se eligen de listas. | Developer 2 | 20/11/2026 | 2 × 1 = 2 · Aceptar |
 | R-03 | Mitigar | Encapsular el OCR y la IA detrás de una interfaz propia para poder cambiar de proveedor; configurar alertas de consumo; tener identificado un proveedor alterno. | M-03 (RIG-64), Sprint 3 | El consumo llega al 80 % de la cuota gratuita, el proveedor anuncia cambios de precio o el servicio falla más de una vez en una semana. | Cambiar al proveedor alterno; mientras tanto, el registro sigue con ingreso manual. | El registro queda solo con ingreso manual hasta integrar otro proveedor en el Sprint siguiente. | Developer 2 | 20/11/2026 | 1 × 2 = 2 · Aceptar |
@@ -934,7 +934,7 @@ respuesta.
 | R-04 | Aceptar (activa) | Usar solo planes gratuitos y comprimir las imágenes; revisar el consumo al cierre de cada Sprint desde el Sprint 2. | M-10 (RIG-71), Sprint 2 | Aparece un cargo en la facturación de algún servicio, el almacenamiento supera el 80 % del plan gratuito o el proyecto de Supabase se pausa por inactividad. | Reducir la resolución de las imágenes guardadas y borrar las fotografías de prueba. | Migrar el servicio afectado según su plan de salida (Plan de adquisiciones). | Marco López Quesada | Al cierre de cada Sprint, desde el 06/11/2026 | 1 × 1 = 1 · Aceptar |
 
 Las acciones de mitigación se registran en Jira como tareas con la etiqueta `riesgo`,
-asignadas al estudiante que las ejecuta y vinculadas a las historias que protegen. No llevan puntos de
+asignadas a su responsable y vinculadas a las historias que protegen. No llevan puntos de
 historia, por lo que no cuentan para la velocidad, pero sí se consideran en la capacidad del
 Sprint. Cuando un disparador se cumple, el dueño avisa al Scrum Master el mismo día y se
 aplica el plan de contingencia según el escalamiento de la Sección 10.
@@ -991,7 +991,7 @@ indicada.
 | Tiempo de respuesta | Cada pantalla responde en menos de 3 segundos y la lectura del arete termina en menos de 30 segundos con conexión 4G | Criterio 5 de la Definition of Done |
 | Protección de datos | La cédula solo se muestra en la ficha del propietario y las pruebas usan cédulas ficticias | Criterio 6 de la Definition of Done; M-08 |
 
-**Aseguramiento de la calidad (QA):** revisión del código por el estudiante que no construyó
+**Aseguramiento de la calidad (QA):** revisión del código por un Developer que no construyó
 la historia, verificación cruzada de los criterios de aceptación en Jira y acciones de mejora
 de la Retrospective, que entran al Sprint Backlog siguiente.
 
@@ -1006,14 +1006,14 @@ no se presenta en la Sprint Review y vuelve al Product Backlog.
 
 | # | Criterio | Quién lo verifica | Columna del tablero |
 |---|---|---|---|
-| 1 | Pruebas: las pruebas unitarias de la lógica nueva y las de integración de la historia pasan. | Estudiante que construyó la historia | Sale de En progreso |
-| 2 | Criterios de aceptación: se cumplen todos y quedan verificados en la tarea de verificación de Jira. | Estudiante que no construyó la historia | Sale de En revisión |
-| 3 | Revisión del código: no quedan observaciones pendientes y la revisión se registra en la tarea de verificación. | Estudiante que no construyó la historia | Sale de En revisión |
-| 4 | Compatibilidad: funciona en Google Chrome y Mozilla Firefox de escritorio y en Chrome para Android en un teléfono con pantalla de 6 pulgadas o más. | Estudiante que no construyó la historia | Sale de En revisión |
-| 5 | Rendimiento: cada pantalla responde en menos de 3 segundos y la carga de la fotografía con la lectura del arete termina en menos de 30 segundos con conexión 4G. | Estudiante que no construyó la historia | Sale de En revisión |
-| 6 | Seguridad: la cédula solo se muestra en la ficha del propietario y los datos de prueba usan cédulas ficticias. | Estudiante que no construyó la historia | Sale de En revisión |
-| 7 | Integración: el código está integrado en la rama principal y desplegado en el ambiente de pruebas de Vercel. | Estudiante que construyó la historia | Entra a Hecho |
-| 8 | Documentación: el README del módulo y, si cambió algún dato, el modelo de datos de la Sección 11 están actualizados. | Estudiante que construyó la historia | Entra a Hecho |
+| 1 | Pruebas: las pruebas unitarias de la lógica nueva y las de integración de la historia pasan. | Developer que construyó la historia | Sale de En progreso |
+| 2 | Criterios de aceptación: se cumplen todos y quedan verificados en la tarea de verificación de Jira. | Developer que no construyó la historia | Sale de En revisión |
+| 3 | Revisión del código: no quedan observaciones pendientes y la revisión se registra en la tarea de verificación. | Developer que no construyó la historia | Sale de En revisión |
+| 4 | Compatibilidad: funciona en Google Chrome y Mozilla Firefox de escritorio y en Chrome para Android en un teléfono con pantalla de 6 pulgadas o más. | Developer que no construyó la historia | Sale de En revisión |
+| 5 | Rendimiento: cada pantalla responde en menos de 3 segundos y la carga de la fotografía con la lectura del arete termina en menos de 30 segundos con conexión 4G. | Developer que no construyó la historia | Sale de En revisión |
+| 6 | Seguridad: la cédula solo se muestra en la ficha del propietario y los datos de prueba usan cédulas ficticias. | Developer que no construyó la historia | Sale de En revisión |
+| 7 | Integración: el código está integrado en la rama principal y desplegado en el ambiente de pruebas de Vercel. | Developer que construyó la historia | Entra a Hecho |
+| 8 | Documentación: el README del módulo y, si cambió algún dato, el modelo de datos de la Sección 11 están actualizados. | Developer que construyó la historia | Entra a Hecho |
 | 9 | Aceptación: el Product Owner acepta la historia frente a sus criterios de aceptación. | Marco López Quesada (Product Owner) | Entra a Hecho |
 
 ### Estrategia de validación
@@ -1037,19 +1037,19 @@ Sección 11. Si la meta no se cumple, se aplica la contingencia de R-06.
 
 R = realiza, A = aprueba y responde por el resultado, C = es consultado.
 
-| Actividad | Marco López Quesada (Product Owner) | Joseph Salazar Araya (Scrum Master) |
-|---|---|---|
-| Ordenar y refinar el Product Backlog | A, R | C |
-| Definir los criterios de aceptación | A, R | C |
-| Facilitar Sprint Planning, Daily Scrum, Sprint Review y Retrospective | C | A, R |
-| Desarrollar las historias (Developer 1 a 3) | R | R |
-| Verificación cruzada y revisión del código | R (historias que construyó Joseph) | R (historias que construyó Marco) |
-| Aceptar historias en Hecho | A | C |
-| Remover impedimentos | C | A, R |
-| Mantener y revisar el registro de riesgos | C | A, R |
-| Adquisiciones | A, R (hosting, base de datos, almacenamiento, herramientas) | R (OCR e IA) |
-| Comunicación con interesados | A, R (productores, cooperativas, médicos veterinarios) | R (SENASA, profesores, proveedor de OCR/IA, PRODHAB) |
-| Actualizar el Expediente y su bitácora | R | R |
+| Actividad | Product Owner (Marco López Quesada) | Scrum Master (Joseph Salazar Araya) | Developer 1 a 3 |
+|---|---|---|---|
+| Ordenar y refinar el Product Backlog | A, R | C | C |
+| Definir los criterios de aceptación | A, R | C | C |
+| Facilitar Sprint Planning, Daily Scrum, Sprint Review y Retrospective | C | A, R | C |
+| Desarrollar las historias | C | — | R |
+| Verificación cruzada y revisión del código | — | — | R (cada historia la verifica un Developer que no la construyó) |
+| Aceptar historias en Hecho | A | — | C |
+| Remover impedimentos | C | A, R | C |
+| Mantener y revisar el registro de riesgos | C | A, R | C |
+| Adquisiciones | A, R (hosting, base de datos, almacenamiento, herramientas) | R (OCR e IA) | C |
+| Comunicación con interesados | A, R (productores, cooperativas, médicos veterinarios) | R (SENASA, profesores, proveedor de OCR/IA, PRODHAB) | — |
+| Actualizar el Expediente y su bitácora | R | R | — |
 
 ### Plan de comunicación
 
@@ -1110,7 +1110,7 @@ R = realiza, A = aprueba y responde por el resultado, C = es consultado.
 - Nadie empieza una historia nueva si la columna En progreso llegó a su límite WIP: primero
   ayuda a revisar o terminar otra.
 - Cada historia se trabaja en una rama propia con su ID (por ejemplo, `HU-08-lectura-arete`) y
-  entra a la rama principal solo con la revisión del otro estudiante.
+  entra a la rama principal solo con la revisión de un Developer que no la construyó.
 - Jira se actualiza el mismo día en que cambia el estado de una tarea.
 - Las observaciones se hacen sobre el trabajo, no sobre la persona; los desacuerdos se
   resuelven con el escalamiento de esta sección.
@@ -1152,6 +1152,7 @@ R = realiza, A = aprueba y responde por el resultado, C = es consultado.
 | 11/11/2026 | 27d65cd | Se agregan las decisiones registradas, la tabla de evidencias y el modelo de datos del Objetivo específico 1; se ajustan las posiciones del Mapa Poder-Interés para que las etiquetas no se encimen. | 03, 11 |
 | 11/11/2026 | 858ace2 | Se detallan las partes predictiva y adaptativa del ciclo de vida, se agregan los eventos Scrum al plan de comunicación y se ajusta el supuesto de la ficha detallada. | 04, 07, 10, 11 |
 | 11/11/2026 | 5166e84 | La Matriz de Riesgos pasa a la escala de 1 a 3 con descripción «si ocurre X, entonces Y», categoría, tipo y dueño, y agrega la oportunidad R-11; el Plan de Mitigación agrega plan de respaldo y riesgo residual; el Plan de adquisiciones agrega tipo de contrato y plan de salida. | 08, 11 |
+| 11/11/2026 | este commit | El desarrollo y la verificación cruzada se atribuyen a las etiquetas Developer 1 a 3 en el Sprint Backlog 1, el tablero, la Definition of Done, el Plan de Mitigación, la matriz de responsabilidades y los Working Agreements. | 05, 08, 09, 10, 11 |
 
 #### Decisiones registradas
 
